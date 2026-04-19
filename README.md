@@ -1,29 +1,36 @@
-## Hi there 👋
+# Hey, I'm Charan Rathore 👋
 
-<!--
-**charanxra7hore/charanxra7hore** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> *Mechanical engineer who got lost in data - and never looked back.*
 
-Here are some ideas to get you started:
+MSc. Chemistry + BE Mechanical Engineering @ **BITS Pilani**. I'm interested in how AI and data systems solve real business and engineering problems - from building ML pipelines to making sense of messy data.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
 
-I am **Charan Rathore** , a dual degree student in **MSc. Chemistry + BE Mechanical Engineering** from **BITS Pilani,India**.
-I am highly curious about **Machine Learning, Deep Learning, Large Language Models** and how **AI intersects with Engineering and Scientific Research**
+## 🔬 What I've worked on
 
-🛠 I’ve previously on a project involving **automated generation of CAD bolt models using Python in Fusion 360 API**,**statistical modelling for weather data and portfolio analysis**.
-
-🌱 I’m currently working on projects involving **Deep Learning, Data Pre-Processing,Gen AI for Scientific Research**.
-
-🧑‍🤝‍🧑 I’m open to discussions and collaborations on **research projects at the intersection of Data Science and scientific workflows**.
-
-📫 **You can reach me out through mail at:ra7hore.charan@gmail.com**
+- Agentic finance advisor (LLM-based)
+- AI-powered cloud storage cost optimizer (FastAPI + React)
+- Object detection for wildlife monitoring (YOLOv8, drone footage)
+- Time series forecasting & statistical modelling (ARIMA, weather data)
+- CAD dataset automation via Fusion 360 API
+- Quantitative portfolio analysis & Sharpe ratio optimization
 
 
+
+## 🛠️ Stack
+
+```
+ML / DL    PyTorch · YOLOv8 · scikit-learn · pandas · numpy
+Web        React · FastAPI
+Currently  Deep Learning · Data Pre-Processing · Gen AI
+```
+
+## 🤝 Open to
+
+Collaborations and discussions around **data science, AI/ML engineering**, and **business & product analytics**. Always happy to connect if you're building/solving some interesting problem.
+
+---
+
+📫 **ra7hore.charan@gmail.com**
+
+<sub>BITS Pilani · Pilani Campus · he/him</sub>
