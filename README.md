@@ -5,33 +5,28 @@
 </picture>
 
 <p align="center">
-  <a href="mailto:ra7hore.charan@gmail.com"><img src="https://img.shields.io/badge/Email-ra7hore.charan-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://linkedin.com/in/charan-rathore"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://charan-rathore.github.io"><img src="https://img.shields.io/badge/Portfolio-Visit-7b68ee?style=for-the-badge&logo=safari&logoColor=white"/></a>
+  <a href="https://charan-rathore.github.io"><img src="https://img.shields.io/badge/Portfolio-charan--rathore.github.io-7b68ee?style=for-the-badge&logo=safari&logoColor=white"/></a>
+  <a href="mailto:ra7hore.charan@gmail.com"><img src="https://img.shields.io/badge/Email-ra7hore.charan-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </p>
 
-<p align="center">
-  <em>Building production-grade AI systems from first principles. Mechanical engineer turned ML systems builder.</em>
-</p>
+<br>
+
+## `> whoami`
+
+**Product Analyst Intern @ Flipkart** | Building data-driven systems at the intersection of AI, analytics, and engineering.
+
+I'm a final-year dual degree student at **BITS Pilani** (MSc Chemistry + BE Mechanical Engineering) who pivoted hard into data science and ML engineering. I don't just use frameworks — I build the infrastructure underneath them.
+
+**Right now:** Building [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) — a production-grade RAG platform from scratch with async pipelines, benchmark-driven chunking, and evaluation frameworks. Every architectural decision documented with tradeoffs.
 
 <img src="assets/wave.svg" width="100%">
 
-## About Me
+## What I'm Working On
 
-```python
-class CharanRathore:
-    education = "MSc Chemistry + BE Mechanical Engineering @ BITS Pilani"
-    focus     = ["Production AI/ML Systems", "Information Retrieval", "Distributed Pipelines"]
-    currently = "Building IntelliRAG — enterprise RAG platform from scratch"
-    
-    tech = {
-        "ai_ml":      ["PyTorch", "YOLOv8", "scikit-learn", "LangChain", "Ollama", "RAGAS"],
-        "backend":    ["FastAPI", "Celery", "PostgreSQL", "Redis", "Docker"],
-        "frontend":   ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-        "data":       ["pandas", "NumPy", "Matplotlib", "Jupyter"],
-        "infra":      ["Azure", "Vercel", "GitHub Actions", "Docker Compose"],
-    }
-```
+- **Flipkart** — Driving seller funnel analytics and search personalization insights as a Product Analyst
+- **IntelliRAG** — Enterprise RAG platform: ingestion pipeline, 5 chunking strategies, RAGAS evaluation, Celery workers, PostgreSQL lifecycle management
+- **Learning** — Production AI systems, distributed pipelines, information retrieval at scale
 
 ---
 
@@ -44,19 +39,19 @@ class CharanRathore:
 ### [IntelliRAG](https://github.com/charan-rathore/IntelliRAG)
 **Production RAG Platform — Built from Scratch**
 
-Enterprise-grade Retrieval-Augmented Generation system with a full async pipeline: ingestion, chunking (5 strategies, benchmark-driven), evaluation via RAGAS, Celery workers with dead-letter queues, and PostgreSQL document lifecycle management.
+Full async pipeline: ingestion, chunking (5 strategies with benchmark-driven defaults), RAGAS evaluation, Celery workers with dead-letter queues, and PostgreSQL document lifecycle. Every choice has documented tradeoffs.
 
 `Python` `FastAPI` `Celery` `PostgreSQL` `Redis` `Ollama`
 
-<img src="https://img.shields.io/badge/Status-Active_Development-00d2ff?style=flat-square"/>
+<img src="https://img.shields.io/badge/Status-Active_Development-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Architecture-Production_Grade-ff6b9d?style=flat-square"/>
 
 </td>
 <td width="50%">
 
 ### [Project Management Tool](https://github.com/charan-rathore/project-management-tool)
-**Full-Stack Kanban Board**
+**Full-Stack Kanban Board — Live on Vercel**
 
-Real-time project management app with drag-and-drop boards, team collaboration, and task tracking. Deployed on Vercel.
+Drag-and-drop project management with team collaboration and real-time task tracking. End-to-end TypeScript.
 
 `TypeScript` `React` `Next.js` `Tailwind CSS`
 
@@ -68,39 +63,11 @@ Real-time project management app with drag-and-drop boards, team collaboration, 
 <td width="50%">
 
 ### [Agentic Finance Advisor](https://github.com/charan-rathore/agentic-finance-advisor)
-**Multi-Agent AI System for Markets**
+**Multi-Agent AI for Markets**
 
-LLM-powered multi-agent system that monitors stocks, analyzes market sentiment from news/social media, and generates actionable investment recommendations.
+LLM-powered multi-agent system: stock monitoring, sentiment analysis from news/social media, actionable investment recommendations.
 
 `Python` `LangChain` `Multi-Agent` `Sentiment Analysis`
-
-<img src="https://img.shields.io/badge/Status-Complete-00c853?style=flat-square"/>
-
-</td>
-<td width="50%">
-
-### [Gen-AI Extraction & Optimization](https://github.com/charan-rathore/Gen-AI-Extraction-Optimization)
-**LLM Prompting Strategy Research**
-
-Systematic experimentation across multiple prompting strategies and LLM configurations for optimizing information extraction accuracy.
-
-`Jupyter` `Prompt Engineering` `LLMs` `Research`
-
-<img src="https://img.shields.io/badge/Status-Complete-00c853?style=flat-square"/>
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [Time Series Temperature Modelling](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)
-**Statistical Forecasting Study**
-
-Sophisticated time series analysis with ARIMA, seasonal decomposition, and statistical tests on weather data. Full pipeline from EDA to forecasting.
-
-`Python` `ARIMA` `statsmodels` `pandas` `Matplotlib`
-
-<img src="https://img.shields.io/badge/Status-Complete-00c853?style=flat-square"/>
 
 </td>
 <td width="50%">
@@ -108,15 +75,45 @@ Sophisticated time series analysis with ARIMA, seasonal decomposition, and stati
 ### [Drone Wildlife Detection](https://github.com/charan-rathore/Object-detection-from-drone-captured-videos)
 **Computer Vision for Conservation**
 
-YOLOv8-based object detection system for identifying male and female blackbuck from drone-captured video footage. Applied ML for ecological research.
+YOLOv8-based detection of blackbuck species from drone-captured video. Applied ML for ecological research.
 
-`Python` `YOLOv8` `Computer Vision` `PyTorch`
+`Python` `YOLOv8` `PyTorch` `Computer Vision`
 
-<img src="https://img.shields.io/badge/Status-Complete-00c853?style=flat-square"/>
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### [Gen-AI Extraction Optimization](https://github.com/charan-rathore/Gen-AI-Extraction-Optimization)
+**LLM Prompting Strategy Research**
+
+Systematic experimentation across prompting strategies and LLM configurations for optimizing information extraction accuracy.
+
+`Jupyter` `Prompt Engineering` `LLMs` `Research`
+
+</td>
+<td width="50%">
+
+### [3D Bolt Dataset Automation](https://github.com/charan-rathore/Automation-of-3D-Bolt-Dataset)
+**Automated ML Dataset Generation**
+
+1,000+ labeled STL datasets generated via Fusion 360 API for ML-based CAD classification. Automated the entire data pipeline.
+
+`Python` `Fusion 360 API` `Deep Learning` `Automation`
 
 </td>
 </tr>
 </table>
+
+<details>
+<summary><b>More Projects</b></summary>
+
+| Project | What It Does | Stack |
+|---------|-------------|-------|
+| [Time Series Temperature Modelling](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | ARIMA forecasting, seasonal decomposition, statistical tests on weather data | Python, statsmodels, pandas |
+| [Quantitative Portfolio Optimization](https://github.com/charan-rathore/Quantitative-Portfolio-Analysis-Optimization) | Sharpe ratio optimization, risk-adjusted portfolio construction | Python, Finance, Statistics |
+
+</details>
 
 ---
 
@@ -125,6 +122,29 @@ YOLOv8-based object detection system for identifying male and female blackbuck f
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,react,nextjs,typescript,tailwind,postgres,redis,docker,azure,git,github,vscode&perline=7" />
 </p>
+
+<table>
+<tr>
+<td><b>AI / ML</b></td>
+<td>PyTorch, YOLOv8, scikit-learn, LangChain, Ollama, RAGAS, Hugging Face, sentence-transformers</td>
+</tr>
+<tr>
+<td><b>Data & Analytics</b></td>
+<td>pandas, NumPy, SQL, Mixpanel, Matplotlib, statsmodels, Jupyter</td>
+</tr>
+<tr>
+<td><b>Backend</b></td>
+<td>Python, FastAPI, Celery, PostgreSQL, Redis, Docker</td>
+</tr>
+<tr>
+<td><b>Frontend</b></td>
+<td>React, Next.js, TypeScript, Tailwind CSS</td>
+</tr>
+<tr>
+<td><b>Cloud & Infra</b></td>
+<td>Azure, Vercel, GitHub Actions, Docker Compose</td>
+</tr>
+</table>
 
 ---
 
@@ -145,30 +165,10 @@ YOLOv8-based object detection system for identifying male and female blackbuck f
 
 ---
 
-## Current Focus
-
-```
-                    ┌─────────────────────────────┐
-                    │  IntelliRAG Development      │
-                    │  ══════════════════════      │
-                    │                              │
-                    │  ✅ Ingestion Pipeline        │
-                    │  ✅ Chunking (5 strategies)   │
-                    │  ✅ Evaluation (RAGAS)         │
-                    │  🔄 Embedding Generation      │
-                    │  ⬜ Vector Search (Qdrant)    │
-                    │  ⬜ Query API + LLM           │
-                    │  ⬜ Reranking                 │
-                    │  ⬜ Production Hardening      │
-                    └─────────────────────────────┘
-```
-
----
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=charan-rathore&style=for-the-badge&color=7b68ee&label=Profile+Views" />
 </p>
 
 <p align="center">
-  <sub>BITS Pilani · Pilani Campus · MSc Chemistry + BE Mechanical Engineering</sub>
+  <sub>Product Analyst @ Flipkart · BITS Pilani '26 · MSc Chemistry + BE Mechanical Engineering</sub>
 </p>
