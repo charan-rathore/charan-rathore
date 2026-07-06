@@ -14,18 +14,18 @@
 
 ## `> whoami`
 
-**Product Analyst Intern @ Flipkart** | Building data-driven systems at the intersection of AI, analytics, and engineering.
+**AI Systems Builder & Product Analyst** | Former Flipkart intern (Jan–Jun 2026). Building data-driven systems at the intersection of AI, analytics, and engineering.
 
 I'm a final-year dual degree student at **BITS Pilani** (MSc Chemistry + BE Mechanical Engineering) who pivoted hard into data science and ML engineering. I don't just use frameworks — I build the infrastructure underneath them.
 
-**Right now:** Building [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) — a production-grade RAG platform from scratch with async pipelines, benchmark-driven chunking, and evaluation frameworks. Every architectural decision documented with tradeoffs.
+**Right now:** Building [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) and [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) — production-grade systems from scratch with documented tradeoffs at every layer.
 
 <img src="assets/wave.svg" width="100%">
 
 ## What I'm Working On
 
-- **Flipkart** — Driving seller funnel analytics and search personalization insights as a Product Analyst
 - **IntelliRAG** — Enterprise RAG platform: ingestion pipeline, 5 chunking strategies, RAGAS evaluation, Celery workers, PostgreSQL lifecycle management
+- **ThermoSense** — IoT + ML hyperlocal weather intelligence: sensor deployment, API bias correction, ensemble forecasting with live accuracy leaderboard
 - **Learning** — Production AI systems, distributed pipelines, information retrieval at scale
 
 ---
@@ -48,6 +48,20 @@ Full async pipeline: ingestion, chunking (5 strategies with benchmark-driven def
 </td>
 <td width="50%">
 
+### [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)
+**Hyperlocal Temperature Intelligence — IoT + ML**
+
+End-to-end system: Raspberry Pi + DHT22 sensor, learns location-specific bias against commercial weather APIs, SARIMAX/LightGBM/TFT ensemble, MLflow tracking, and live accuracy leaderboard.
+
+`Python` `FastAPI` `React` `MLflow` `LightGBM` `statsmodels` `IoT`
+
+<img src="https://img.shields.io/badge/Focus-Microclimate_ML-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Hardware-Raspberry_Pi-ff6b9d?style=flat-square"/>
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 ### [Project Management Tool](https://github.com/charan-rathore/project-management-tool)
 **Full-Stack Kanban Board — Live on Vercel**
 
@@ -58,8 +72,6 @@ Drag-and-drop project management with team collaboration and real-time task trac
 <a href="https://project-management-tool-nine-zeta.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Visit-7b68ee?style=flat-square&logo=vercel"/></a>
 
 </td>
-</tr>
-<tr>
 <td width="50%">
 
 ### [Agentic Finance Advisor](https://github.com/charan-rathore/agentic-finance-advisor)
@@ -70,6 +82,8 @@ LLM-powered multi-agent system: stock monitoring, sentiment analysis from news/s
 `Python` `LangChain` `Multi-Agent` `Sentiment Analysis`
 
 </td>
+</tr>
+<tr>
 <td width="50%">
 
 ### [Drone Wildlife Detection](https://github.com/charan-rathore/Object-detection-from-drone-captured-videos)
@@ -78,18 +92,6 @@ LLM-powered multi-agent system: stock monitoring, sentiment analysis from news/s
 YOLOv8-based detection of blackbuck species from drone-captured video. Applied ML for ecological research.
 
 `Python` `YOLOv8` `PyTorch` `Computer Vision`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [Gen-AI Extraction Optimization](https://github.com/charan-rathore/Gen-AI-Extraction-Optimization)
-**LLM Prompting Strategy Research**
-
-Systematic experimentation across prompting strategies and LLM configurations for optimizing information extraction accuracy.
-
-`Jupyter` `Prompt Engineering` `LLMs` `Research`
 
 </td>
 <td width="50%">
@@ -110,7 +112,7 @@ Systematic experimentation across prompting strategies and LLM configurations fo
 
 | Project | What It Does | Stack |
 |---------|-------------|-------|
-| [Time Series Temperature Modelling](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | ARIMA forecasting, seasonal decomposition, statistical tests on weather data | Python, statsmodels, pandas |
+| [Gen-AI Extraction Optimization](https://github.com/charan-rathore/Gen-AI-Extraction-Optimization) | Systematic prompting experiments for information extraction accuracy | Jupyter, Prompt Engineering, LLMs |
 | [Quantitative Portfolio Optimization](https://github.com/charan-rathore/Quantitative-Portfolio-Analysis-Optimization) | Sharpe ratio optimization, risk-adjusted portfolio construction | Python, Finance, Statistics |
 
 </details>
@@ -126,7 +128,7 @@ Systematic experimentation across prompting strategies and LLM configurations fo
 <table>
 <tr>
 <td><b>AI / ML</b></td>
-<td>PyTorch, YOLOv8, scikit-learn, LangChain, Ollama, RAGAS, Hugging Face, sentence-transformers</td>
+<td>PyTorch, YOLOv8, scikit-learn, LangChain, Ollama, RAGAS, Hugging Face, sentence-transformers, MLflow, LightGBM</td>
 </tr>
 <tr>
 <td><b>Data & Analytics</b></td>
@@ -170,5 +172,5 @@ Systematic experimentation across prompting strategies and LLM configurations fo
 </p>
 
 <p align="center">
-  <sub>Product Analyst @ Flipkart · BITS Pilani '26 · MSc Chemistry + BE Mechanical Engineering</sub>
+  <sub>Ex-Flipkart (Jan–Jun 2026) · BITS Pilani '26 · MSc Chemistry + BE Mechanical Engineering</sub>
 </p>
