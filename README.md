@@ -24,7 +24,7 @@ I'm a final-year dual degree student at **BITS Pilani** (MSc Chemistry + BE Mech
 
 ## What I'm Working On
 
-- **IntelliRAG** — Enterprise RAG platform: ingestion pipeline, 5 chunking strategies, RAGAS evaluation, Celery workers, PostgreSQL lifecycle management
+- **IntelliRAG** — Full-stack RAG platform (Phases 1–12 complete): hybrid retrieval, cross-encoder reranking, Query API, CI quality gates, observability dashboard
 - **ThermoSense** — IoT + ML hyperlocal weather intelligence: sensor deployment, API bias correction, ensemble forecasting with live accuracy leaderboard
 - **Learning** — Production AI systems, distributed pipelines, information retrieval at scale
 
@@ -37,13 +37,13 @@ I'm a final-year dual degree student at **BITS Pilani** (MSc Chemistry + BE Mech
 <td width="50%">
 
 ### [IntelliRAG](https://github.com/charan-rathore/IntelliRAG)
-**Production RAG Platform — Built from Scratch**
+**Production RAG Platform — Full Pipeline Live**
 
-Full async pipeline: ingestion, chunking (5 strategies with benchmark-driven defaults), RAGAS evaluation, Celery workers with dead-letter queues, and PostgreSQL document lifecycle. Every choice has documented tradeoffs.
+Phases 1–12 complete: ingestion through observability. Hybrid retrieval (dense + BM25 + RRF), cross-encoder reranking, citation-aware Ollama generation, instrumented Query API, unified evaluation with CI gates, metrics dashboard.
 
-`Python` `FastAPI` `Celery` `PostgreSQL` `Redis` `Ollama`
+`Python` `FastAPI` `Celery` `PostgreSQL` `ChromaDB` `Ollama` `Hybrid Search`
 
-<img src="https://img.shields.io/badge/Status-Active_Development-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Architecture-Production_Grade-ff6b9d?style=flat-square"/>
+<img src="https://img.shields.io/badge/Status-Phases_1--12_Complete-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Query_API-Live-ff6b9d?style=flat-square"/>
 
 </td>
 <td width="50%">
