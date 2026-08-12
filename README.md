@@ -11,101 +11,112 @@ I care about two things that sound different but feel the same to me:
 1. **what a product is actually doing** when a user clicks something  
 2. **what a system is actually doing** in the two seconds before the answer shows up
 
-At Flipkart I worked on seller funnel analytics and search personalization - turning behavioral data into product decisions. Outside of that I build the infrastructure under intelligent systems: retrieval, memory, closed-loop forecasts, agents that can say how much to trust themselves.
-
 Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was even the right thing to ship.
 
-<p align="center">
-  <a href="https://charan-rathore.github.io">portfolio</a>
-  ·
-  <a href="https://charanrathore.substack.com">substack</a>
-  ·
-  <a href="mailto:ra7hore.charan@gmail.com">email</a>
-</p>
+At Flipkart I worked on seller funnel analytics and search personalization - behavioral data into product decisions. Outside of that I build the layers under intelligent systems: retrieval, memory, closed-loop forecasts, agents that can say how much to trust themselves.
 
 ---
 
-### what I'm deep in right now
+### currently
 
-| | |
-|:--|:--|
-| **retrieval & evaluation** | hybrid search, reranking, golden sets, CI quality gates |
-| **memory with provenance** | documents that become source-linked knowledge, not another summary |
-| **closed loops** | sensor / API ground truth → bias → forecast → scoreboard → retrain |
-| **product instincts** | funnel math, search behavior, feature tradeoffs, the boring middle of growth |
+AI systems · retrieval · inference  
+memory · evaluation · product experiments
 
 ---
 
-### things I've built (click around)
+### what I'm curious about
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**01** Where does the latency actually go?  
+**02** What should an AI system remember - and prove it remembered from the source?  
+**03** When is a forecast wrong because of the model, and when because of the place?  
+**04** Why do technically good products still fail distribution?  
+**05** Which problems are worth automating, and which only look that way?
+
+---
+
+### things I've built
 
 **[IntelliRAG](https://github.com/charan-rathore/IntelliRAG)**  
-RAG from the ground up - ingestion lifecycle, Celery + DLQ, five chunkers, hybrid RRF, rerank, citations, observability, CI gates.
+*I wanted to know where RAG actually breaks.*
 
-I keep the eval honest: small deterministic corpus for CI, mock vs real Ollama labeled separately. No inflated SOTA claims.
+ingestion → chunking → hybrid retrieval → rerank → citations → evaluation → observability  
+An experimental platform for measuring failure modes, not a claim of production SOTA. Eval stays honest: small deterministic corpus for CI, mock vs real Ollama labeled separately.
 
-</td>
-<td width="50%" valign="top">
+[read the investigation →](https://github.com/charan-rathore/IntelliRAG)
 
-**[memoRABLE](https://github.com/charan-rathore/memoRABLE)** · [try it live](https://memo-rable.vercel.app)  
-A document becomes six source-linked memory blocks. Click a memory, the original lines light up. Publish once to email / web / doc without rewriting the truth.
+**[memoRABLE](https://github.com/charan-rathore/memoRABLE)**  
+*What if documents became memory?*
 
-Local-first. Expensive parsers only when they earn it.
+Six source-linked blocks. Click a memory, the original lines light up. Publish once to email / web / doc without rewriting the truth. Local-first.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+[try it →](https://memo-rable.vercel.app)
 
-**[ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)** · [live dashboard](https://thermosense-black.vercel.app)  
-Weather apps guess from a station kilometers away. This one learns *your* microclimate bias, forecasts, then posts a public leaderboard against commercial baselines.
+**[ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)**  
+*Can a forecast know your rooftop?*
 
-The product is the loop, not the model name.
+Ground truth → commercial API bias → ensemble forecast → public leaderboard → retrain. The product is the loop, not the model name.
 
-</td>
-<td width="50%" valign="top">
+[see the experiment →](https://thermosense-black.vercel.app)
 
 **[Finsight](https://github.com/charan-rathore/agentic-finance-advisor)**  
-Multi-agent market research with a trust layer: freshness, source agreement, versioned knowledge, confidence on every answer.
+*Can an AI answer also explain how much it should be trusted?*
 
-Built so you can inspect *why* it said what it said.
+Multi-agent research with freshness, source agreement, versioned knowledge, and a confidence score you can inspect.
 
-</td>
-</tr>
-</table>
+[inspect the system →](https://github.com/charan-rathore/agentic-finance-advisor)
 
 ---
 
-### something I wrote
+### product things I keep taking apart
+
+**Search** - what actually happens between a query and the ranked result (Flipkart search personalization was the first place this got real for me)  
+**Funnels** - where discovery leaks: the step users drop, not the dashboard average  
+**Trust UX** - when a product should show confidence, provenance, or “I don’t know yet”  
+**Distribution** - why a technically solid system still fails to get used  
+**The invisible middle** - [the 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see): auth, memory, routing, the work that makes complexity feel effortless
+
+I go system → product → business. Same habit: open the black box, name the failure mode, then decide what to ship.
+
+---
+
+### one thing I wrote
 
 **[The 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see)**  
-That pause after you hit enter isn't the model thinking. It's auth, memory, routing, and a pile of systems trying to make something complicated feel effortless. I thought I knew. I was wrong.
+I thought I knew what happened after you hit enter. I was wrong.
 
-More on [Substack](https://charanrathore.substack.com) when I have something worth saying.
-
----
-
-### how I tend to work
-
-- measure before I declare victory  
-- write the tradeoff down (chunk size vs recall, local vs paid, when the fancy parser is worth it)  
-- keep eval and observability in the same repo as the code  
-- prefer systems that fail in known ways  
-- same energy for product: if I can't explain the funnel step, I don't trust the feature yet
+More when I have something worth saying → [Substack](https://charanrathore.substack.com)
 
 ---
 
-### quick context
+### how I work
 
-BITS Pilani · dual degree (MSc Chemistry + BE Mechanical) · class of 2026  
-Ex-Flipkart (product analytics, search personalization)  
-Based in India · building in public when it feels real
+measure → build → break → learn → repeat
+
+Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in known ways. Same rule for product: if I can’t explain the funnel step, I don’t trust the feature yet.
+
+---
+
+### currently investigating
+
+→ what actually determines RAG latency (retrieval vs rerank vs generation vs cold start)  
+→ how memory systems should preserve provenance without becoming another summary blob  
+→ when local inference is the right constraint vs when it just feels pure  
+→ closed-loop evaluation: leaderboards that force the model to face ground truth  
+→ why technically good products fail distribution
+
+*I update this when the questions change.*
+
+---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=charan-rathore&style=for-the-badge&color=7b68ee&label=Profile+Views" alt="Profile views" />
+  <a href="https://github.com/charan-rathore">GitHub</a>
+  ·
+  <a href="https://charanrathore.substack.com">Substack</a>
+  ·
+  <a href="https://charan-rathore.github.io">Portfolio</a>
+  ·
+  <a href="mailto:ra7hore.charan@gmail.com">Email</a>
 </p>
 
-<sub>Older experiments stay public for history. The four projects above are the ones that still feel like me.</sub>
+<sub>BITS Pilani · dual degree · class of 2026 · ex-Flipkart product analytics  
+Older experiments stay public. The four above are the ones that still feel like me.</sub>
