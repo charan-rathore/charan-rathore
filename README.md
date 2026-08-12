@@ -4,7 +4,7 @@ I investigate how intelligent systems behave underneath the abstraction layer, t
 
 Retrieval, memory, closed-loop prediction, and agent reliability are not black boxes. They are pipelines with measurable failure modes. I treat them that way.
 
-[Portfolio](https://charan-rathore.github.io) · [Email](mailto:ra7hore.charan@gmail.com)
+[Portfolio](https://charan-rathore.github.io) · [Substack](https://charanrathore.substack.com) · [Email](mailto:ra7hore.charan@gmail.com)
 
 ---
 
@@ -12,7 +12,7 @@ Retrieval, memory, closed-loop prediction, and agent reliability are not black b
 
 **2026**
 
-→ Production RAG systems — hybrid retrieval, evaluation, observability, CI quality gates  
+→ Production RAG systems - hybrid retrieval, evaluation, observability, CI quality gates  
 → Document intelligence and provenance-preserving memory  
 → Closed-loop IoT + forecasting (ground truth → bias → model → feedback)  
 → Agent systems with explicit trust, freshness, and knowledge versioning  
@@ -52,6 +52,12 @@ Ingest agents (prices, NAVs, macro, news), analysis agents that maintain version
 
 ---
 
+## Writing
+
+[The 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see) - on Substack
+
+---
+
 ## How I work
 
 - Prefer systems that can be measured and failed in known ways over opaque frameworks.
@@ -64,9 +70,13 @@ Ingest agents (prices, NAVs, macro, news), analysis agents that maintain version
 ## Background
 
 BITS Pilani (MSc Chemistry + BE Mechanical Engineering, class of 2026).  
-Former Flipkart intern (Jan–Jun 2026).  
+Former Flipkart intern (Jan-Jun 2026).  
 Previously worked across computer vision, quantitative finance experiments, and automated dataset generation; the current focus is the infrastructure under intelligent systems.
 
 ---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=charan-rathore&style=for-the-badge&color=7b68ee&label=Profile+Views" alt="Profile views" />
+</p>
 
 *Repositories that no longer represent the main line of work are left public for history but are not highlighted here.*
