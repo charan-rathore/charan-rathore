@@ -1,176 +1,72 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header.svg">
-  <img alt="Charan Rathore" src="assets/header.svg" width="100%">
-</picture>
+# Charan Rathore
 
-<p align="center">
-  <a href="https://linkedin.com/in/charan-rathore"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://charan-rathore.github.io"><img src="https://img.shields.io/badge/Portfolio-charan--rathore.github.io-7b68ee?style=for-the-badge&logo=safari&logoColor=white"/></a>
-  <a href="mailto:ra7hore.charan@gmail.com"><img src="https://img.shields.io/badge/Email-ra7hore.charan-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-</p>
+I investigate how intelligent systems behave underneath the abstraction layer, then build the infrastructure, evaluation, and failure-handling mechanisms around them.
 
-<br>
+Retrieval, memory, closed-loop prediction, and agent reliability are not black boxes. They are pipelines with measurable failure modes. I treat them that way.
 
-## `> whoami`
-
-**AI Systems Builder & Product Analyst** | Former Flipkart intern (Jan–Jun 2026). Building data-driven systems at the intersection of AI, analytics, and engineering.
-
-I'm a final-year dual degree student at **BITS Pilani** (MSc Chemistry + BE Mechanical Engineering) who pivoted hard into data science and ML engineering. I don't just use frameworks — I build the infrastructure underneath them.
-
-**Right now:** Building [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) and [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) — production-grade systems from scratch with documented tradeoffs at every layer.
-
-<img src="assets/wave.svg" width="100%">
-
-## What I'm Working On
-
-- **IntelliRAG** — Full-stack RAG platform (Phases 1–12 complete): hybrid retrieval, cross-encoder reranking, Query API, CI quality gates, observability dashboard
-- **ThermoSense** — IoT + ML hyperlocal weather intelligence: sensor deployment, API bias correction, ensemble forecasting with live accuracy leaderboard
-- **Learning** — Production AI systems, distributed pipelines, information retrieval at scale
+[Portfolio](https://charan-rathore.github.io) · [Email](mailto:ra7hore.charan@gmail.com)
 
 ---
 
-## Featured Projects
+## Currently
 
-<table>
-<tr>
-<td width="50%">
+**2026**
+
+→ Production RAG systems — hybrid retrieval, evaluation, observability, CI quality gates  
+→ Document intelligence and provenance-preserving memory  
+→ Closed-loop IoT + forecasting (ground truth → bias → model → feedback)  
+→ Agent systems with explicit trust, freshness, and knowledge versioning  
+→ Performance and reliability of local inference stacks
+
+---
+
+## Evidence
 
 ### [IntelliRAG](https://github.com/charan-rathore/IntelliRAG)
-**Production RAG Platform — Full Pipeline Live**
+Production-oriented RAG platform built from first principles.
 
-Phases 1–12 complete: ingestion through observability. Hybrid retrieval (dense + BM25 + RRF), cross-encoder reranking, citation-aware Ollama generation, instrumented Query API, unified evaluation with CI gates, metrics dashboard.
+Ingestion with document lifecycle tracking, Celery workers, retries and DLQ, five chunking strategies with benchmarks, dense + keyword + hybrid (RRF) retrieval, cross-encoder reranking, context assembly (dedup / MMR / budget), citation-aware generation, unified evaluation platform, adversarial probes, observability, and CI quality gates.
 
-`Python` `FastAPI` `Celery` `PostgreSQL` `ChromaDB` `Ollama` `Hybrid Search`
+Benchmarks are reported on a small deterministic corpus (2 documents, golden queries) with mock embeddings/LLM for CI; real Ollama runs are supported and labeled separately. Precision numbers are intentionally not inflated.
 
-<img src="https://img.shields.io/badge/Status-Phases_1--12_Complete-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Query_API-Live-ff6b9d?style=flat-square"/>
+Architecture docs and an engineering journal record the trade-offs at each layer.
 
-</td>
-<td width="50%">
+### [memoRABLE](https://github.com/charan-rathore/memoRABLE)
+Document → source-linked memory graph → multi-surface publish.
+
+Preserves semantic structure and provenance while turning a document into six memory blocks (Snapshot, Signals, Timeline, Decisions, Risks, Actions). Local-first by default. Selective OCR / experimental Docling refine only when quality improves. Correctness gates and deterministic behavior are first-class concerns.
+
+Live: [memo-rable.vercel.app](https://memo-rable.vercel.app)
 
 ### [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)
-**Hyperlocal Temperature Intelligence — IoT + ML**
+Closed-loop hyperlocal temperature system.
 
-End-to-end system: Raspberry Pi + DHT22 sensor, learns location-specific bias against commercial weather APIs, SARIMAX/LightGBM/TFT ensemble, MLflow tracking, and live accuracy leaderboard.
+Sensor (or historical) ground truth → commercial API forecasts → learned location-specific bias → ensemble forecasting (SARIMA / LightGBM / TFT) → live accuracy leaderboard against baselines → feedback and retraining. The interesting engineering is the measurement and correction loop, not the models alone.
 
-`Python` `FastAPI` `React` `MLflow` `LightGBM` `statsmodels` `IoT`
+Live: [thermosense-black.vercel.app](https://thermosense-black.vercel.app)
 
-<img src="https://img.shields.io/badge/Focus-Microclimate_ML-00d2ff?style=flat-square"/> <img src="https://img.shields.io/badge/Hardware-Raspberry_Pi-ff6b9d?style=flat-square"/>
+### [Finsight](https://github.com/charan-rathore/agentic-finance-advisor)
+Multi-agent finance research system with an explicit trust layer.
 
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [Project Management Tool](https://github.com/charan-rathore/project-management-tool)
-**Full-Stack Kanban Board — Live on Vercel**
-
-Drag-and-drop project management with team collaboration and real-time task tracking. End-to-end TypeScript.
-
-`TypeScript` `React` `Next.js` `Tailwind CSS`
-
-<a href="https://project-management-tool-nine-zeta.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Visit-7b68ee?style=flat-square&logo=vercel"/></a>
-
-</td>
-<td width="50%">
-
-### [Agentic Finance Advisor](https://github.com/charan-rathore/agentic-finance-advisor)
-**Multi-Agent AI for Markets**
-
-LLM-powered multi-agent system: stock monitoring, sentiment analysis from news/social media, actionable investment recommendations.
-
-`Python` `LangChain` `Multi-Agent` `Sentiment Analysis`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [Drone Wildlife Detection](https://github.com/charan-rathore/Object-detection-from-drone-captured-videos)
-**Computer Vision for Conservation**
-
-YOLOv8-based detection of blackbuck species from drone-captured video. Applied ML for ecological research.
-
-`Python` `YOLOv8` `PyTorch` `Computer Vision`
-
-</td>
-<td width="50%">
-
-### [3D Bolt Dataset Automation](https://github.com/charan-rathore/Automation-of-3D-Bolt-Dataset)
-**Automated ML Dataset Generation**
-
-1,000+ labeled STL datasets generated via Fusion 360 API for ML-based CAD classification. Automated the entire data pipeline.
-
-`Python` `Fusion 360 API` `Deep Learning` `Automation`
-
-</td>
-</tr>
-</table>
-
-<details>
-<summary><b>More Projects</b></summary>
-
-| Project | What It Does | Stack |
-|---------|-------------|-------|
-| [Gen-AI Extraction Optimization](https://github.com/charan-rathore/Gen-AI-Extraction-Optimization) | Systematic prompting experiments for information extraction accuracy | Jupyter, Prompt Engineering, LLMs |
-| [Quantitative Portfolio Optimization](https://github.com/charan-rathore/Quantitative-Portfolio-Analysis-Optimization) | Sharpe ratio optimization, risk-adjusted portfolio construction | Python, Finance, Statistics |
-
-</details>
+Ingest agents (prices, NAVs, macro, news), analysis agents that maintain versioned knowledge bases, storage with provenance, and a confidence score on every answer derived from data freshness, source agreement, and staleness flags. Not positioned as a black-box advisor.
 
 ---
 
-## Tech Stack
+## How I work
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,react,nextjs,typescript,tailwind,postgres,redis,docker,azure,git,github,vscode&perline=7" />
-</p>
-
-<table>
-<tr>
-<td><b>AI / ML</b></td>
-<td>PyTorch, YOLOv8, scikit-learn, LangChain, Ollama, RAGAS, Hugging Face, sentence-transformers, MLflow, LightGBM</td>
-</tr>
-<tr>
-<td><b>Data & Analytics</b></td>
-<td>pandas, NumPy, SQL, Mixpanel, Matplotlib, statsmodels, Jupyter</td>
-</tr>
-<tr>
-<td><b>Backend</b></td>
-<td>Python, FastAPI, Celery, PostgreSQL, Redis, Docker</td>
-</tr>
-<tr>
-<td><b>Frontend</b></td>
-<td>React, Next.js, TypeScript, Tailwind CSS</td>
-</tr>
-<tr>
-<td><b>Cloud & Infra</b></td>
-<td>Azure, Vercel, GitHub Actions, Docker Compose</td>
-</tr>
-</table>
+- Prefer systems that can be measured and failed in known ways over opaque frameworks.
+- Document trade-offs (chunk size vs recall, local vs paid inference, when to invoke an expensive parser).
+- Keep evaluation and observability in the same repository as the pipeline.
+- Local-first and zero paid API keys when the goal is understanding the stack.
 
 ---
 
-## GitHub Analytics
+## Background
 
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=charan-rathore&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7b68ee&icon_color=00d2ff&text_color=a0a0b8&ring_color=7b68ee" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=charan-rathore&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7b68ee&text_color=a0a0b8&langs_count=8" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=charan-rathore&theme=tokyonight&hide_border=true&background=0D1117&ring=7b68ee&fire=ff6b9d&currStreakLabel=00d2ff" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=charan-rathore&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=7b68ee&line=00d2ff&point=ff6b9d&area=true&area_color=7b68ee" />
-</p>
+BITS Pilani (MSc Chemistry + BE Mechanical Engineering, class of 2026).  
+Former Flipkart intern (Jan–Jun 2026).  
+Previously worked across computer vision, quantitative finance experiments, and automated dataset generation; the current focus is the infrastructure under intelligent systems.
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=charan-rathore&style=for-the-badge&color=7b68ee&label=Profile+Views" />
-</p>
-
-<p align="center">
-  <sub>Ex-Flipkart (Jan–Jun 2026) · BITS Pilani '26 · MSc Chemistry + BE Mechanical Engineering</sub>
-</p>
+*Repositories that no longer represent the main line of work are left public for history but are not highlighted here.*
