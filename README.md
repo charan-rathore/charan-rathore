@@ -1,82 +1,111 @@
-# Charan Rathore
+<p align="center">
+  <img src="assets/wave.svg" width="100%" alt="">
+</p>
 
-I investigate how intelligent systems behave underneath the abstraction layer, then build the infrastructure, evaluation, and failure-handling mechanisms around them.
+### hey, I'm Charan
 
-Retrieval, memory, closed-loop prediction, and agent reliability are not black boxes. They are pipelines with measurable failure modes. I treat them that way.
+I'm a mechanical engineer who got lost in data and never looked back.
 
-[Portfolio](https://charan-rathore.github.io) · [Substack](https://charanrathore.substack.com) · [Email](mailto:ra7hore.charan@gmail.com)
+I care about two things that sound different but feel the same to me:
 
----
+1. **what a product is actually doing** when a user clicks something  
+2. **what a system is actually doing** in the two seconds before the answer shows up
 
-## Currently
+At Flipkart I worked on seller funnel analytics and search personalization - turning behavioral data into product decisions. Outside of that I build the infrastructure under intelligent systems: retrieval, memory, closed-loop forecasts, agents that can say how much to trust themselves.
 
-**2026**
+Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was even the right thing to ship.
 
-→ Production RAG systems - hybrid retrieval, evaluation, observability, CI quality gates  
-→ Document intelligence and provenance-preserving memory  
-→ Closed-loop IoT + forecasting (ground truth → bias → model → feedback)  
-→ Agent systems with explicit trust, freshness, and knowledge versioning  
-→ Performance and reliability of local inference stacks
-
----
-
-## Evidence
-
-### [IntelliRAG](https://github.com/charan-rathore/IntelliRAG)
-Production-oriented RAG platform built from first principles.
-
-Ingestion with document lifecycle tracking, Celery workers, retries and DLQ, five chunking strategies with benchmarks, dense + keyword + hybrid (RRF) retrieval, cross-encoder reranking, context assembly (dedup / MMR / budget), citation-aware generation, unified evaluation platform, adversarial probes, observability, and CI quality gates.
-
-Benchmarks are reported on a small deterministic corpus (2 documents, golden queries) with mock embeddings/LLM for CI; real Ollama runs are supported and labeled separately. Precision numbers are intentionally not inflated.
-
-Architecture docs and an engineering journal record the trade-offs at each layer.
-
-### [memoRABLE](https://github.com/charan-rathore/memoRABLE)
-Document → source-linked memory graph → multi-surface publish.
-
-Preserves semantic structure and provenance while turning a document into six memory blocks (Snapshot, Signals, Timeline, Decisions, Risks, Actions). Local-first by default. Selective OCR / experimental Docling refine only when quality improves. Correctness gates and deterministic behavior are first-class concerns.
-
-Live: [memo-rable.vercel.app](https://memo-rable.vercel.app)
-
-### [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)
-Closed-loop hyperlocal temperature system.
-
-Sensor (or historical) ground truth → commercial API forecasts → learned location-specific bias → ensemble forecasting (SARIMA / LightGBM / TFT) → live accuracy leaderboard against baselines → feedback and retraining. The interesting engineering is the measurement and correction loop, not the models alone.
-
-Live: [thermosense-black.vercel.app](https://thermosense-black.vercel.app)
-
-### [Finsight](https://github.com/charan-rathore/agentic-finance-advisor)
-Multi-agent finance research system with an explicit trust layer.
-
-Ingest agents (prices, NAVs, macro, news), analysis agents that maintain versioned knowledge bases, storage with provenance, and a confidence score on every answer derived from data freshness, source agreement, and staleness flags. Not positioned as a black-box advisor.
+<p align="center">
+  <a href="https://charan-rathore.github.io">portfolio</a>
+  ·
+  <a href="https://charanrathore.substack.com">substack</a>
+  ·
+  <a href="mailto:ra7hore.charan@gmail.com">email</a>
+</p>
 
 ---
 
-## Writing
+### what I'm deep in right now
 
-[The 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see) - on Substack
-
----
-
-## How I work
-
-- Prefer systems that can be measured and failed in known ways over opaque frameworks.
-- Document trade-offs (chunk size vs recall, local vs paid inference, when to invoke an expensive parser).
-- Keep evaluation and observability in the same repository as the pipeline.
-- Local-first and zero paid API keys when the goal is understanding the stack.
+| | |
+|:--|:--|
+| **retrieval & evaluation** | hybrid search, reranking, golden sets, CI quality gates |
+| **memory with provenance** | documents that become source-linked knowledge, not another summary |
+| **closed loops** | sensor / API ground truth → bias → forecast → scoreboard → retrain |
+| **product instincts** | funnel math, search behavior, feature tradeoffs, the boring middle of growth |
 
 ---
 
-## Background
+### things I've built (click around)
 
-BITS Pilani (MSc Chemistry + BE Mechanical Engineering, class of 2026).  
-Former Flipkart intern (Jan-Jun 2026).  
-Previously worked across computer vision, quantitative finance experiments, and automated dataset generation; the current focus is the infrastructure under intelligent systems.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[IntelliRAG](https://github.com/charan-rathore/IntelliRAG)**  
+RAG from the ground up - ingestion lifecycle, Celery + DLQ, five chunkers, hybrid RRF, rerank, citations, observability, CI gates.
+
+I keep the eval honest: small deterministic corpus for CI, mock vs real Ollama labeled separately. No inflated SOTA claims.
+
+</td>
+<td width="50%" valign="top">
+
+**[memoRABLE](https://github.com/charan-rathore/memoRABLE)** · [try it live](https://memo-rable.vercel.app)  
+A document becomes six source-linked memory blocks. Click a memory, the original lines light up. Publish once to email / web / doc without rewriting the truth.
+
+Local-first. Expensive parsers only when they earn it.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)** · [live dashboard](https://thermosense-black.vercel.app)  
+Weather apps guess from a station kilometers away. This one learns *your* microclimate bias, forecasts, then posts a public leaderboard against commercial baselines.
+
+The product is the loop, not the model name.
+
+</td>
+<td width="50%" valign="top">
+
+**[Finsight](https://github.com/charan-rathore/agentic-finance-advisor)**  
+Multi-agent market research with a trust layer: freshness, source agreement, versioned knowledge, confidence on every answer.
+
+Built so you can inspect *why* it said what it said.
+
+</td>
+</tr>
+</table>
 
 ---
+
+### something I wrote
+
+**[The 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see)**  
+That pause after you hit enter isn't the model thinking. It's auth, memory, routing, and a pile of systems trying to make something complicated feel effortless. I thought I knew. I was wrong.
+
+More on [Substack](https://charanrathore.substack.com) when I have something worth saying.
+
+---
+
+### how I tend to work
+
+- measure before I declare victory  
+- write the tradeoff down (chunk size vs recall, local vs paid, when the fancy parser is worth it)  
+- keep eval and observability in the same repo as the code  
+- prefer systems that fail in known ways  
+- same energy for product: if I can't explain the funnel step, I don't trust the feature yet
+
+---
+
+### quick context
+
+BITS Pilani · dual degree (MSc Chemistry + BE Mechanical) · class of 2026  
+Ex-Flipkart (product analytics, search personalization)  
+Based in India · building in public when it feels real
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=charan-rathore&style=for-the-badge&color=7b68ee&label=Profile+Views" alt="Profile views" />
 </p>
 
-*Repositories that no longer represent the main line of work are left public for history but are not highlighted here.*
+<sub>Older experiments stay public for history. The four projects above are the ones that still feel like me.</sub>
