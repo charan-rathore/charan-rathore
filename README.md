@@ -4,8 +4,6 @@
 
 ### hey, I'm Charan
 
-I'm a mechanical engineer who got lost in data and never looked back.
-
 I care about two things that sound different but feel the same to me:
 
 1. **what a product is actually doing** when a user clicks something  
