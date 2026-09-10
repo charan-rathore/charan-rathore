@@ -13,11 +13,14 @@ I care about two things that sound different but feel the same to me:
 
 Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was even the right thing to ship.
 
-At Flipkart I worked on seller funnel analytics and search personalization - behavioral data into product decisions. Outside of that I build the layers under intelligent systems: retrieval, memory, closed-loop forecasts, agents that can say how much to trust themselves.
+I am an **Analyst at MiQ, working across the MENA markets**. Previously, at Flipkart, I worked on seller funnel analytics and search personalization — behavioral data into product decisions. Outside work I build and test intelligent systems: retrieval, memory, forecasts and source-aware agents.
 
 ---
 
 ### currently
+
+**MiQ · Analyst · MENA markets**<br>
+[Play through my Systris portfolio →](https://charan-tetris-portfolio.vercel.app/)
 
 AI systems · retrieval · inference  
 memory · evaluation · product experiments
@@ -40,9 +43,9 @@ memory · evaluation · product experiments
 *I wanted to know where RAG actually breaks.*
 
 ingestion → chunking → hybrid retrieval → rerank → citations → evaluation → observability  
-An experimental platform for measuring failure modes, not a claim of production SOTA. Eval stays honest: small deterministic corpus for CI, mock vs real Ollama labeled separately.
+The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. Its public deployment currently uses temporary keyword/extractive mode; persistent hybrid and real-provider evaluation are tracked as the next milestone. The Python platform has separate deterministic CI benchmarks.
 
-[read the investigation →](https://github.com/charan-rathore/IntelliRAG)
+[try the live lab →](https://intellirag-live-own-track.vercel.app/) · [read the measured audit →](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md)
 
 **[memoRABLE](https://github.com/charan-rathore/memoRABLE)**  
 *What if documents became memory?*
@@ -113,10 +116,10 @@ Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in
   ·
   <a href="https://charanrathore.substack.com">Substack</a>
   ·
-  <a href="https://charan-rathore.github.io">Portfolio</a>
+  <a href="https://charan-tetris-portfolio.vercel.app/">Portfolio</a>
   ·
   <a href="mailto:ra7hore.charan@gmail.com">Email</a>
 </p>
 
-<sub>BITS Pilani · dual degree · class of 2026 · ex-Flipkart product analytics  
+<sub>BITS Pilani · dual degree · class of 2026 · MiQ analyst, MENA · ex-Flipkart product analytics<br>
 Older experiments stay public. The four above are the ones that still feel like me.</sub>
