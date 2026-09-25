@@ -2,30 +2,30 @@
   <img src="assets/wave.svg" width="100%" alt="">
 </p>
 
-### hey, I'm Charan
+## hey, I'm Charan
 
 I care about two things that sound different but feel the same to me:
 
 1. **what a product is actually doing** when a user clicks something  
 2. **what a system is actually doing** in the two seconds before the answer shows up
 
-Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was even the right thing to ship.
+Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was the right thing to ship.
 
 I am an **Analyst at MiQ, working across the MENA markets**. Previously, at Flipkart, I worked on seller funnel analytics and search personalization — behavioral data into product decisions. Outside work I build and test intelligent systems: retrieval, memory, forecasts and source-aware agents.
 
 ---
 
-### currently
+## currently
 
 **MiQ · Analyst · MENA markets**<br>
-[Play through my Systris portfolio →](https://charan-tetris-portfolio.vercel.app/)
+[Explore my Systris portfolio →](https://charan-tetris-portfolio.vercel.app/)
 
 AI systems · retrieval · inference  
 memory · evaluation · product experiments
 
 ---
 
-### what I'm curious about
+## what I'm curious about
 
 **01** Where does the latency actually go?  
 **02** What should an AI system remember - and prove it remembered from the source?  
@@ -35,13 +35,13 @@ memory · evaluation · product experiments
 
 ---
 
-### things I've built
+## things I've built
 
 **[IntelliRAG](https://github.com/charan-rathore/IntelliRAG)**  
 *I wanted to know where RAG actually breaks.*
 
 ingestion → chunking → hybrid retrieval → rerank → citations → evaluation → observability  
-The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. Its public deployment currently uses temporary keyword/extractive mode; persistent hybrid and real-provider evaluation are tracked as the next milestone. The Python platform has separate deterministic CI benchmarks.
+The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. The public demo currently uses temporary keyword/extractive mode; persistent hybrid retrieval and real-provider evaluation are next. The Python platform has separate deterministic CI benchmarks.
 
 [try the live lab →](https://intellirag-live-own-track.vercel.app/) · [read the measured audit →](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md)
 
@@ -52,7 +52,7 @@ Six source-linked blocks. Click a memory, the original lines light up. Publish o
 
 [try it →](https://memo-rable.vercel.app)
 
-**[ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)**  
+**[ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)** · hyperlocal temperature forecasting  
 *Can a forecast know your rooftop?*
 
 Ground truth → commercial API bias → ensemble forecast → public leaderboard → retrain. The product is the loop, not the model name.
@@ -68,7 +68,7 @@ Multi-agent research with freshness, source agreement, versioned knowledge, and 
 
 ---
 
-### product things I keep taking apart
+## product things I keep taking apart
 
 **Search** - what actually happens between a query and the ranked result (Flipkart search personalization was the first place this got real for me)  
 **Funnels** - where discovery leaks: the step users drop, not the dashboard average  
@@ -80,7 +80,7 @@ I go system → product → business. Same habit: open the black box, name the f
 
 ---
 
-### one thing I wrote
+## one thing I wrote
 
 **[The 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see)**  
 I thought I knew what happened after you hit enter. I was wrong.
@@ -89,7 +89,7 @@ More when I have something worth saying → [Substack](https://charanrathore.sub
 
 ---
 
-### how I work
+## how I work
 
 measure → build → break → learn → repeat
 
@@ -97,7 +97,7 @@ Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in
 
 ---
 
-### currently investigating
+## currently investigating
 
 → what actually determines RAG latency (retrieval vs rerank vs generation vs cold start)  
 → how memory systems should preserve provenance without becoming another summary blob  
