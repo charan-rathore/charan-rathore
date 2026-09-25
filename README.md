@@ -36,6 +36,12 @@ Reproduced it with a provider test that failed 10 of 10 runs, found the cache me
 
 [merged in yetone/magpie#74 →](https://github.com/yetone/magpie/pull/74) · Sep 2026
 
+*A key marked Off was still being called on every model refresh - a dead or disabled key could silently strip capabilities (like image input) from an active key's models.*
+
+Reproduced it with TestOffKeyIsNotFetched against an httptest server proving off keys got zero requests, found allKeys() still returning entries with Off:true, and fixed the refresh to use KeysOn() so disabled keys are never fetched.
+
+[merged in yetone/magpie#76 →](https://github.com/yetone/magpie/pull/76) · Sep 2026
+
 ---
 
 ## what I'm curious about
