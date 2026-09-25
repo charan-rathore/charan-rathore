@@ -29,18 +29,13 @@ memory · evaluation · product experiments
 
 *if it isn't merged, it isn't here.*
 
-**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar  
-*Two Codex accounts saved prompts in the same mtime tick, and one account's instructions silently disappeared.*
+**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
-Reproduced it with a provider test that failed 10 of 10 runs, found the cache merge that let a same-tick save replace the first account's list, and fixed it so both accounts keep their prompts.
+I fixed the Codex prompt cache so two accounts saving in the same mtime tick both keep their instructions. [merged in yetone/magpie#74 →](https://github.com/yetone/magpie/pull/74) · Sep 2026
 
-[merged in yetone/magpie#74 →](https://github.com/yetone/magpie/pull/74) · Sep 2026
+I stopped disabled keys from being fetched during model refresh, with a regression test proving zero requests to them. [merged in yetone/magpie#76 →](https://github.com/yetone/magpie/pull/76) · Sep 2026
 
-*A key marked Off was still being called on every model refresh - a dead or disabled key could silently strip capabilities (like image input) from an active key's models.*
-
-Reproduced it with TestOffKeyIsNotFetched against an httptest server proving off keys got zero requests, found allKeys() still returning entries with Off:true, and fixed the refresh to use KeysOn() so disabled keys are never fetched.
-
-[merged in yetone/magpie#76 →](https://github.com/yetone/magpie/pull/76) · Sep 2026
+I fixed the `TestSmartRouting` hour-boundary flake by anchoring its reset fixture within one hour, so the five-hour tie-breaker stays deterministic. [merged in yetone/magpie#77 →](https://github.com/yetone/magpie/pull/77) · Sep 2026
 
 ---
 
