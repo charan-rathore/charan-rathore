@@ -27,15 +27,14 @@ memory · evaluation · product experiments
 
 ## open source contributions
 
-Small fixes where correctness leaks into behavior.
+*if it isn't merged, it isn't here.*
 
-| Repo · PR | Fix | Status |
-| --- | --- | --- |
-| [yetone/magpie #74](https://github.com/yetone/magpie/pull/74) | Keep both Codex accounts' prompts when saves share an mtime. | ![merged](https://img.shields.io/badge/status-merged-2ea44f) |
-| [CopilotKit/openmuse #45](https://github.com/CopilotKit/openmuse/pull/45) | Make file-producing task retries idempotent. | ![open](https://img.shields.io/badge/status-open-0969da) |
-| [CopilotKit/CopilotKit #7453](https://github.com/CopilotKit/CopilotKit/pull/7453) | Upsert same-ID activity messages instead of accumulating copies. | ![open](https://img.shields.io/badge/status-open-0969da) |
-| [vLLM #57993](https://github.com/vllm-project/vllm/pull/57993) | Clarify validation for padded KV pages and kernel splitting. | ![open](https://img.shields.io/badge/status-open-0969da) |
-| [vLLM #57975](https://github.com/vllm-project/vllm/pull/57975) | Reject incomplete local safetensors metadata headers. | ![open](https://img.shields.io/badge/status-open-0969da) |
+**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar  
+*Two Codex accounts saved prompts in the same mtime tick, and one account's instructions silently disappeared.*
+
+Reproduced it with a provider test that failed 10 of 10 runs, found the cache merge that let a same-tick save replace the first account's list, and fixed it so both accounts keep their prompts.
+
+[merged in yetone/magpie#74 →](https://github.com/yetone/magpie/pull/74) · Sep 2026
 
 ---
 
