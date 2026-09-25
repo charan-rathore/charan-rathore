@@ -25,6 +25,20 @@ memory · evaluation · product experiments
 
 ---
 
+## open source contributions
+
+Small fixes where correctness leaks into behavior.
+
+| Repo · PR | Fix | Status |
+| --- | --- | --- |
+| [yetone/magpie #74](https://github.com/yetone/magpie/pull/74) | Keep both Codex accounts' prompts when saves share an mtime. | ![merged](https://img.shields.io/badge/status-merged-2ea44f) |
+| [CopilotKit/openmuse #45](https://github.com/CopilotKit/openmuse/pull/45) | Make file-producing task retries idempotent. | ![open](https://img.shields.io/badge/status-open-0969da) |
+| [CopilotKit/CopilotKit #7453](https://github.com/CopilotKit/CopilotKit/pull/7453) | Upsert same-ID activity messages instead of accumulating copies. | ![open](https://img.shields.io/badge/status-open-0969da) |
+| [vLLM #57993](https://github.com/vllm-project/vllm/pull/57993) | Clarify validation for padded KV pages and kernel splitting. | ![open](https://img.shields.io/badge/status-open-0969da) |
+| [vLLM #57975](https://github.com/vllm-project/vllm/pull/57975) | Reject incomplete local safetensors metadata headers. | ![open](https://img.shields.io/badge/status-open-0969da) |
+
+---
+
 ## what I'm curious about
 
 **01** Where does the latency actually go?  
