@@ -1,4 +1,8 @@
 <p align="center">
+  <a href="https://charan-tetris-portfolio.vercel.app/">
+    <img src="assets/1-portfolio-cover.png" width="100%" alt="Charan Rathore - explore my playable Systris portfolio">
+  </a>
+  <br>
   <img src="assets/wave.svg" width="100%" alt="">
 </p>
 
@@ -22,6 +26,12 @@ I am an **Analyst at MiQ, working across the MENA markets**. Previously, at Flip
 
 AI systems · retrieval · inference  
 memory · evaluation · product experiments
+
+<p>
+  <a href="https://github.com/charan-rathore?tab=repositories"><img alt="GitHub projects" src="https://img.shields.io/badge/GitHub-Projects-181717?logo=github"></a>
+  <a href="https://charan-tetris-portfolio.vercel.app/"><img alt="Play Systris" src="https://img.shields.io/badge/Portfolio-Play%20Systris-7b68ee"></a>
+  <a href="https://charanrathore.substack.com"><img alt="Read the writing" src="https://img.shields.io/badge/Substack-Writing-ff6719?logo=substack&logoColor=white"></a>
+</p>
 
 ---
 
@@ -79,6 +89,26 @@ Ground truth → commercial API bias → ensemble forecast → public leaderboar
 Multi-agent research with freshness, source agreement, versioned knowledge, and a confidence score you can inspect.
 
 [inspect the system →](https://github.com/charan-rathore/agentic-finance-advisor)
+
+**[infer-tab](https://github.com/charan-rathore/infer-tab)**  
+*What changes between prefill and decode?*
+
+CPU-only KV-cache experiments write traces of attention arithmetic and tensor bytes; a Next.js visualizer replays them. No model download needed.
+
+[run the experiments →](https://github.com/charan-rathore/infer-tab#quick-start)
+
+---
+
+## receipts
+
+| Work | One thing you can check |
+| --- | --- |
+| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | 31 live browser questions in the [audit](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md); RAGAS-style rubric, not an official RAGAS score. |
+| [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
+| [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
+| [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
+| [magpie](https://github.com/yetone/magpie) | Four merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78). |
+| [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
 
 ---
 
