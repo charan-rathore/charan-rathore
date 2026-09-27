@@ -49,6 +49,12 @@ I fixed the `TestSmartRouting` hour-boundary flake by anchoring its reset fixtur
 
 ---
 
+## the scenic route to main
+
+I stopped Hermes compression from copying long user messages into summaries; the maintainer carried my fix into the merged PR, with credit in its history. [merged via NousResearch/hermes-agent#124966 →](https://github.com/NousResearch/hermes-agent/pull/124966) · Sep 2026
+
+---
+
 ## what I'm curious about
 
 **01** Where does the latency actually go?  
