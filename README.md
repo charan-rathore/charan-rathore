@@ -71,6 +71,10 @@ I kept Gemini session affinity when the first turn omits its role, treating it a
 
 I gave the browser loop the visible text it was missing, so Jev can see a price or error before calling the job done. [merged in awlevin/typesafe-computer-use#23 →](https://github.com/awlevin/typesafe-computer-use/pull/23) · Sep 2026
 
+**[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
+
+I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
+
 ---
 
 ## the scenic route to main
