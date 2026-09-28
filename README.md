@@ -79,6 +79,8 @@ I stopped Hermes compression from copying long user messages into summaries; the
 
 I traced why Anthropic tool_result images died with a 400 on Chat translation; the maintainer shipped his own version of the fix in v0.1.348, crediting the find in the commit message. [fixed via yetone/magpie@504b470 →](https://github.com/yetone/magpie/commit/504b470f127c05a805093ada144e11b58376ddb0) · Sep 2026
 
+I made unanswered user text survive the next turn's persist override; after my PR was closed unmerged, the maintainer carried all four of my commits to main with authorship intact. [merged via NousResearch/hermes-agent#126615 →](https://github.com/NousResearch/hermes-agent/pull/126615) · Sep 2026
+
 ---
 
 ## what I'm curious about
