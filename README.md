@@ -43,6 +43,10 @@ memory · evaluation · product experiments
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
 
+**[harness-sdk](https://github.com/strands-agents/harness-sdk)** · build an agent harness and control it end-to-end
+
+I gave the OpenAI Responses model the location-source guard every other provider already had, so a document backed by an S3 location is skipped with a warning instead of crashing the request. [merged in strands-agents/harness-sdk#4706 →](https://github.com/strands-agents/harness-sdk/pull/4706) · Sep 2026
+
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
 I stopped Gemini ANY mode and Responses allowed_tools from leaking the full tool list, so an allowed subset stays a subset. [merged in yetone/magpie#164 →](https://github.com/yetone/magpie/pull/164) · Sep 2026
