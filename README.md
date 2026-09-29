@@ -95,6 +95,8 @@ I made unanswered user text survive the next turn's persist override; after my P
 
 I kept clarify and connection cards open for /btw side tasks; the maintainer's expanded take (/bg too, plus an attachment guard) carried two of my commits to main and co-credited me on his. [merged via NousResearch/hermes-agent#127051 →](https://github.com/NousResearch/hermes-agent/pull/127051) · Sep 2026
 
+I made scaffold generation read the vendored AIP specs instead of the sibling checkout; another contributor's PR carried the approach to main, crediting it in the description. [merged via agentproto/ts#1622 →](https://github.com/agentproto/ts/pull/1622) · Sep 2026
+
 ---
 
 ## what I'm curious about
