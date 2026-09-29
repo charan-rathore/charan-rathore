@@ -63,6 +63,10 @@ I gave Gemini's session-affinity fallback a hash of the conversation to stick to
 
 I cleared the 400 on Responses images referenced by file_id, so stored images survive translation to Chat routes. [merged in yetone/magpie#166 →](https://github.com/yetone/magpie/pull/166) · Sep 2026
 
+I stopped a multi-choice Chat stream from being flattened into one reply, so translation keeps the first readable choice instead of joining the rest. [merged in yetone/magpie#168 →](https://github.com/yetone/magpie/pull/168) · Sep 2026
+
+I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
+
 I made Gemini VALIDATED mode filter declarations down to the allowed list on translated routes, so the model only sees tools it may call. [merged in yetone/magpie#170 →](https://github.com/yetone/magpie/pull/170) · Sep 2026
 
 I kept Gemini session affinity when the first turn omits its role, treating it as the user turn Gemini says it is. [merged in yetone/magpie#171 →](https://github.com/yetone/magpie/pull/171) · Sep 2026
