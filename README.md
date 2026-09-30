@@ -39,6 +39,10 @@ memory · evaluation · product experiments
 
 *if it isn't merged, it isn't here.*
 
+**[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
+
+I stopped Vite's dependency optimizer from warning about packages that intentionally empty an import in the browser, so a `browser: false` mapping loads an empty module while genuinely unsupported imports still warn. [merged in vitejs/vite#23590 →](https://github.com/vitejs/vite/pull/23590) · Sep 2026
+
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
