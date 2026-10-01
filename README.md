@@ -2,8 +2,6 @@
 
 **@charan-rathore** · I build systems that make the pieces click.
 
-## hey, I'm Charan
-
 I care about two things that sound different but feel the same to me:
 
 1. **what a product is actually doing** when a user clicks something  
