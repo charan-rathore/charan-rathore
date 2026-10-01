@@ -63,6 +63,8 @@ I made a required tool choice that filters down to nothing callable fail with a 
 
 I stopped `--externals foo` from dropping `foobar`, so packages that share a name prefix with the target stay in the output while `foo.internal` stays internal. [merged in thebjorn/pydeps#290 →](https://github.com/thebjorn/pydeps/pull/290) · Oct 2026
 
+I made pydeps warn when a dependency diagram comes out with no edges, naming the target and pointing to filters, `--include-missing` and debug logging, instead of silently drawing a blank graph. [merged in thebjorn/pydeps#291 →](https://github.com/thebjorn/pydeps/pull/291) · Oct 2026
+
 **[bottleneck](https://github.com/pydata/bottleneck)** · fast NumPy array functions written in C
 
 I made the reducer memory test measure retained allocations with tracemalloc instead of process peak RSS, so unrelated growth stops failing it and a real leak can't hide under an old peak. [merged in pydata/bottleneck#602 →](https://github.com/pydata/bottleneck/pull/602) · Oct 2026
