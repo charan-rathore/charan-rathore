@@ -73,6 +73,8 @@ I made `check_circular` catch cycles that run through a custom `for_json()` or `
 
 I made `DirFileSystem` report async support from the filesystem it wraps, so a directory view over a synchronous backend no longer claims `async_impl`. [merged in fsspec/filesystem_spec#2213 →](https://github.com/fsspec/filesystem_spec/pull/2213) · Oct 2026
 
+I made `DirFileSystem` forward the `local_file` flag of the filesystem it wraps, so a directory view over local files passes the `open_local` check instead of failing it. [merged in fsspec/filesystem_spec#2212 →](https://github.com/fsspec/filesystem_spec/pull/2212) · Oct 2026
+
 **[bottleneck](https://github.com/pydata/bottleneck)** · fast NumPy array functions written in C
 
 I made the reducer memory test measure retained allocations with tracemalloc instead of process peak RSS, so unrelated growth stops failing it and a real leak can't hide under an old peak. [merged in pydata/bottleneck#602 →](https://github.com/pydata/bottleneck/pull/602) · Oct 2026
