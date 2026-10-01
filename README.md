@@ -1,10 +1,6 @@
-<p align="center">
-  <a href="https://charan-tetris-portfolio.vercel.app/">
-    <img src="assets/1-portfolio-cover.png" width="100%" alt="Charan Rathore - explore my playable Systris portfolio">
-  </a>
-  <br>
-  <img src="assets/wave.svg" width="100%" alt="">
-</p>
+# Charan Rathore
+
+**@charan-rathore** · I build systems that make the pieces click.
 
 ## hey, I'm Charan
 
