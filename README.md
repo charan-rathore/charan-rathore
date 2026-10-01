@@ -83,6 +83,14 @@ I made the reducer memory test measure retained allocations with tracemalloc ins
 
 I gave the browser loop the visible text it was missing, so Jev can see a price or error before calling the job done. [merged in awlevin/typesafe-computer-use#23 →](https://github.com/awlevin/typesafe-computer-use/pull/23) · Sep 2026
 
+**[pydantic-extra-types](https://github.com/pydantic/pydantic-extra-types)** · extra Pydantic types
+
+I made card number validation check the Verve ranges before the broader Discover prefix, so a Verve card in 650002 to 650027 no longer reports as Discover and a 17-digit one is rejected. [merged in pydantic/pydantic-extra-types#429 →](https://github.com/pydantic/pydantic-extra-types/pull/429) · Oct 2026
+
+I made `S3Path` keep newlines in object keys, so a key with a newline in its prefix is no longer silently trimmed to a different last key. [merged in pydantic/pydantic-extra-types#430 →](https://github.com/pydantic/pydantic-extra-types/pull/430) · Oct 2026
+
+I let `DomainStr` accept internal hyphens in punycode top-level domains, so delegated TLDs like `xn--vermgensberater-ctb` stop being rejected. [merged in pydantic/pydantic-extra-types#431 →](https://github.com/pydantic/pydantic-extra-types/pull/431) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
