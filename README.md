@@ -65,6 +65,14 @@ I stopped `--externals foo` from dropping `foobar`, so packages that share a nam
 
 I made pydeps warn when a dependency diagram comes out with no edges, naming the target and pointing to filters, `--include-missing` and debug logging, instead of silently drawing a blank graph. [merged in thebjorn/pydeps#291 →](https://github.com/thebjorn/pydeps/pull/291) · Oct 2026
 
+**[simplejson](https://github.com/simplejson/simplejson)** · simple, fast, extensible JSON encoder and decoder for Python
+
+I made `check_circular` catch cycles that run through a custom `for_json()` or `_asdict()`, so a self-returning object raises the usual circular-reference error instead of exhausting recursion, in both the Python and C encoders. [merged in simplejson/simplejson#390 →](https://github.com/simplejson/simplejson/pull/390) · Oct 2026
+
+**[filesystem_spec](https://github.com/fsspec/filesystem_spec)** · a specification that python filesystems should adhere to
+
+I made `DirFileSystem` report async support from the filesystem it wraps, so a directory view over a synchronous backend no longer claims `async_impl`. [merged in fsspec/filesystem_spec#2213 →](https://github.com/fsspec/filesystem_spec/pull/2213) · Oct 2026
+
 **[bottleneck](https://github.com/pydata/bottleneck)** · fast NumPy array functions written in C
 
 I made the reducer memory test measure retained allocations with tracemalloc instead of process peak RSS, so unrelated growth stops failing it and a real leak can't hide under an old peak. [merged in pydata/bottleneck#602 →](https://github.com/pydata/bottleneck/pull/602) · Oct 2026
@@ -74,7 +82,7 @@ I made the reducer memory test measure retained allocations with tracemalloc ins
 I gave the browser loop the visible text it was missing, so Jev can see a price or error before calling the job done. [merged in awlevin/typesafe-computer-use#23 →](https://github.com/awlevin/typesafe-computer-use/pull/23) · Sep 2026
 
 <details>
-<summary><b>more magpie fixes</b> · the other fifteen merged PRs</summary>
+<summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
@@ -107,6 +115,10 @@ I kept YAML top-level strings as strings, so a model named like `null` or `true`
 I kept large integers exact in the Cursor gateway's tool history, so IDs and results above 2^53 are no longer rounded when a call is replayed or its result is stored. [merged in yetone/magpie#434 →](https://github.com/yetone/magpie/pull/434) · Oct 2026
 
 I stopped inline comments from leaking into dotenv values in two readers, so `GEMINI_API_KEY=abc123 # my key` reads back as the key alone while quoted values keep their `#`. [merged in yetone/magpie#439 →](https://github.com/yetone/magpie/pull/439) · Oct 2026
+
+I made the Kimi model picker read TOML literal-quoted keys like `[models.'kimi k2.5']`, so models with spaces in their names stop being silently skipped. [merged in yetone/magpie#446 →](https://github.com/yetone/magpie/pull/446) · Oct 2026
+
+I escaped backslashes when quoting dotenv values on write, so a Windows path like `C:\new folder\tmp` round-trips instead of reading back with a newline and a tab. [merged in yetone/magpie#450 →](https://github.com/yetone/magpie/pull/450) · Oct 2026
 
 </details>
 
@@ -184,7 +196,7 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
-| [magpie](https://github.com/yetone/magpie) | Eighteen merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439). |
+| [magpie](https://github.com/yetone/magpie) | Twenty merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450). |
 | [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
 
 ---
