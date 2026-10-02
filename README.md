@@ -63,6 +63,10 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
+**[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
+
+I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
+
 **[pydeps](https://github.com/thebjorn/pydeps)** · python module dependency graphs
 
 I stopped `--externals foo` from dropping `foobar`, so packages that share a name prefix with the target stay in the output while `foo.internal` stays internal. [merged in thebjorn/pydeps#290 →](https://github.com/thebjorn/pydeps/pull/290) · Oct 2026
