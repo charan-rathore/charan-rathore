@@ -194,6 +194,8 @@ I made scaffold generation read the vendored AIP specs instead of the sibling ch
 ingestion → chunking → hybrid retrieval → rerank → citations → evaluation → observability  
 The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. The public demo currently uses temporary keyword/extractive mode; persistent hybrid retrieval and real-provider evaluation are next. The Python platform has separate deterministic CI benchmarks.
 
+Graph-first vector retrieval with weighted shortest-path ranking is now in main ([PR #9](https://github.com/charan-rathore/IntelliRAG/pull/9)).
+
 [try the live lab →](https://intellirag-live-own-track.vercel.app/) · [read the measured audit →](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md)
 
 **[memoRABLE](https://github.com/charan-rathore/memoRABLE)**  
