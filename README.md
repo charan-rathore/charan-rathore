@@ -111,6 +111,10 @@ I made `S3Path` keep newlines in object keys, so a key with a newline in its pre
 
 I let `DomainStr` accept internal hyphens in punycode top-level domains, so delegated TLDs like `xn--vermgensberater-ctb` stop being rejected. [merged in pydantic/pydantic-extra-types#431 →](https://github.com/pydantic/pydantic-extra-types/pull/431) · Oct 2026
 
+**[opencompany](https://github.com/tinyhumansai/opencompany)** · run a hive mind of agents to focus on a specific goal
+
+I removed the dead `ChannelAdapter::inbound()` stream that every adapter stubbed with an empty stream and nothing read, so the trait is now an honest outbound-only sink; a deprecated default keeps out-of-tree adapters compiling. [merged in tinyhumansai/opencompany#2408 →](https://github.com/tinyhumansai/opencompany/pull/2408) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
