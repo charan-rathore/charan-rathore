@@ -117,6 +117,8 @@ I removed the dead `ChannelAdapter::inbound()` stream that every adapter stubbed
 
 I made the reserved-path test expect the right status for `/acp` (404 without the feature, 405 with it) and added the missing CI lane for `server::routes`, so the check that only failed on unscoped runs now runs in CI. [merged in tinyhumansai/opencompany#2410 →](https://github.com/tinyhumansai/opencompany/pull/2410) · Oct 2026
 
+I stopped the empty-retry from sending the user message twice: on retry the agent reloaded the failed turn's saved transcript and re-added the message, so I suppress that autoload on the retry and added regression tests. [merged in tinyhumansai/opencompany#2421 →](https://github.com/tinyhumansai/opencompany/pull/2421) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
