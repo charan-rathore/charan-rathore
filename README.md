@@ -115,6 +115,8 @@ I let `DomainStr` accept internal hyphens in punycode top-level domains, so dele
 
 I removed the dead `ChannelAdapter::inbound()` stream that every adapter stubbed with an empty stream and nothing read, so the trait is now an honest outbound-only sink; a deprecated default keeps out-of-tree adapters compiling. [merged in tinyhumansai/opencompany#2408 →](https://github.com/tinyhumansai/opencompany/pull/2408) · Oct 2026
 
+I made the reserved-path test expect the right status for `/acp` (404 without the feature, 405 with it) and added the missing CI lane for `server::routes`, so the check that only failed on unscoped runs now runs in CI. [merged in tinyhumansai/opencompany#2410 →](https://github.com/tinyhumansai/opencompany/pull/2410) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
