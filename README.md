@@ -41,6 +41,10 @@ I stopped Vite's dependency optimizer from warning about packages that intention
 
 I restored blur validation on a `Controller` after `reset()`, so a field that lost its registration without rerendering registers again on blur and validates in `onTouched` mode instead of skipping the check. [merged in react-hook-form/react-hook-form#13817 →](https://github.com/react-hook-form/react-hook-form/pull/13817) · Oct 2026
 
+**[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
+
+I fixed multipart file uploads in Scalar's generated code examples, starting with the missing `fileName` on file params. The maintainer built on it so examples keep real file bytes and matching boundaries across clients. [merged in scalar/scalar#10460 →](https://github.com/scalar/scalar/pull/10460) · Oct 2026
+
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
