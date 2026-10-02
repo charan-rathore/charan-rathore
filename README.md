@@ -47,6 +47,10 @@ I gave the OpenAI Responses model the location-source guard every other provider
 
 I stopped a finished Gemini reply from crashing token accounting, so a final response without usage metadata completes normally instead of throwing. [merged in strands-agents/harness-sdk#4724 →](https://github.com/strands-agents/harness-sdk/pull/4724) · Sep 2026
 
+**[dynamo](https://github.com/ai-dynamo/dynamo)** · a datacenter scale distributed inference serving framework
+
+I fixed the 500 on vLLM-Omni video requests that set a negative prompt, by putting it in the prompt's dict entry instead of assigning it as an attribute. [merged in ai-dynamo/dynamo#15402 →](https://github.com/ai-dynamo/dynamo/pull/15402) · Oct 2026
+
 **[jedi](https://github.com/davidhalter/jedi)** · awesome autocompletion, static analysis and refactoring library for Python
 
 I stopped importing Jedi from changing the process-wide recursion limit; it now raises the limit only while its own parsing and inference run, then restores it, and never lowers a higher one. [merged in davidhalter/jedi#2113 →](https://github.com/davidhalter/jedi/pull/2113) · Oct 2026
