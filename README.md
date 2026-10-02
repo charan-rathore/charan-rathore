@@ -67,6 +67,12 @@ I fixed the 500 on vLLM-Omni video requests that set a negative prompt, by putti
 
 I stopped importing Jedi from changing the process-wide recursion limit; it now raises the limit only while its own parsing and inference run, then restores it, and never lowers a higher one. [merged in davidhalter/jedi#2113 →](https://github.com/davidhalter/jedi/pull/2113) · Oct 2026
 
+**[OpenBot](https://github.com/CopilotKit/OpenBot)** · a template for running your own agent bots, built to be cloned and made your own
+
+I stopped a malformed percent-escape in a stream URL from crashing the server with a 500; it now falls through to normal routing. [merged in CopilotKit/OpenBot#699 →](https://github.com/CopilotKit/OpenBot/pull/699) · Oct 2026
+
+I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
+
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
 I stopped Gemini ANY mode and Responses allowed_tools from leaking the full tool list, so an allowed subset stays a subset. [merged in yetone/magpie#164 →](https://github.com/yetone/magpie/pull/164) · Sep 2026
