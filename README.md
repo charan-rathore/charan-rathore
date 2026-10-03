@@ -147,6 +147,8 @@ I stopped the empty-retry from sending the user message twice: on retry the agen
 
 I made a setup answer cut off by the output limit report that instead of "model unreachable", and raised the setup output budget from 1,500 to 4,000 tokens so a reasoning model can think and still answer. [merged in tinyhumansai/opencompany#2556 →](https://github.com/tinyhumansai/opencompany/pull/2556) · Oct 2026
 
+I gave a setup run that stops on the output limit its own fallback reason, `output_budget_exhausted`, and both setup screens now say the model ran out of output room and offer a retry. [merged in tinyhumansai/opencompany#2562 →](https://github.com/tinyhumansai/opencompany/pull/2562) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
