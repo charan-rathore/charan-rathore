@@ -133,6 +133,8 @@ I made the reserved-path test expect the right status for `/acp` (404 without th
 
 I stopped the empty-retry from sending the user message twice: on retry the agent reloaded the failed turn's saved transcript and re-added the message, so I suppress that autoload on the retry and added regression tests. [merged in tinyhumansai/opencompany#2421 →](https://github.com/tinyhumansai/opencompany/pull/2421) · Oct 2026
 
+I made a setup answer cut off by the output limit report that instead of "model unreachable", and raised the setup output budget from 1,500 to 4,000 tokens so a reasoning model can think and still answer. [merged in tinyhumansai/opencompany#2556 →](https://github.com/tinyhumansai/opencompany/pull/2556) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
