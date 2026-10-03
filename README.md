@@ -45,6 +45,8 @@ I restored blur validation on a `Controller` after `reset()`, so a field that lo
 
 I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
 
+I fixed KV rules crashing on an `or` or `and` inside an f-string, such as `f"{a or b}"`, by splitting the boolean branch from the f-string branch so both operands are found and stay reactive. [merged in kivy/kivy#9393 →](https://github.com/kivy/kivy/pull/9393) · Oct 2026
+
 **[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
 
 I fixed multipart file uploads in Scalar's generated code examples, starting with the missing `fileName` on file params. The maintainer built on it so examples keep real file bytes and matching boundaries across clients. [merged in scalar/scalar#10460 →](https://github.com/scalar/scalar/pull/10460) · Oct 2026
