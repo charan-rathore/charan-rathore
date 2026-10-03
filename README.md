@@ -190,6 +190,8 @@ I kept clarify and connection cards open for /btw side tasks; the maintainer's e
 
 I made scaffold generation read the vendored AIP specs instead of the sibling checkout; another contributor's PR carried the approach to main, crediting it in the description. [merged via agentproto/ts#1622 →](https://github.com/agentproto/ts/pull/1622) · Sep 2026
 
+I made the gateway show an enabled platform whose adapter is missing in `hermes status`; my commit was rebase-merged to main with my authorship, inside a maintainer's larger PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
+
 ---
 
 ## what I'm curious about
