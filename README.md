@@ -45,6 +45,10 @@ I stopped Vite's dependency optimizer from warning about packages that intention
 
 I restored blur validation on a `Controller` after `reset()`, so a field that lost its registration without rerendering registers again on blur and validates in `onTouched` mode instead of skipping the check. [merged in react-hook-form/react-hook-form#13817 →](https://github.com/react-hook-form/react-hook-form/pull/13817) · Oct 2026
 
+**[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
+
+I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
+
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
 I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
