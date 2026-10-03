@@ -33,6 +33,10 @@ memory · evaluation · product experiments
 
 *if it isn't merged, it isn't here. the strongest fixes lead; the rest of the magpie history is folded below.*
 
+**[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
+
+I made the gateway show an enabled platform whose adapter is missing in `hermes status`. My commit is on main with my authorship, merged through a maintainer's salvage PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
+
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
 I stopped Vite's dependency optimizer from warning about packages that intentionally empty an import in the browser, so a `browser: false` mapping loads an empty module while genuinely unsupported imports still warn. [merged in vitejs/vite#23590 →](https://github.com/vitejs/vite/pull/23590) · Sep 2026
@@ -189,8 +193,6 @@ I made unanswered user text survive the next turn's persist override; after my P
 I kept clarify and connection cards open for /btw side tasks; the maintainer's expanded take (/bg too, plus an attachment guard) carried two of my commits to main and co-credited me on his. [merged via NousResearch/hermes-agent#127051 →](https://github.com/NousResearch/hermes-agent/pull/127051) · Sep 2026
 
 I made scaffold generation read the vendored AIP specs instead of the sibling checkout; another contributor's PR carried the approach to main, crediting it in the description. [merged via agentproto/ts#1622 →](https://github.com/agentproto/ts/pull/1622) · Sep 2026
-
-I made the gateway show an enabled platform whose adapter is missing in `hermes status`; my commit was rebase-merged to main with my authorship, inside a maintainer's larger PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
 
 ---
 
