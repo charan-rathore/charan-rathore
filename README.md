@@ -37,6 +37,8 @@ memory · evaluation · product experiments
 
 I made the gateway show an enabled platform whose adapter is missing in `hermes status`. My commit is on main with my authorship, merged through a maintainer's salvage PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
 
+I fixed every request to a llama.cpp server failing with HTTP 400 "failed to parse grammar", by dropping the `maxLength: 8000` from the clarify tool's `choices` schema; the runtime length check is untouched, and tests guard against any bound of 2000 or more. [merged in NousResearch/hermes-agent#131286 →](https://github.com/NousResearch/hermes-agent/pull/131286) · Oct 2026
+
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
 I stopped Vite's dependency optimizer from warning about packages that intentionally empty an import in the browser, so a `browser: false` mapping loads an empty module while genuinely unsupported imports still warn. [merged in vitejs/vite#23590 →](https://github.com/vitejs/vite/pull/23590) · Sep 2026
