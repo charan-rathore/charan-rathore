@@ -158,7 +158,7 @@ I gave a setup run that stops on the output limit its own fallback reason, `outp
 I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
 
 <details>
-<summary><b>more magpie fixes</b> · the other twenty merged PRs</summary>
+<summary><b>more magpie fixes</b> · the other twenty-one merged PRs</summary>
 
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
@@ -202,6 +202,8 @@ I kept a CRLF file's line endings when the dotenv, TOML and top-level YAML sette
 I did the same for JSON and JSONC edits, so `SetJSON` on a CRLF file keeps `\r\n` on the lines it adds. [merged in yetone/magpie#830 →](https://github.com/yetone/magpie/pull/830) · Oct 2026
 
 I did the same for the YAML round trip, so `SetYAML`, `DelYAML` and `EditYAMLStrings` no longer rewrite every line of a CRLF file as LF. [merged in yetone/magpie#831 →](https://github.com/yetone/magpie/pull/831) · Oct 2026
+
+I made a dotenv key that appears twice read and write its last line, as dotenv does, so wiring Gemini CLI to the gateway edits the line the CLI actually uses. [merged in yetone/magpie#832 →](https://github.com/yetone/magpie/pull/832) · Oct 2026
 
 </details>
 
@@ -281,7 +283,7 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
-| [magpie](https://github.com/yetone/magpie) | Twenty-three merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831). |
+| [magpie](https://github.com/yetone/magpie) | Twenty-four merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832). |
 | [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
 
 ---
