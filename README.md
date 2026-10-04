@@ -151,6 +151,10 @@ I made a setup answer cut off by the output limit report that instead of "model 
 
 I gave a setup run that stops on the output limit its own fallback reason, `output_budget_exhausted`, and both setup screens now say the model ran out of output room and offer a retry. [merged in tinyhumansai/opencompany#2562 →](https://github.com/tinyhumansai/opencompany/pull/2562) · Oct 2026
 
+**[click-repl](https://github.com/click-contrib/click-repl)** · subcommand REPL for click apps
+
+I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
+
 <details>
 <summary><b>more magpie fixes</b> · the other seventeen merged PRs</summary>
 
