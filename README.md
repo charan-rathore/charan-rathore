@@ -109,6 +109,10 @@ I made a required tool choice that filters down to nothing callable fail with a 
 
 I fixed a race where the server and worker starting together on a fresh data directory could crash on the session-signing key; the key is now published with an atomic hard link and the loser reads the winner's. [merged in CopilotKit/openmuse#125 →](https://github.com/CopilotKit/openmuse/pull/125) · Oct 2026
 
+I stopped one bad attachment filename with an unpaired surrogate from breaking the whole Gmail inbox listing and from failing sends, by replacing the bad character before encoding. [merged in CopilotKit/openmuse#121 →](https://github.com/CopilotKit/openmuse/pull/121) · Oct 2026
+
+I made the spending analysis reject a CSV with a repeated `date`, `description`, `amount` or `category` header, so it no longer silently reports one of two conflicting amounts. [merged in CopilotKit/openmuse#114 →](https://github.com/CopilotKit/openmuse/pull/114) · Oct 2026
+
 **[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
 
 I made the server accept the key name the Copilotkit CLI writes, `CPK_INTELLIGENCE_API_KEY`, as well as `INTELLIGENCE_API_KEY`, so setup no longer stays incomplete after a successful CLI login. [merged in CopilotKit/OpenDots#72 →](https://github.com/CopilotKit/OpenDots/pull/72) · Oct 2026
