@@ -105,6 +105,12 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
+**[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
+
+I made the server accept the key name the Copilotkit CLI writes, `CPK_INTELLIGENCE_API_KEY`, as well as `INTELLIGENCE_API_KEY`, so setup no longer stays incomplete after a successful CLI login. [merged in CopilotKit/OpenDots#72 →](https://github.com/CopilotKit/OpenDots/pull/72) · Oct 2026
+
+I stopped a store error in the background runner's scheduler tick from rejecting unhandled and taking down the always-on server; later ticks now keep running. [merged in CopilotKit/OpenDots#12 →](https://github.com/CopilotKit/OpenDots/pull/12) · Oct 2026
+
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
 I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
