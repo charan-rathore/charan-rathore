@@ -15,15 +15,13 @@ I am an **Analyst at MiQ, working across the MENA markets**. Previously, at Flip
 
 ## currently
 
-**MiQ · Analyst · MENA markets**<br>
-[Explore my Systris portfolio →](https://charan-tetris-portfolio.vercel.app/)
+**MiQ · Analyst · MENA markets**
 
 AI systems · retrieval · inference  
 memory · evaluation · product experiments
 
 <p>
   <a href="https://github.com/charan-rathore?tab=repositories"><img alt="GitHub projects" src="https://img.shields.io/badge/GitHub-Projects-181717?logo=github"></a>
-  <a href="https://charan-tetris-portfolio.vercel.app/"><img alt="Play Systris" src="https://img.shields.io/badge/Portfolio-Play%20Systris-7b68ee"></a>
   <a href="https://charanrathore.substack.com"><img alt="Read the writing" src="https://img.shields.io/badge/Substack-Writing-ff6719?logo=substack&logoColor=white"></a>
 </p>
 
@@ -355,8 +353,6 @@ Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in
   <a href="https://github.com/charan-rathore">GitHub</a>
   ·
   <a href="https://charanrathore.substack.com">Substack</a>
-  ·
-  <a href="https://charan-tetris-portfolio.vercel.app/">Portfolio</a>
   ·
   <a href="mailto:ra7hore.charan@gmail.com">Email</a>
 </p>
