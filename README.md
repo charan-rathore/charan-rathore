@@ -49,6 +49,8 @@ I restored blur validation on a `Controller` after `reset()`, so a field that lo
 
 I stopped removing a row from an outer `useFieldArray` with `shouldUnregister` on from wiping the nested field array values of the row that shifts into its place, by skipping the nested unregister while the parent reindexes. [merged in react-hook-form/react-hook-form#13828 →](https://github.com/react-hook-form/react-hook-form/pull/13828) · Oct 2026
 
+I fixed `useFieldArray.remove` so duplicated indexes like `remove([1, 1])` no longer remove extra rows, and the array you pass in is no longer sorted in place. [merged in react-hook-form/react-hook-form#13830 →](https://github.com/react-hook-form/react-hook-form/pull/13830) · Oct 2026
+
 **[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
 
 I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
