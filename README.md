@@ -123,6 +123,10 @@ I made the Dot turn that runs past the 90 second limit end with a clear time-lim
 
 I made the "Ready for your review" card render Markdown tables as tables instead of raw pipe text, by adding GFM support. [merged in CopilotKit/OpenDots#78 →](https://github.com/CopilotKit/OpenDots/pull/78) · Oct 2026
 
+I made a WebRTC voice call wait five seconds on `disconnected` before hanging up, so a short network blip that recovers no longer ends the call; `failed` still ends it at once. [merged in CopilotKit/OpenDots#26 →](https://github.com/CopilotKit/OpenDots/pull/26) · Oct 2026
+
+I made the red connection banner clear once polling recovers after an API restart; action errors still need a dismiss. [merged in CopilotKit/OpenDots#73 →](https://github.com/CopilotKit/OpenDots/pull/73) · Oct 2026
+
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
 I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
