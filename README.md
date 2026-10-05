@@ -105,11 +105,19 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
+**[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
+
+I fixed a race where the server and worker starting together on a fresh data directory could crash on the session-signing key; the key is now published with an atomic hard link and the loser reads the winner's. [merged in CopilotKit/openmuse#125 →](https://github.com/CopilotKit/openmuse/pull/125) · Oct 2026
+
 **[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
 
 I made the server accept the key name the Copilotkit CLI writes, `CPK_INTELLIGENCE_API_KEY`, as well as `INTELLIGENCE_API_KEY`, so setup no longer stays incomplete after a successful CLI login. [merged in CopilotKit/OpenDots#72 →](https://github.com/CopilotKit/OpenDots/pull/72) · Oct 2026
 
 I stopped a store error in the background runner's scheduler tick from rejecting unhandled and taking down the always-on server; later ticks now keep running. [merged in CopilotKit/OpenDots#12 →](https://github.com/CopilotKit/OpenDots/pull/12) · Oct 2026
+
+I made the Dot turn that runs past the 90 second limit end with a clear time-limit error instead of an incomplete stream blamed on the runtime connection. [merged in CopilotKit/OpenDots#85 →](https://github.com/CopilotKit/OpenDots/pull/85) · Oct 2026
+
+I made the "Ready for your review" card render Markdown tables as tables instead of raw pipe text, by adding GFM support. [merged in CopilotKit/OpenDots#78 →](https://github.com/CopilotKit/OpenDots/pull/78) · Oct 2026
 
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
