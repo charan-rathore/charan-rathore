@@ -127,6 +127,10 @@ I made a WebRTC voice call wait five seconds on `disconnected` before hanging up
 
 I made the red connection banner clear once polling recovers after an API restart; action errors still need a dismiss. [merged in CopilotKit/OpenDots#73 →](https://github.com/CopilotKit/OpenDots/pull/73) · Oct 2026
 
+I made an unknown or foreign page conversation id return a 404 instead of a generic 503 that blamed the Intelligence setup; real Intelligence errors still return 503. [merged in CopilotKit/OpenDots#14 →](https://github.com/CopilotKit/OpenDots/pull/14) · Oct 2026
+
+I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
+
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
 I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
