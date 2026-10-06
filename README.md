@@ -81,6 +81,8 @@ I kept every value of a repeated form field in the PHP Guzzle examples, so `tag=
 
 I escaped strings in the C# HttpClient examples, so a URL, header or form value with a quote or backslash still compiles and sends as written. [merged in scalar/scalar#10503 →](https://github.com/scalar/scalar/pull/10503) · Oct 2026
 
+I kept multiline bodies and unusual header or form names valid in the clj-http examples, by writing line breaks as escapes and falling back to string keys when a name is not a valid keyword. [merged in scalar/scalar#10507 →](https://github.com/scalar/scalar/pull/10507) · Oct 2026
+
 **[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
 
 I fixed a root value of `false`, `0` or `''` failing validation, so a boolean form with `false` no longer errors with "must be boolean" and can submit. [merged in rjsf-team/react-jsonschema-form#5423 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5423) · Oct 2026
