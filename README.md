@@ -83,6 +83,8 @@ I escaped strings in the C# HttpClient examples, so a URL, header or form value 
 
 I kept multiline bodies and unusual header or form names valid in the clj-http examples, by writing line breaks as escapes and falling back to string keys when a name is not a valid keyword. [merged in scalar/scalar#10507 →](https://github.com/scalar/scalar/pull/10507) · Oct 2026
 
+I made the raw HTTP/1.1 examples send the body for JSON media types with parameters and for text bodies, instead of sending a Content-Type header with no body behind it. [merged in scalar/scalar#10510 →](https://github.com/scalar/scalar/pull/10510) · Oct 2026
+
 **[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
 
 I fixed a root value of `false`, `0` or `''` failing validation, so a boolean form with `false` no longer errors with "must be boolean" and can submit. [merged in rjsf-team/react-jsonschema-form#5423 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5423) · Oct 2026
@@ -152,6 +154,10 @@ I made the red connection banner clear once polling recovers after an API restar
 I made an unknown or foreign page conversation id return a 404 instead of a generic 503 that blamed the Intelligence setup; real Intelligence errors still return 503. [merged in CopilotKit/OpenDots#14 →](https://github.com/CopilotKit/OpenDots/pull/14) · Oct 2026
 
 I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
+
+**[tududi](https://github.com/chrisvel/tududi)** · a calm, open system for organizing life and work - tasks, projects, notes, areas and smart workflows
+
+I fixed CalDAV pushes to Radicale failing with a 412 and the task getting stuck as a conflict, by sending the stored ETag as a properly quoted entity-tag in `If-Match`. [merged in chrisvel/tududi#1779 →](https://github.com/chrisvel/tududi/pull/1779) · Oct 2026
 
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
