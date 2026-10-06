@@ -75,6 +75,8 @@ I fixed a root value of `false`, `0` or `''` failing validation, so a boolean fo
 
 I made the build refuse to run when cleaning the output directory would delete the public assets inside it, so it fails with an error naming both paths instead of reporting success on an empty deploy. [merged in nitrojs/nitro#4685 →](https://github.com/nitrojs/nitro/pull/4685) · Oct 2026
 
+I fixed the Vercel preset ignoring a `redirect: false` rule without headers, so those paths no longer get pulled into broader redirects in the build output. [merged in nitrojs/nitro#4728 →](https://github.com/nitrojs/nitro/pull/4728) · Oct 2026
+
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
