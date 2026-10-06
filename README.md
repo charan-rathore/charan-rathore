@@ -57,6 +57,8 @@ I made `useForm` reset an option to its default when it is left out of the props
 
 I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
 
+I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the DOM when a name or className is missing; the attribute is now left out, and Brush aria labels fall back to the dataKey value. [merged in recharts/recharts#7914 →](https://github.com/recharts/recharts/pull/7914) · Oct 2026
+
 I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
 
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
