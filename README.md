@@ -57,6 +57,8 @@ I made `useForm` reset an option to its default when it is left out of the props
 
 I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
 
+I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
+
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
 I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
@@ -66,6 +68,16 @@ I fixed KV rules crashing on an `or` or `and` inside an f-string, such as `f"{a 
 **[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
 
 I fixed multipart file uploads in Scalar's generated code examples, starting with the missing `fileName` on file params. The maintainer built on it so examples keep real file bytes and matching boundaries across clients. [merged in scalar/scalar#10460 →](https://github.com/scalar/scalar/pull/10460) · Oct 2026
+
+I escaped quotes and backslashes in the PHP cURL example bodies, so a copied snippet with an apostrophe in the body is still valid PHP. [merged in scalar/scalar#10495 →](https://github.com/scalar/scalar/pull/10495) · Oct 2026
+
+I escaped special characters in the Dart HTTP examples and taught them to send plain text bodies, so copied Dart code compiles and includes the body it should. [merged in scalar/scalar#10496 →](https://github.com/scalar/scalar/pull/10496) · Oct 2026
+
+I made the Python Requests and HTTPX examples send bodies for JSON media types with parameters and for text types, instead of dropping them. [merged in scalar/scalar#10497 →](https://github.com/scalar/scalar/pull/10497) · Oct 2026
+
+I kept every value of a repeated form field in the PHP Guzzle examples, so `tag=a&tag=b` arrives with both values instead of only the last. [merged in scalar/scalar#10499 →](https://github.com/scalar/scalar/pull/10499) · Oct 2026
+
+I escaped strings in the C# HttpClient examples, so a URL, header or form value with a quote or backslash still compiles and sends as written. [merged in scalar/scalar#10503 →](https://github.com/scalar/scalar/pull/10503) · Oct 2026
 
 **[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
 
