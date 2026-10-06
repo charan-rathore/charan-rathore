@@ -139,6 +139,8 @@ I made a required tool choice that filters down to nothing callable fail with a 
 
 **[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
 
+I made a price watch recognize amounts written with a space after the dollar sign, so `$ 9.99` trips the same threshold as `$9.99`. [merged in CopilotKit/openmuse#126 →](https://github.com/CopilotKit/openmuse/pull/126) · Oct 2026
+
 I made a pasted transaction CSV that starts with a byte order mark parse instead of failing with "Invalid quoted CSV field", by dropping the mark before parsing. [merged in CopilotKit/openmuse#146 →](https://github.com/CopilotKit/openmuse/pull/146) · Oct 2026
 
 I fixed a race where the server and worker starting together on a fresh data directory could crash on the session-signing key; the key is now published with an atomic hard link and the loser reads the winner's. [merged in CopilotKit/openmuse#125 →](https://github.com/CopilotKit/openmuse/pull/125) · Oct 2026
@@ -148,6 +150,12 @@ I stopped one bad attachment filename with an unpaired surrogate from breaking t
 I made the spending analysis reject a CSV with a repeated `date`, `description`, `amount` or `category` header, so it no longer silently reports one of two conflicting amounts. [merged in CopilotKit/openmuse#114 →](https://github.com/CopilotKit/openmuse/pull/114) · Oct 2026
 
 **[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
+
+I kept balanced brackets in URLs inside research prompts, so a link like `Rust_(programming_language)` is read whole instead of cut at the parenthesis. [merged in CopilotKit/OpenDots#99 →](https://github.com/CopilotKit/OpenDots/pull/99) · Oct 2026
+
+I made the workspace routes answer 404 for a conversation, call or Dot that does not exist, instead of a 503 that sent the user to check the server configuration. [merged in CopilotKit/OpenDots#98 →](https://github.com/CopilotKit/OpenDots/pull/98) · Oct 2026
+
+I made the home composer submit on Enter like the in-thread one, with Shift+Enter still adding a new line. [merged in CopilotKit/OpenDots#95 →](https://github.com/CopilotKit/OpenDots/pull/95) · Oct 2026
 
 I made the server accept the key name the Copilotkit CLI writes, `CPK_INTELLIGENCE_API_KEY`, as well as `INTELLIGENCE_API_KEY`, so setup no longer stays incomplete after a successful CLI login. [merged in CopilotKit/OpenDots#72 →](https://github.com/CopilotKit/OpenDots/pull/72) · Oct 2026
 
