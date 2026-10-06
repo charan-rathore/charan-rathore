@@ -117,6 +117,14 @@ I stopped importing Jedi from changing the process-wide recursion limit; it now 
 
 **[OpenBot](https://github.com/CopilotKit/OpenBot)** · a template for running your own agent bots, built to be cloned and made your own
 
+I stopped the Bot's computer reaching the cloud metadata address through the NAT64 prefix, by unwrapping a `64:ff9b::/96` address to the IPv4 it carries before the deny check. [merged in CopilotKit/OpenBot#745 →](https://github.com/CopilotKit/OpenBot/pull/745) · Oct 2026
+
+I stopped a public name that merely starts with `127.` from counting as loopback for `OPENBOT_SINGLE_USER`, so the no-sign-in administrator can no longer be served on a public address. [merged in CopilotKit/OpenBot#744 →](https://github.com/CopilotKit/OpenBot/pull/744) · Oct 2026
+
+I made the Bot's browser refuse every name under `.localhost`, which resolves to loopback without asking DNS, not just the bare name. [merged in CopilotKit/OpenBot#743 →](https://github.com/CopilotKit/OpenBot/pull/743) · Oct 2026
+
+I made command telemetry redact the curl password in every spelling `-u` allows, so `-uuser:pass`, `--user=user:pass` and quoted pairs no longer keep it in clear. [merged in CopilotKit/OpenBot#742 →](https://github.com/CopilotKit/OpenBot/pull/742) · Oct 2026
+
 I stopped a malformed percent-escape in a stream URL from crashing the server with a 500; it now falls through to normal routing. [merged in CopilotKit/OpenBot#699 →](https://github.com/CopilotKit/OpenBot/pull/699) · Oct 2026
 
 I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
@@ -130,6 +138,8 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 **[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
+
+I made a pasted transaction CSV that starts with a byte order mark parse instead of failing with "Invalid quoted CSV field", by dropping the mark before parsing. [merged in CopilotKit/openmuse#146 →](https://github.com/CopilotKit/openmuse/pull/146) · Oct 2026
 
 I fixed a race where the server and worker starting together on a fresh data directory could crash on the session-signing key; the key is now published with an atomic hard link and the loser reads the winner's. [merged in CopilotKit/openmuse#125 →](https://github.com/CopilotKit/openmuse/pull/125) · Oct 2026
 
