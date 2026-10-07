@@ -207,6 +207,10 @@ I made the reducer memory test measure retained allocations with tracemalloc ins
 
 I gave the browser loop the visible text it was missing, so Jev can see a price or error before calling the job done. [merged in awlevin/typesafe-computer-use#23 →](https://github.com/awlevin/typesafe-computer-use/pull/23) · Sep 2026
 
+**[astroid](https://github.com/pylint-dev/astroid)** · a common base representation of python source code for pylint and other projects
+
+I taught astroid to infer `values += (1, 2)` on a list, so augmented concatenation with a tuple infers a list instead of `Uninferable`. [merged in pylint-dev/astroid#3357 →](https://github.com/pylint-dev/astroid/pull/3357) · Oct 2026
+
 **[pydantic-extra-types](https://github.com/pydantic/pydantic-extra-types)** · extra Pydantic types
 
 I made card number validation check the Verve ranges before the broader Discover prefix, so a Verve card in 650002 to 650027 no longer reports as Discover and a 17-digit one is rejected. [merged in pydantic/pydantic-extra-types#429 →](https://github.com/pydantic/pydantic-extra-types/pull/429) · Oct 2026
