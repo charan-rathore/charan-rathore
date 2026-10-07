@@ -95,6 +95,10 @@ I fixed a root value of `false`, `0` or `''` failing validation, so a boolean fo
 
 I fixed a false "Circular reference ($ref cycle) detected" notice when `dependencies` `oneOf` branches share a definition, by resolving each branch against its own recurse list so a sibling's resolved ref no longer reads as a cycle. [merged in rjsf-team/react-jsonschema-form#5435 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5435) · Oct 2026
 
+**[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
+
+I fixed data URIs with parameters like `charset=utf-8` raising ContentError and parameterless ones losing their media type, and tightened media detection so plain text no longer reads as BMP or arbitrary XML as SVG. [merged in microsoft/agent-framework#8918 →](https://github.com/microsoft/agent-framework/pull/8918) · Oct 2026
+
 **[nitro](https://github.com/nitrojs/nitro)** · next generation server toolkit
 
 I made the build refuse to run when cleaning the output directory would delete the public assets inside it, so it fails with an error naming both paths instead of reporting success on an empty deploy. [merged in nitrojs/nitro#4685 →](https://github.com/nitrojs/nitro/pull/4685) · Oct 2026
