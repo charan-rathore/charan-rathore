@@ -89,6 +89,8 @@ I made the raw HTTP/1.1 examples send the body for JSON media types with paramet
 
 I fixed a root value of `false`, `0` or `''` failing validation, so a boolean form with `false` no longer errors with "must be boolean" and can submit. [merged in rjsf-team/react-jsonschema-form#5423 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5423) · Oct 2026
 
+I fixed a false "Circular reference ($ref cycle) detected" notice when `dependencies` `oneOf` branches share a definition, by resolving each branch against its own recurse list so a sibling's resolved ref no longer reads as a cycle. [merged in rjsf-team/react-jsonschema-form#5435 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5435) · Oct 2026
+
 **[nitro](https://github.com/nitrojs/nitro)** · next generation server toolkit
 
 I made the build refuse to run when cleaning the output directory would delete the public assets inside it, so it fails with an error naming both paths instead of reporting success on an empty deploy. [merged in nitrojs/nitro#4685 →](https://github.com/nitrojs/nitro/pull/4685) · Oct 2026
