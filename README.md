@@ -209,6 +209,8 @@ I made `DirFileSystem` report async support from the filesystem it wraps, so a d
 
 I made `DirFileSystem` forward the `local_file` flag of the filesystem it wraps, so a directory view over local files passes the `open_local` check instead of failing it. [merged in fsspec/filesystem_spec#2212 →](https://github.com/fsspec/filesystem_spec/pull/2212) · Oct 2026
 
+I stopped `sync()` from hanging forever when the default fsspec IO thread has already stopped, so it raises `RuntimeError` instead, and stays quiet during interpreter shutdown. [merged in fsspec/filesystem_spec#2210 →](https://github.com/fsspec/filesystem_spec/pull/2210) · Oct 2026
+
 **[bottleneck](https://github.com/pydata/bottleneck)** · fast NumPy array functions written in C
 
 I made the reducer memory test measure retained allocations with tracemalloc instead of process peak RSS, so unrelated growth stops failing it and a real leak can't hide under an old peak. [merged in pydata/bottleneck#602 →](https://github.com/pydata/bottleneck/pull/602) · Oct 2026
