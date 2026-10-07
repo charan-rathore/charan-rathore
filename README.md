@@ -55,6 +55,10 @@ I made `useForm` reset an option to its default when it is left out of the props
 
 I stopped `getValues` with `dirtyFields` from throwing when a form has a field literally named `hasOwnProperty`, so the dirty check no longer mistakes the field's value for the Object method. [merged in react-hook-form/react-hook-form#13832 →](https://github.com/react-hook-form/react-hook-form/pull/13832) · Oct 2026
 
+I fixed blur and `setValue` for fields named after `Object.prototype` members like `hasOwnProperty`, so they get marked touched instead of crashing the touched-fields lookup. [merged in react-hook-form/react-hook-form#13833 →](https://github.com/react-hook-form/react-hook-form/pull/13833) · Oct 2026
+
+I made `cloneObject` keep the length of sparse arrays, so a sparse array passed through `defaultValues` or `reset` no longer collapses to `[]` on the way back out of `getValues`. [merged in react-hook-form/react-hook-form#13834 →](https://github.com/react-hook-form/react-hook-form/pull/13834) · Oct 2026
+
 **[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
 
 I made the model response cache key include the response schema, so two output classes with different fields no longer share a cached answer for identical messages. [merged in agno-agi/agno#10621 →](https://github.com/agno-agi/agno/pull/10621) · Oct 2026
