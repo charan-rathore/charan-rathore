@@ -117,6 +117,8 @@ I stopped a finished Gemini reply from crashing token accounting, so a final res
 
 I made the Ollama model forward numeric `keep_alive` values like `0`, which were dropped as falsy, so "unload immediately" now reaches the server. [merged in strands-agents/harness-sdk#4725 →](https://github.com/strands-agents/harness-sdk/pull/4725) · Oct 2026
 
+I mapped Gemini's RECITATION finish reason to `content_filtered` instead of `end_turn`, so a response cut off for recitation no longer reads as a normal completion. [merged in strands-agents/harness-sdk#4898 →](https://github.com/strands-agents/harness-sdk/pull/4898) · Oct 2026
+
 **[dynamo](https://github.com/ai-dynamo/dynamo)** · a datacenter scale distributed inference serving framework
 
 I fixed the 500 on vLLM-Omni video requests that set a negative prompt, by putting it in the prompt's dict entry instead of assigning it as an attribute. [merged in ai-dynamo/dynamo#15402 →](https://github.com/ai-dynamo/dynamo/pull/15402) · Oct 2026
