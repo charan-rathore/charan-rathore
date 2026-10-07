@@ -53,6 +53,10 @@ I fixed `useFieldArray.remove` so duplicated indexes like `remove([1, 1])` no lo
 
 I made `useForm` reset an option to its default when it is left out of the props on a later render, so a dropped `resolver` stops running on submit and `mode` goes back to `onSubmit`. [merged in react-hook-form/react-hook-form#13831 →](https://github.com/react-hook-form/react-hook-form/pull/13831) · Oct 2026
 
+**[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
+
+I made the model response cache key include the response schema, so two output classes with different fields no longer share a cached answer for identical messages. [merged in agno-agi/agno#10621 →](https://github.com/agno-agi/agno/pull/10621) · Oct 2026
+
 **[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
 
 I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
