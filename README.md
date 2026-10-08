@@ -115,6 +115,10 @@ I made the build refuse to run when cleaning the output directory would delete t
 
 I fixed the Vercel preset ignoring a `redirect: false` rule without headers, so those paths no longer get pulled into broader redirects in the build output. [merged in nitrojs/nitro#4728 →](https://github.com/nitrojs/nitro/pull/4728) · Oct 2026
 
+**[kedro](https://github.com/kedro-org/kedro)** · a toolbox for production-ready data science
+
+I fixed unnamed pipeline nodes built from callable objects failing with AttributeError, so a callable without `__name__` now gets its class name, including under `functools.partial`. [merged in kedro-org/kedro#5797 →](https://github.com/kedro-org/kedro/pull/5797) · Oct 2026
+
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
