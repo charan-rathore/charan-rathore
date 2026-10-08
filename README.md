@@ -31,13 +31,57 @@ memory · evaluation · product experiments
 
 ## open source contributions
 
-*if it isn't merged, it isn't here. the strongest fixes lead; the rest of the magpie history is folded below.*
+*if it isn't merged, it isn't here. badges up top; every fix in words folded below.*
+
+<p>
+  <a href="https://github.com/NousResearch/hermes-agent"><img alt="hermes-agent · 2 merged PRs" src="https://img.shields.io/badge/hermes--agent-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 4 merged PRs" src="https://img.shields.io/badge/recharts-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 2 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 2 merged PRs" src="https://img.shields.io/badge/nitro-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 1 merged PR" src="https://img.shields.io/badge/kedro-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 4 merged PRs" src="https://img.shields.io/badge/harness--sdk-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/yetone/magpie"><img alt="magpie · 25 merged PRs" src="https://img.shields.io/badge/magpie-25_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 5 merged PRs" src="https://img.shields.io/badge/openmuse-5_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 1 merged PR" src="https://img.shields.io/badge/urwid-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 3 merged PRs" src="https://img.shields.io/badge/filesystem__spec-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/pydata/bottleneck"><img alt="bottleneck · 1 merged PR" src="https://img.shields.io/badge/bottleneck-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/awlevin/typesafe-computer-use"><img alt="typesafe-computer-use · 1 merged PR" src="https://img.shields.io/badge/typesafe--computer--use-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/pylint-dev/astroid"><img alt="astroid · 1 merged PR" src="https://img.shields.io/badge/astroid-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/pydantic/pydantic-extra-types"><img alt="pydantic-extra-types · 3 merged PRs" src="https://img.shields.io/badge/pydantic--extra--types-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/tinyhumansai/opencompany"><img alt="opencompany · 5 merged PRs" src="https://img.shields.io/badge/opencompany-5_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/click-contrib/click-repl"><img alt="click-repl · 1 merged PR" src="https://img.shields.io/badge/click--repl-1_merged-181717?logo=github&logoColor=white"></a>
+</p>
 
 **[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
 
 I made the gateway show an enabled platform whose adapter is missing in `hermes status`. My commit is on main with my authorship, merged through a maintainer's salvage PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
 
 I fixed every request to a llama.cpp server failing with HTTP 400 "failed to parse grammar", by dropping the `maxLength: 8000` from the clarify tool's `choices` schema; the runtime length check is untouched, and tests guard against any bound of 2000 or more. [merged in NousResearch/hermes-agent#131286 →](https://github.com/NousResearch/hermes-agent/pull/131286) · Oct 2026
+
+**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
+
+I stopped Gemini ANY mode and Responses allowed_tools from leaking the full tool list, so an allowed subset stays a subset. [merged in yetone/magpie#164 →](https://github.com/yetone/magpie/pull/164) · Sep 2026
+
+I made Gemini VALIDATED mode filter declarations down to the allowed list on translated routes, so the model only sees tools it may call. [merged in yetone/magpie#170 →](https://github.com/yetone/magpie/pull/170) · Sep 2026
+
+I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
+
+<details>
+<summary><b>every merged fix, in words</b> · the other 28 repos, plus the full magpie history</summary>
 
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
@@ -154,14 +198,6 @@ I made command telemetry redact the curl password in every spelling `-u` allows,
 I stopped a malformed percent-escape in a stream URL from crashing the server with a 500; it now falls through to normal routing. [merged in CopilotKit/OpenBot#699 →](https://github.com/CopilotKit/OpenBot/pull/699) · Oct 2026
 
 I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
-
-**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
-
-I stopped Gemini ANY mode and Responses allowed_tools from leaking the full tool list, so an allowed subset stays a subset. [merged in yetone/magpie#164 →](https://github.com/yetone/magpie/pull/164) · Sep 2026
-
-I made Gemini VALIDATED mode filter declarations down to the allowed list on translated routes, so the model only sees tools it may call. [merged in yetone/magpie#170 →](https://github.com/yetone/magpie/pull/170) · Sep 2026
-
-I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 **[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
 
@@ -310,6 +346,8 @@ I did the same for the YAML round trip, so `SetYAML`, `DelYAML` and `EditYAMLStr
 I made a dotenv key that appears twice read and write its last line, as dotenv does, so wiring Gemini CLI to the gateway edits the line the CLI actually uses. [merged in yetone/magpie#832 →](https://github.com/yetone/magpie/pull/832) · Oct 2026
 
 I held a catalog model's prompt cap to its context window, so rows like `opencode/hy3-free` no longer serve an input limit above the window the gateway advertises. [merged in yetone/magpie#1288 →](https://github.com/yetone/magpie/pull/1288) · Oct 2026
+
+</details>
 
 </details>
 
