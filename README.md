@@ -50,7 +50,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/yetone/magpie"><img alt="magpie · 25 merged PRs" src="https://img.shields.io/badge/magpie-25_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/yetone/magpie"><img alt="magpie · 26 merged PRs" src="https://img.shields.io/badge/magpie-26_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 5 merged PRs" src="https://img.shields.io/badge/openmuse-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
@@ -298,7 +298,7 @@ I gave a setup run that stops on the output limit its own fallback reason, `outp
 I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
 
 <details>
-<summary><b>more magpie fixes</b> · the other twenty-two merged PRs</summary>
+<summary><b>more magpie fixes</b> · the other twenty-three merged PRs</summary>
 
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
@@ -346,6 +346,8 @@ I did the same for the YAML round trip, so `SetYAML`, `DelYAML` and `EditYAMLStr
 I made a dotenv key that appears twice read and write its last line, as dotenv does, so wiring Gemini CLI to the gateway edits the line the CLI actually uses. [merged in yetone/magpie#832 →](https://github.com/yetone/magpie/pull/832) · Oct 2026
 
 I held a catalog model's prompt cap to its context window, so rows like `opencode/hy3-free` no longer serve an input limit above the window the gateway advertises. [merged in yetone/magpie#1288 →](https://github.com/yetone/magpie/pull/1288) · Oct 2026
+
+I made the sessions page limit count nonempty sessions only, so a newest empty session file no longer eats the whole page or wins an mtime tie. [merged in yetone/magpie#1324 →](https://github.com/yetone/magpie/pull/1324) · Oct 2026
 
 </details>
 
@@ -427,7 +429,7 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
-| [magpie](https://github.com/yetone/magpie) | Twenty-five merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832), [#1288](https://github.com/yetone/magpie/pull/1288). |
+| [magpie](https://github.com/yetone/magpie) | Twenty-six merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832), [#1288](https://github.com/yetone/magpie/pull/1288), [#1324](https://github.com/yetone/magpie/pull/1324). |
 | [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
 
 ---
