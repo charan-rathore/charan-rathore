@@ -71,6 +71,8 @@ I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the D
 
 I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
 
+I fixed the `ease-out` and `ease-in-out` animation curves being swapped, so `easing="ease-out"` now runs the real CSS ease-out curve instead of ease-in-out. [merged in recharts/recharts#7931 →](https://github.com/recharts/recharts/pull/7931) · Oct 2026
+
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
 I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
