@@ -97,6 +97,8 @@ I kept multiline bodies and unusual header or form names valid in the clj-http e
 
 I made the raw HTTP/1.1 examples send the body for JSON media types with parameters and for text bodies, instead of sending a Content-Type header with no body behind it. [merged in scalar/scalar#10510 →](https://github.com/scalar/scalar/pull/10510) · Oct 2026
 
+I made Scalar's document download convert flow-style YAML to real JSON, so a spec that starts with `{` no longer downloads as YAML wearing a `.json` name. [merged in scalar/scalar#10545 →](https://github.com/scalar/scalar/pull/10545) · Oct 2026
+
 **[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
 
 I fixed a root value of `false`, `0` or `''` failing validation, so a boolean form with `false` no longer errors with "must be boolean" and can submit. [merged in rjsf-team/react-jsonschema-form#5423 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5423) · Oct 2026
@@ -256,7 +258,7 @@ I gave a setup run that stops on the output limit its own fallback reason, `outp
 I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
 
 <details>
-<summary><b>more magpie fixes</b> · the other twenty-one merged PRs</summary>
+<summary><b>more magpie fixes</b> · the other twenty-two merged PRs</summary>
 
 **[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
 
@@ -302,6 +304,8 @@ I did the same for JSON and JSONC edits, so `SetJSON` on a CRLF file keeps `\r\n
 I did the same for the YAML round trip, so `SetYAML`, `DelYAML` and `EditYAMLStrings` no longer rewrite every line of a CRLF file as LF. [merged in yetone/magpie#831 →](https://github.com/yetone/magpie/pull/831) · Oct 2026
 
 I made a dotenv key that appears twice read and write its last line, as dotenv does, so wiring Gemini CLI to the gateway edits the line the CLI actually uses. [merged in yetone/magpie#832 →](https://github.com/yetone/magpie/pull/832) · Oct 2026
+
+I held a catalog model's prompt cap to its context window, so rows like `opencode/hy3-free` no longer serve an input limit above the window the gateway advertises. [merged in yetone/magpie#1288 →](https://github.com/yetone/magpie/pull/1288) · Oct 2026
 
 </details>
 
@@ -381,7 +385,7 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
-| [magpie](https://github.com/yetone/magpie) | Twenty-four merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832). |
+| [magpie](https://github.com/yetone/magpie) | Twenty-five merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832), [#1288](https://github.com/yetone/magpie/pull/1288). |
 | [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
 
 ---
