@@ -51,7 +51,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 5 merged PRs" src="https://img.shields.io/badge/openmuse-5_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 6 merged PRs" src="https://img.shields.io/badge/openmuse-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 1 merged PR" src="https://img.shields.io/badge/urwid-1_merged-181717?logo=github&logoColor=white"></a>
@@ -202,6 +202,8 @@ I made the provider and Bot registries ignore inherited keys like `constructor` 
 **[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
 
 I made a price watch recognize amounts written with a space after the dollar sign, so `$ 9.99` trips the same threshold as `$9.99`. [merged in CopilotKit/openmuse#126 →](https://github.com/CopilotKit/openmuse/pull/126) · Oct 2026
+
+I made file-producing task retries idempotent, so a retry after a lost checkpoint recovers the original file instead of writing a duplicate under a new ID. [merged in CopilotKit/openmuse#45 →](https://github.com/CopilotKit/openmuse/pull/45) · Oct 2026
 
 I made a pasted transaction CSV that starts with a byte order mark parse instead of failing with "Invalid quoted CSV field", by dropping the mark before parsing. [merged in CopilotKit/openmuse#146 →](https://github.com/CopilotKit/openmuse/pull/146) · Oct 2026
 
@@ -432,7 +434,7 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
 | [magpie](https://github.com/yetone/magpie) | Twenty-seven merged PRs: [#74](https://github.com/yetone/magpie/pull/74), [#76](https://github.com/yetone/magpie/pull/76), [#77](https://github.com/yetone/magpie/pull/77), [#78](https://github.com/yetone/magpie/pull/78), [#86](https://github.com/yetone/magpie/pull/86), [#87](https://github.com/yetone/magpie/pull/87), [#94](https://github.com/yetone/magpie/pull/94), [#95](https://github.com/yetone/magpie/pull/95), [#164](https://github.com/yetone/magpie/pull/164), [#165](https://github.com/yetone/magpie/pull/165), [#166](https://github.com/yetone/magpie/pull/166), [#168](https://github.com/yetone/magpie/pull/168), [#169](https://github.com/yetone/magpie/pull/169), [#170](https://github.com/yetone/magpie/pull/170), [#171](https://github.com/yetone/magpie/pull/171), [#431](https://github.com/yetone/magpie/pull/431), [#434](https://github.com/yetone/magpie/pull/434), [#439](https://github.com/yetone/magpie/pull/439), [#446](https://github.com/yetone/magpie/pull/446), [#450](https://github.com/yetone/magpie/pull/450), [#829](https://github.com/yetone/magpie/pull/829), [#830](https://github.com/yetone/magpie/pull/830), [#831](https://github.com/yetone/magpie/pull/831), [#832](https://github.com/yetone/magpie/pull/832), [#1288](https://github.com/yetone/magpie/pull/1288), [#1318](https://github.com/yetone/magpie/pull/1318), [#1324](https://github.com/yetone/magpie/pull/1324). |
-| [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - open, awaiting merge. |
+| [openmuse](https://github.com/CopilotKit/openmuse) | [#45](https://github.com/CopilotKit/openmuse/pull/45) fixes duplicate artifacts on interrupted file steps - merged Oct 6. |
 
 ---
 
