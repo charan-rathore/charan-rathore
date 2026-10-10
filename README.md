@@ -55,6 +55,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 1 merged PR" src="https://img.shields.io/badge/urwid-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 3 merged PRs" src="https://img.shields.io/badge/filesystem__spec-3_merged-181717?logo=github&logoColor=white"></a>
@@ -81,7 +82,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 28 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 29 repos, plus the full magpie history</summary>
 
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
@@ -246,6 +247,10 @@ I fixed CalDAV pushes to Radicale failing with a 412 and the task getting stuck 
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
 I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
+
+**[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
+
+I stopped `connect_tcp()` from leaking a connected socket when the surrounding cancel scope fires after a connection attempt wins but before the internal task group exits, by closing the winning stream before the cancellation re-raises. [merged in agronholm/anyio#1367 →](https://github.com/agronholm/anyio/pull/1367) · Oct 2026
 
 **[pydeps](https://github.com/thebjorn/pydeps)** · python module dependency graphs
 
