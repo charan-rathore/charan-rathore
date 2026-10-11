@@ -43,6 +43,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 3 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 2 merged PRs" src="https://img.shields.io/badge/nitro-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 1 merged PR" src="https://img.shields.io/badge/kedro-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
@@ -82,7 +83,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 29 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 30 repos, plus the full magpie history</summary>
 
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
@@ -155,6 +156,10 @@ I made `makeAllReferencesAbsolute` skip non-string `$ref` and `$id` values, so a
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
 I fixed data URIs with parameters like `charset=utf-8` raising ContentError and parameterless ones losing their media type, and tightened media detection so plain text no longer reads as BMP or arbitrary XML as SVG. [merged in microsoft/agent-framework#8918 →](https://github.com/microsoft/agent-framework/pull/8918) · Oct 2026
+
+**[semantica](https://github.com/semantica-agi/semantica)** · graph-native infrastructure for context and accountable AI systems
+
+I made all five `semantica temporal` subcommands work again on v0.7.0, remapping each one from engine methods that no longer exist onto the APIs that do, with a smoke test per subcommand. [merged in semantica-agi/semantica#1987 →](https://github.com/semantica-agi/semantica/pull/1987) · Oct 2026
 
 **[nitro](https://github.com/nitrojs/nitro)** · next generation server toolkit
 
