@@ -54,6 +54,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 6 merged PRs" src="https://img.shields.io/badge/openmuse-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 1 merged PR" src="https://img.shields.io/badge/urwid-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
@@ -83,7 +84,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 30 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 31 repos, plus the full magpie history</summary>
 
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
@@ -244,6 +245,10 @@ I made the red connection banner clear once polling recovers after an API restar
 I made an unknown or foreign page conversation id return a 404 instead of a generic 503 that blamed the Intelligence setup; real Intelligence errors still return 503. [merged in CopilotKit/OpenDots#14 →](https://github.com/CopilotKit/OpenDots/pull/14) · Oct 2026
 
 I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
+
+**[msgspec](https://github.com/msgspec/msgspec)** · a fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML
+
+I made msgspec propagate an error raised while looking up `ClassVar` on the `typing` module, instead of reporting "not a ClassVar" with the exception still pending, which was terminating debug CPython builds on an assert. [merged in msgspec/msgspec#1223 →](https://github.com/msgspec/msgspec/pull/1223) · Oct 2026
 
 **[tududi](https://github.com/chrisvel/tududi)** · a calm, open system for organizing life and work - tasks, projects, notes, areas and smart workflows
 
