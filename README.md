@@ -41,7 +41,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 4 merged PRs" src="https://img.shields.io/badge/recharts-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 3 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 4 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 2 merged PRs" src="https://img.shields.io/badge/nitro-2_merged-181717?logo=github&logoColor=white"></a>
@@ -153,6 +153,8 @@ I fixed a root value of `false`, `0` or `''` failing validation, so a boolean fo
 I fixed a false "Circular reference ($ref cycle) detected" notice when `dependencies` `oneOf` branches share a definition, by resolving each branch against its own recurse list so a sibling's resolved ref no longer reads as a cycle. [merged in rjsf-team/react-jsonschema-form#5435 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5435) · Oct 2026
 
 I made `makeAllReferencesAbsolute` skip non-string `$ref` and `$id` values, so a schema property that happens to be named `$ref` keeps its schema instead of being rewritten as a URL with `[object Object]` in it. [merged in rjsf-team/react-jsonschema-form#5459 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5459) · Oct 2026
+
+I named the shadcn multiple `SelectWidget`'s cmdk combobox from the field's title or a `ui:title` override, so its search input no longer renders without an accessible name. [merged in rjsf-team/react-jsonschema-form#5475 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5475) · Oct 2026
 
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
