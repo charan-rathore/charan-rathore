@@ -45,7 +45,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 2 merged PRs" src="https://img.shields.io/badge/nitro-2_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 1 merged PR" src="https://img.shields.io/badge/kedro-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 2 merged PRs" src="https://img.shields.io/badge/kedro-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 4 merged PRs" src="https://img.shields.io/badge/harness--sdk-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
@@ -173,6 +173,8 @@ I fixed the Vercel preset ignoring a `redirect: false` rule without headers, so 
 **[kedro](https://github.com/kedro-org/kedro)** · a toolbox for production-ready data science
 
 I fixed unnamed pipeline nodes built from callable objects failing with AttributeError, so a callable without `__name__` now gets its class name, including under `functools.partial`. [merged in kedro-org/kedro#5797 →](https://github.com/kedro-org/kedro/pull/5797) · Oct 2026
+
+I made generator nodes wrapped in `functools.wraps` stream chunk by chunk again, by unwrapping the callable before the runner's generator check, so a decorated generator saves each chunk instead of the generator object once. [merged in kedro-org/kedro#5798 →](https://github.com/kedro-org/kedro/pull/5798) · Oct 2026
 
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
