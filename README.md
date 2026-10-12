@@ -35,6 +35,7 @@ memory · evaluation · product experiments
 
 <p>
   <a href="https://github.com/NousResearch/hermes-agent"><img alt="hermes-agent · 2 merged PRs" src="https://img.shields.io/badge/hermes--agent-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
@@ -84,7 +85,11 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 31 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 32 repos, plus the full magpie history</summary>
+
+**[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
+
+I added an opt-in Swift module cache to REA's macOS ownership helper: `REA_DARWIN_MODULE_CACHE_PATH` gives the compiler a caller-owned cache that survives helper close, and `REA_DARWIN_SWIFTC_PATH` with an absolute `SDKROOT` invokes an installed Swift compiler directly, bypassing `xcrun`'s lookup cache. [merged in morluto/rea#2252 →](https://github.com/morluto/rea/pull/2252) · Oct 2026
 
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
