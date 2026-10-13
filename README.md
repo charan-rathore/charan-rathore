@@ -37,6 +37,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/NousResearch/hermes-agent"><img alt="hermes-agent · 2 merged PRs" src="https://img.shields.io/badge/hermes--agent-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 4 merged PRs" src="https://img.shields.io/badge/recharts-4_merged-181717?logo=github&logoColor=white"></a>
@@ -85,7 +86,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 32 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 33 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -94,6 +95,10 @@ I added an opt-in Swift module cache to REA's macOS ownership helper: `REA_DARWI
 **[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
 
 I stopped Vite's dependency optimizer from warning about packages that intentionally empty an import in the browser, so a `browser: false` mapping loads an empty module while genuinely unsupported imports still warn. [merged in vitejs/vite#23590 →](https://github.com/vitejs/vite/pull/23590) · Sep 2026
+
+**[prettier](https://github.com/prettier/prettier)** · an opinionated code formatter
+
+I stopped a leading comment between `export` and a decorator from growing a fresh blank line on every reformat, by leaving out the extra hardline the decorator printer added on top of the comment's own separator. [merged in prettier/prettier#20180 →](https://github.com/prettier/prettier/pull/20180) · Oct 2026
 
 **[react-hook-form](https://github.com/react-hook-form/react-hook-form)** · react hooks for form state management and validation
 
