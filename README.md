@@ -62,7 +62,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 3 merged PRs" src="https://img.shields.io/badge/filesystem__spec-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 4 merged PRs" src="https://img.shields.io/badge/filesystem__spec-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pydata/bottleneck"><img alt="bottleneck · 1 merged PR" src="https://img.shields.io/badge/bottleneck-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/awlevin/typesafe-computer-use"><img alt="typesafe-computer-use · 1 merged PR" src="https://img.shields.io/badge/typesafe--computer--use-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pylint-dev/astroid"><img alt="astroid · 1 merged PR" src="https://img.shields.io/badge/astroid-1_merged-181717?logo=github&logoColor=white"></a>
@@ -293,6 +293,8 @@ I made pydeps warn when a dependency diagram comes out with no edges, naming the
 I made `check_circular` catch cycles that run through a custom `for_json()` or `_asdict()`, so a self-returning object raises the usual circular-reference error instead of exhausting recursion, in both the Python and C encoders. [merged in simplejson/simplejson#390 →](https://github.com/simplejson/simplejson/pull/390) · Oct 2026
 
 **[filesystem_spec](https://github.com/fsspec/filesystem_spec)** · a specification that python filesystems should adhere to
+
+I made async HTTP streaming files reject position-changing seeks with a `ValueError` and report `seekable()` as false, so a seek can no longer look like it worked while returning bytes from the wrong offset. [merged in fsspec/filesystem_spec#2214 →](https://github.com/fsspec/filesystem_spec/pull/2214) · Oct 2026
 
 I made `DirFileSystem` report async support from the filesystem it wraps, so a directory view over a synchronous backend no longer claims `async_impl`. [merged in fsspec/filesystem_spec#2213 →](https://github.com/fsspec/filesystem_spec/pull/2213) · Oct 2026
 
