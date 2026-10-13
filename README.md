@@ -43,7 +43,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 4 merged PRs" src="https://img.shields.io/badge/recharts-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 5 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-5_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
@@ -167,6 +167,8 @@ I made `makeAllReferencesAbsolute` skip non-string `$ref` and `$id` values, so a
 I stopped `sanitizeDataForNewSchema` from deleting legitimately entered array items when an unrelated sibling field's schema changed: the old items schema now resolves against the previous form data, so the enum filter only runs when the items schema really changed. [merged in rjsf-team/react-jsonschema-form#5460 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5460) · Oct 2026
 
 I named the shadcn multiple `SelectWidget`'s cmdk combobox from the field's title or a `ui:title` override, so its search input no longer renders without an accessible name. [merged in rjsf-team/react-jsonschema-form#5475 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5475) · Oct 2026
+
+I made the daisyui `SelectWidget`'s empty-selection fallback go through `translateString`, so a `SelectPlaceholder` translation reaches it the way it already reached the shadcn widget. [merged in rjsf-team/react-jsonschema-form#5512 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5512) · Oct 2026
 
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
