@@ -46,7 +46,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 5 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 2 merged PRs" src="https://img.shields.io/badge/nitro-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 2 merged PRs" src="https://img.shields.io/badge/kedro-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 4 merged PRs" src="https://img.shields.io/badge/harness--sdk-4_merged-181717?logo=github&logoColor=white"></a>
@@ -179,6 +179,8 @@ I made all five `semantica temporal` subcommands work again on v0.7.0, remapping
 **[nitro](https://github.com/nitrojs/nitro)** · next generation server toolkit
 
 I made the build refuse to run when cleaning the output directory would delete the public assets inside it, so it fails with an error naming both paths instead of reporting success on an empty deploy. [merged in nitrojs/nitro#4685 →](https://github.com/nitrojs/nitro/pull/4685) · Oct 2026
+
+I stopped the Cloudflare preset from answering a missing public asset with a 404 carrying the one-year immutable cache header, so browsers no longer cache "this module does not exist" until a hard reload. [merged in nitrojs/nitro#4727 →](https://github.com/nitrojs/nitro/pull/4727) · Oct 2026
 
 I fixed the Vercel preset ignoring a `redirect: false` rule without headers, so those paths no longer get pulled into broader redirects in the build output. [merged in nitrojs/nitro#4728 →](https://github.com/nitrojs/nitro/pull/4728) · Oct 2026
 
