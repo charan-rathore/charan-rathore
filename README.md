@@ -57,7 +57,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 1 merged PR" src="https://img.shields.io/badge/urwid-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 2 merged PRs" src="https://img.shields.io/badge/urwid-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
@@ -268,6 +268,8 @@ I fixed CalDAV pushes to Radicale failing with a 412 and the task getting stuck 
 **[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
 
 I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
+
+I made alarm callbacks from `set_alarm_in` and `set_alarm_at` safe to raise, so a mis-shaped or throwing callback gets logged with its traceback and the main loop keeps running instead of tearing down the whole app. [merged in urwid/urwid#1418 →](https://github.com/urwid/urwid/pull/1418) · Oct 2026
 
 **[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
 
