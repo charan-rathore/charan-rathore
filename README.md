@@ -55,7 +55,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 6 merged PRs" src="https://img.shields.io/badge/openmuse-6_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 11 merged PRs" src="https://img.shields.io/badge/OpenDots-11_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 2 merged PRs" src="https://img.shields.io/badge/urwid-2_merged-181717?logo=github&logoColor=white"></a>
@@ -243,6 +243,10 @@ I stopped one bad attachment filename with an unpaired surrogate from breaking t
 I made the spending analysis reject a CSV with a repeated `date`, `description`, `amount` or `category` header, so it no longer silently reports one of two conflicting amounts. [merged in CopilotKit/openmuse#114 →](https://github.com/CopilotKit/openmuse/pull/114) · Oct 2026
 
 **[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
+
+I kept edits made while "Load latest" is reading a remote page from being discarded when the read finishes, so replacing an earlier confirmed draft no longer overwrites newer work. [merged in CopilotKit/OpenDots#130 →](https://github.com/CopilotKit/OpenDots/pull/130) · Oct 2026
+
+I bound an approved connection action to one `toolCallId`, so reusing the same approval with a fresh call ID gets a 409 instead of running it twice; retries of the original call still recover its saved result. [merged in CopilotKit/OpenDots#137 →](https://github.com/CopilotKit/OpenDots/pull/137) · Oct 2026
 
 I kept balanced brackets in URLs inside research prompts, so a link like `Rust_(programming_language)` is read whole instead of cut at the parenthesis. [merged in CopilotKit/OpenDots#99 →](https://github.com/CopilotKit/OpenDots/pull/99) · Oct 2026
 
