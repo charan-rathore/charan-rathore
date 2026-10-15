@@ -1,31 +1,39 @@
 # Charan Rathore
 
-**@charan-rathore** · I build systems that make the pieces click.
+**Agentic system architecture & system design**
 
-I care about two things that sound different but feel the same to me:
+I'm interested in the machinery around the model: how agents get context, choose tools, keep state and recover when work breaks halfway through.
 
-1. **what a product is actually doing** when a user clicks something  
-2. **what a system is actually doing** in the two seconds before the answer shows up
+My work spans source-linked memory and retrieval projects, plus merged fixes in agent runtimes and model gateways. I care about the failure modes: a retry that duplicates an artifact, an approval that runs twice, or a tool restriction lost between providers.
 
-Most tutorials show you how to call an API. I want to know why the pipeline failed, which layer lied, and whether the feature was the right thing to ship.
+**My focus:** context → tools → execution → recovery → evaluation.
 
-I am an **Analyst at MiQ, working across the MENA markets**. Previously, at Flipkart, I worked on seller funnel analytics and search personalization — behavioral data into product decisions. Outside work I build and test intelligent systems: retrieval, memory, forecasts and source-aware agents.
+I work as an Analyst at MiQ across MENA markets. This is the systems work I build and contribute to outside that role.
+
+[Projects](#systems-im-building) · [Merged work](#open-source-contributions) · [Writing](https://charanrathore.substack.com) · [Portfolio](https://charan-tetris-portfolio.vercel.app/)
 
 ---
 
-## currently
+## systems I'm building
 
-**MiQ · Analyst · MENA markets**<br>
-[Explore my Systris portfolio →](https://charan-tetris-portfolio.vercel.app/)
+| Project | The system-design question | What is there today |
+| --- | --- | --- |
+| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
+| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | Can a retrieval pipeline show which evidence it kept, lost or refused to answer from? | A source-to-answer browser lab with citations, retrieval traces and a measured diagnostic. The public no-key demo uses keyword retrieval and cited extracts; production hybrid retrieval and model-answer evaluation remain open. |
+| [memoRABLE](https://github.com/charan-rathore/memoRABLE) | How does information become reusable memory without losing its source? | Six source-linked memory blocks, click-through provenance and email/web/document outputs. Local-first; AI is optional. |
 
-AI systems · retrieval · inference  
-memory · evaluation · product experiments
+These are different parts of the problem, not one finished autonomous-agent platform.
 
-<p>
-  <a href="https://github.com/charan-rathore?tab=repositories"><img alt="GitHub projects" src="https://img.shields.io/badge/GitHub-Projects-181717?logo=github"></a>
-  <a href="https://charan-tetris-portfolio.vercel.app/"><img alt="Play Systris" src="https://img.shields.io/badge/Portfolio-Play%20Systris-7b68ee"></a>
-  <a href="https://charanrathore.substack.com"><img alt="Read the writing" src="https://img.shields.io/badge/Substack-Writing-ff6719?logo=substack&logoColor=white"></a>
-</p>
+## system-design problems I've fixed upstream
+
+| Boundary | Merged contribution |
+| --- | --- |
+| Tool selection across providers | Kept allowed-tool subsets intact through Gemini and Responses translation in [Magpie #164](https://github.com/yetone/magpie/pull/164). |
+| Approval and execution identity | Bound an approved action to one call ID, rejecting reuse under a fresh ID in [OpenDots #137](https://github.com/CopilotKit/OpenDots/pull/137). |
+| Checkpoints and retries | Made file-producing retries recover the original artifact after a lost checkpoint in [openmuse #45](https://github.com/CopilotKit/openmuse/pull/45). |
+| Agent network boundaries | Closed a NAT64-address gap in the cloud-metadata deny check in [OpenBot #745](https://github.com/CopilotKit/OpenBot/pull/745). |
+
+These are scoped fixes in existing systems, not claims that I designed the frameworks. The full ledger below also includes general library and UI work.
 
 ---
 
@@ -422,17 +430,19 @@ I made scaffold generation read the vendored AIP specs instead of the sibling ch
 
 ---
 
-## what I'm curious about
+## the questions behind the work
 
-**01** Where does the latency actually go?  
-**02** What should an AI system remember - and prove it remembered from the source?  
-**03** When is a forecast wrong because of the model, and when because of the place?  
-**04** Why do technically good products still fail distribution?  
-**05** Which problems are worth automating, and which only look that way?
+- What state must survive a retry, and what must never run twice?
+- Where should a tool's permission boundary live when providers translate requests differently?
+- How can memory and retrieval preserve the exact evidence behind an answer?
+- Which latency and quality measurements reflect the real system rather than a friendly demo?
 
 ---
 
-## things I've built
+## project notes and other experiments
+
+<details>
+<summary>Implementation notes, demos and adjacent projects</summary>
 
 **[IntelliRAG](https://github.com/charan-rathore/IntelliRAG)**  
 *I wanted to know where RAG actually breaks.*
@@ -461,7 +471,7 @@ Ground truth → commercial API bias → ensemble forecast → public leaderboar
 **[Finsight](https://github.com/charan-rathore/agentic-finance-advisor)**  
 *Can an AI answer also explain how much it should be trusted?*
 
-Multi-agent research with freshness, source agreement, versioned knowledge, and a confidence score you can inspect.
+Multi-agent research with freshness, source diversity, versioned knowledge, and a confidence score you can inspect.
 
 [inspect the system →](https://github.com/charan-rathore/agentic-finance-advisor)
 
@@ -474,11 +484,13 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 
 ---
 
+</details>
+
 ## receipts
 
 | Work | One thing you can check |
 | --- | --- |
-| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | 31 live browser questions in the [audit](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md); RAGAS-style rubric, not an official RAGAS score. |
+| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | On 15 answerable questions from one pinned README, required-evidence recall improved from 36.7% to 70.0%; plain BM25 scored 73.3%. Retrieval-only, no LLM accuracy claim. [Protocol and raw evidence](https://github.com/charan-rathore/IntelliRAG). |
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | Six source-linked memory blocks with click-through to the original lines. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Live dashboard and a public forecast leaderboard. |
 | [infer-tab](https://github.com/charan-rathore/infer-tab) | CPU-only KV-cache / prefill-decode traces, replayed in a Next.js visualizer. |
@@ -487,15 +499,9 @@ CPU-only KV-cache experiments write traces of attention arithmetic and tensor by
 
 ---
 
-## product things I keep taking apart
+## product lens
 
-**Search** - what actually happens between a query and the ranked result (Flipkart search personalization was the first place this got real for me)  
-**Funnels** - where discovery leaks: the step users drop, not the dashboard average  
-**Trust UX** - when a product should show confidence, provenance, or “I don’t know yet”  
-**Distribution** - why a technically solid system still fails to get used  
-**The invisible middle** - [the 2 seconds you never see](https://charanrathore.substack.com/p/the-2-seconds-you-never-see): auth, memory, routing, the work that makes complexity feel effortless
-
-I go system → product → business. Same habit: open the black box, name the failure mode, then decide what to ship.
+My analytics work keeps the design question honest: which failure matters to the user, and how would we measure the fix? I want the architecture to explain a product's behavior, not just name its components.
 
 ---
 
@@ -512,19 +518,18 @@ More when I have something worth saying → [Substack](https://charanrathore.sub
 
 measure → build → break → learn → repeat
 
-Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in known ways. Same rule for product: if I can’t explain the funnel step, I don’t trust the feature yet.
+Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in known ways. Same rule for product: if I can't explain the funnel step, I don't trust the feature yet.
 
 ---
 
 ## currently investigating
 
-→ what actually determines RAG latency (retrieval vs rerank vs generation vs cold start)  
-→ how memory systems should preserve provenance without becoming another summary blob  
-→ when local inference is the right constraint vs when it just feels pure  
-→ closed-loop evaluation: leaderboards that force the model to face ground truth  
-→ why technically good products fail distribution
+→ execution identity, checkpoints and retry-safe side effects  
+→ memory and retrieval with inspectable provenance  
+→ tool contracts across model providers  
+→ evaluation that separates retrieval quality, answer quality and system latency
 
-*I update this when the questions change.*
+*The niche is agentic systems. The method is to make the boundaries visible, then test where they fail.*
 
 ---
 
