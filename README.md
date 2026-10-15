@@ -40,7 +40,7 @@ memory · evaluation · product experiments
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/recharts/recharts"><img alt="recharts · 4 merged PRs" src="https://img.shields.io/badge/recharts-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 6 merged PRs" src="https://img.shields.io/badge/recharts-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
@@ -129,6 +129,10 @@ I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the D
 I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
 
 I fixed the `ease-out` and `ease-in-out` animation curves being swapped, so `easing="ease-out"` now runs the real CSS ease-out curve instead of ease-in-out. [merged in recharts/recharts#7931 →](https://github.com/recharts/recharts/pull/7931) · Oct 2026
+
+I gave each `Funnel` entry its own tooltip color and legend item, so the tooltip and legend reflect the entry instead of a shared chart-level color or an empty legend. [merged in recharts/recharts#7985 →](https://github.com/recharts/recharts/pull/7985) · Oct 2026
+
+I made `Scatter` tooltips use each point's own color and stopped data-entry IDs from leaking onto rendered symbols, while keeping the original ID in the point's payload. [merged in recharts/recharts#7986 →](https://github.com/recharts/recharts/pull/7986) · Oct 2026
 
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
