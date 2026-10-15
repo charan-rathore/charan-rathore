@@ -57,7 +57,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 2 merged PRs" src="https://img.shields.io/badge/kedro-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 4 merged PRs" src="https://img.shields.io/badge/harness--sdk-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 5 merged PRs" src="https://img.shields.io/badge/harness--sdk-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
@@ -66,7 +66,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 2 merged PRs" src="https://img.shields.io/badge/urwid-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 3 merged PRs" src="https://img.shields.io/badge/urwid-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
@@ -77,6 +77,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/pydantic/pydantic-extra-types"><img alt="pydantic-extra-types · 3 merged PRs" src="https://img.shields.io/badge/pydantic--extra--types-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/tinyhumansai/opencompany"><img alt="opencompany · 5 merged PRs" src="https://img.shields.io/badge/opencompany-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/click-contrib/click-repl"><img alt="click-repl · 1 merged PR" src="https://img.shields.io/badge/click--repl-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kserve/models-web-app"><img alt="models-web-app · 1 merged PR" src="https://img.shields.io/badge/models--web--app-1_merged-181717?logo=github&logoColor=white"></a>
 </p>
 
 **[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
@@ -94,7 +95,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 33 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 34 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -210,6 +211,8 @@ I wrapped Gemini array tool results in an object, so serialized tool output surv
 
 **[harness-sdk](https://github.com/strands-agents/harness-sdk)** · build an agent harness and control it end-to-end
 
+I made TypeScript `FileStorage` return a portable filename instead of a machine-specific artifact path, while keeping older references inside the configured artifact directory readable. [merged in strands-agents/harness-sdk#4668 →](https://github.com/strands-agents/harness-sdk/pull/4668) · Oct 2026
+
 I gave the OpenAI Responses model the location-source guard every other provider already had, so a document backed by an S3 location is skipped with a warning instead of crashing the request. [merged in strands-agents/harness-sdk#4706 →](https://github.com/strands-agents/harness-sdk/pull/4706) · Sep 2026
 
 I stopped a finished Gemini reply from crashing token accounting, so a final response without usage metadata completes normally instead of throwing. [merged in strands-agents/harness-sdk#4724 →](https://github.com/strands-agents/harness-sdk/pull/4724) · Sep 2026
@@ -296,6 +299,8 @@ I stopped `ListBox` from rendering the same items repeatedly when a short list s
 
 I made alarm callbacks from `set_alarm_in` and `set_alarm_at` safe to raise, so a mis-shaped or throwing callback gets logged with its traceback and the main loop keeps running instead of tearing down the whole app. [merged in urwid/urwid#1418 →](https://github.com/urwid/urwid/pull/1418) · Oct 2026
 
+I made `FloatEdit` turn exponent defaults into editable fixed-point values, reject non-finite defaults and quantize long inputs without exceeding the decimal context precision. [merged in urwid/urwid#1447 →](https://github.com/urwid/urwid/pull/1447) · Oct 2026
+
 **[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
 
 I stopped `connect_tcp()` from leaking a connected socket when the surrounding cancel scope fires after a connection attempt wins but before the internal task group exits, by closing the winning stream before the cancellation re-raises. [merged in agronholm/anyio#1367 →](https://github.com/agronholm/anyio/pull/1367) · Oct 2026
@@ -355,6 +360,10 @@ I gave a setup run that stops on the output limit its own fallback reason, `outp
 **[click-repl](https://github.com/click-contrib/click-repl)** · subcommand REPL for click apps
 
 I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
+
+**[models-web-app](https://github.com/kserve/models-web-app)** · KServe UI
+
+I stopped an old SSE watcher from delivering callbacks to reconnected clients or overwriting their replay snapshot, by checking watcher generations before recording and sending events. [merged in kserve/models-web-app#206 →](https://github.com/kserve/models-web-app/pull/206) · Oct 2026
 
 <details>
 <summary><b>more magpie fixes</b> · the other twenty-four merged PRs</summary>
