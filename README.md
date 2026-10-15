@@ -18,8 +18,8 @@ I work as an Analyst at MiQ across MENA markets. This is the systems work I buil
 
 | Project | The system-design question | What is there today |
 | --- | --- | --- |
-| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
 | [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | Can a retrieval pipeline show which evidence it kept, lost or refused to answer from? | A source-to-answer browser lab with citations, retrieval traces and a measured diagnostic. The public no-key demo uses keyword retrieval and cited extracts; production hybrid retrieval and model-answer evaluation remain open. |
+| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | How does information become reusable memory without losing its source? | Six source-linked memory blocks, click-through provenance and email/web/document outputs. Local-first; AI is optional. |
 
 These are different parts of the problem, not one finished autonomous-agent platform.
