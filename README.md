@@ -74,6 +74,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/pydata/bottleneck"><img alt="bottleneck · 1 merged PR" src="https://img.shields.io/badge/bottleneck-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/awlevin/typesafe-computer-use"><img alt="typesafe-computer-use · 1 merged PR" src="https://img.shields.io/badge/typesafe--computer--use-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pylint-dev/astroid"><img alt="astroid · 1 merged PR" src="https://img.shields.io/badge/astroid-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/fsspec/gcsfs"><img alt="gcsfs · 1 merged PR" src="https://img.shields.io/badge/gcsfs-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pydantic/pydantic-extra-types"><img alt="pydantic-extra-types · 3 merged PRs" src="https://img.shields.io/badge/pydantic--extra--types-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/tinyhumansai/opencompany"><img alt="opencompany · 5 merged PRs" src="https://img.shields.io/badge/opencompany-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/click-contrib/click-repl"><img alt="click-repl · 1 merged PR" src="https://img.shields.io/badge/click--repl-1_merged-181717?logo=github&logoColor=white"></a>
@@ -95,7 +96,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 34 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 35 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -338,6 +339,10 @@ I gave the browser loop the visible text it was missing, so Jev can see a price 
 **[astroid](https://github.com/pylint-dev/astroid)** · a common base representation of python source code for pylint and other projects
 
 I taught astroid to infer `values += (1, 2)` on a list, so augmented concatenation with a tuple infers a list instead of `Uninferable`. [merged in pylint-dev/astroid#3357 →](https://github.com/pylint-dev/astroid/pull/3357) · Oct 2026
+
+**[gcsfs](https://github.com/fsspec/gcsfs)** · Pythonic filesystem interface for Google Cloud Storage
+
+I made size-integrity mismatches raise `ChecksumError` instead of relying on assertions, so `consistency="size"` still checks for corrupt transfers under `python -O`. [merged in fsspec/gcsfs#1107 →](https://github.com/fsspec/gcsfs/pull/1107) · Oct 2026
 
 **[pydantic-extra-types](https://github.com/pydantic/pydantic-extra-types)** · extra Pydantic types
 
