@@ -61,6 +61,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 6 merged PRs" src="https://img.shields.io/badge/openmuse-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
@@ -96,7 +97,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 35 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 36 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -245,6 +246,10 @@ I made command telemetry redact the curl password in every spelling `-u` allows,
 I stopped a malformed percent-escape in a stream URL from crashing the server with a 500; it now falls through to normal routing. [merged in CopilotKit/OpenBot#699 →](https://github.com/CopilotKit/OpenBot/pull/699) · Oct 2026
 
 I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
+
+**[kserve](https://github.com/kserve/kserve)** · model inference on Kubernetes
+
+I made `cpu_count()` read cgroup v2 CPU limits, so the default model-server worker count respects the container quota instead of falling back to the node CPU count. [merged in kserve/kserve#6347 →](https://github.com/kserve/kserve/pull/6347) · Oct 2026
 
 **[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
 
