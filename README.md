@@ -48,7 +48,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/recharts/recharts"><img alt="recharts · 6 merged PRs" src="https://img.shields.io/badge/recharts-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 7 merged PRs" src="https://img.shields.io/badge/recharts-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
@@ -138,6 +138,8 @@ I fixed a lone negative bar in a `BarStack` rounding its corners at the zero lin
 I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the DOM when a name or className is missing; the attribute is now left out, and Brush aria labels fall back to the dataKey value. [merged in recharts/recharts#7914 →](https://github.com/recharts/recharts/pull/7914) · Oct 2026
 
 I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
+
+I fixed mouse events on a sparse `Bar` series reporting the wrong data index when a bar is skipped, by passing the original data index instead of the rendered position to the hover and press handlers. [merged in recharts/recharts#7929 →](https://github.com/recharts/recharts/pull/7929) · Oct 2026
 
 I fixed the `ease-out` and `ease-in-out` animation curves being swapped, so `easing="ease-out"` now runs the real CSS ease-out curve instead of ease-in-out. [merged in recharts/recharts#7931 →](https://github.com/recharts/recharts/pull/7931) · Oct 2026
 
