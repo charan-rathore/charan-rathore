@@ -53,6 +53,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 4 merged PRs" src="https://img.shields.io/badge/kivy-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 2 merged PRs" src="https://img.shields.io/badge/pdfcraft-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
@@ -99,7 +100,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 38 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 39 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -196,6 +197,12 @@ I stopped `sanitizeDataForNewSchema` from deleting legitimately entered array it
 I named the shadcn multiple `SelectWidget`'s cmdk combobox from the field's title or a `ui:title` override, so its search input no longer renders without an accessible name. [merged in rjsf-team/react-jsonschema-form#5475 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5475) · Oct 2026
 
 I made the daisyui `SelectWidget`'s empty-selection fallback go through `translateString`, so a `SelectPlaceholder` translation reaches it the way it already reached the shadcn widget. [merged in rjsf-team/react-jsonschema-form#5512 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5512) · Oct 2026
+
+**[pdfcraft](https://github.com/storytold/pdfcraft)** · an open-source PDF reader and editor written from scratch in pure Rust
+
+I kept link annotations with non-ASCII targets within the PDF spec, percent-encoding the bytes written into the link's `/URI` string instead of saving raw UTF-8 that strict readers can reject or misparse. [merged in storytold/pdfcraft#2679 →](https://github.com/storytold/pdfcraft/pull/2679) · Oct 2026
+
+I made the `info` command catch JavaScript attached through a document's `/OpenAction` catalog entry, so a PDF that runs JS on open no longer reports `javascript: false`. [merged in storytold/pdfcraft#2687 →](https://github.com/storytold/pdfcraft/pull/2687) · Oct 2026
 
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
