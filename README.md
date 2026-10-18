@@ -53,6 +53,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
@@ -97,7 +98,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 36 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 37 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -190,6 +191,10 @@ I made the daisyui `SelectWidget`'s empty-selection fallback go through `transla
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
 I fixed data URIs with parameters like `charset=utf-8` raising ContentError and parameterless ones losing their media type, and tightened media detection so plain text no longer reads as BMP or arbitrary XML as SVG. [merged in microsoft/agent-framework#8918 →](https://github.com/microsoft/agent-framework/pull/8918) · Oct 2026
+
+**[wordcraft](https://github.com/storytold/wordcraft)** · an open-source, clean-room reimplementation of Microsoft Word in pure Rust
+
+I made `Export as PDF` and `Export as PNG` ask where to save when they run without a path, instead of failing with a missing-parameter error, and added regression tests for both. [merged in storytold/wordcraft#2665 →](https://github.com/storytold/wordcraft/pull/2665) · Oct 2026
 
 **[semantica](https://github.com/semantica-agi/semantica)** · graph-native infrastructure for context and accountable AI systems
 
