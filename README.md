@@ -50,7 +50,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 7 merged PRs" src="https://img.shields.io/badge/recharts-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/kivy/kivy"><img alt="kivy · 2 merged PRs" src="https://img.shields.io/badge/kivy-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kivy/kivy"><img alt="kivy · 3 merged PRs" src="https://img.shields.io/badge/kivy-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
@@ -145,19 +145,21 @@ I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the D
 
 I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
 
-I fixed mouse events on a sparse `Bar` series reporting the wrong data index when a bar is skipped, by passing the original data index instead of the rendered position to the hover and press handlers. [merged in recharts/recharts#7929 →](https://github.com/recharts/recharts/pull/7929) · Oct 2026
-
 I fixed the `ease-out` and `ease-in-out` animation curves being swapped, so `easing="ease-out"` now runs the real CSS ease-out curve instead of ease-in-out. [merged in recharts/recharts#7931 →](https://github.com/recharts/recharts/pull/7931) · Oct 2026
 
 I gave each `Funnel` entry its own tooltip color and legend item, so the tooltip and legend reflect the entry instead of a shared chart-level color or an empty legend. [merged in recharts/recharts#7985 →](https://github.com/recharts/recharts/pull/7985) · Oct 2026
 
 I made `Scatter` tooltips use each point's own color and stopped data-entry IDs from leaking onto rendered symbols, while keeping the original ID in the point's payload. [merged in recharts/recharts#7986 →](https://github.com/recharts/recharts/pull/7986) · Oct 2026
 
+I fixed mouse events on a sparse `Bar` series reporting the wrong data index when a bar is skipped, by passing the original data index instead of the rendered position to the hover and press handlers. [merged in recharts/recharts#7929 →](https://github.com/recharts/recharts/pull/7929) · Oct 2026
+
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
 I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
 
 I fixed KV rules crashing on an `or` or `and` inside an f-string, such as `f"{a or b}"`, by splitting the boolean branch from the f-string branch so both operands are found and stay reactive. [merged in kivy/kivy#9393 →](https://github.com/kivy/kivy/pull/9393) · Oct 2026
+
+I stopped `xclip` holding a launcher's captured output streams open after the app quits, by sending the two streams it does not use to `/dev/null`, so test runners and pipelines see EOF instead of a process that looks hung. [merged in kivy/kivy#9419 →](https://github.com/kivy/kivy/pull/9419) · Oct 2026
 
 **[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
 
