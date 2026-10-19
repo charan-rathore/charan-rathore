@@ -50,7 +50,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 7 merged PRs" src="https://img.shields.io/badge/recharts-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/kivy/kivy"><img alt="kivy · 5 merged PRs" src="https://img.shields.io/badge/kivy-5_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kivy/kivy"><img alt="kivy · 6 merged PRs" src="https://img.shields.io/badge/kivy-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 2 merged PRs" src="https://img.shields.io/badge/pdfcraft-2_merged-181717?logo=github&logoColor=white"></a>
@@ -165,6 +165,8 @@ I stopped `xclip` holding a launcher's captured output streams open after the ap
 I fixed rotation-invariant gesture matching treating every gesture as unrotated: `get_rotation()` measured the angle between the other gesture's first point and itself, and it now uses this gesture's own first point. [merged in kivy/kivy#9420 →](https://github.com/kivy/kivy/pull/9420) · Oct 2026
 
 I fixed a released `Recorder` still receiving keyboard input and staying retained by the window: `release()` tried to unbind the underlying methods instead of the partial callbacks bound at init, and skipped the keyboard event entirely. It now unbinds the exact mapping from bind time, and releasing twice stays safe. [merged in kivy/kivy#9424 →](https://github.com/kivy/kivy/pull/9424) · Oct 2026
+
+I stopped a per-entry cache timeout from leaking onto every entry stored after it in the same category: `Cache._purge_by_timeout` seeded the timeout once per category and let any entry's own timeout overwrite it for the rest of the sweep, so an entry with `timeout=10` expired later entries that never asked for one. The effective timeout now resets per entry. [merged in kivy/kivy#9433 →](https://github.com/kivy/kivy/pull/9433) · Oct 2026
 
 **[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
 
