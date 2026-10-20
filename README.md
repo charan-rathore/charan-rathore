@@ -59,6 +59,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/Droid-Deck/DroidDeck"><img alt="DroidDeck · 1 merged PR" src="https://img.shields.io/badge/DroidDeck-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kornia/kornia"><img alt="kornia · 1 merged PR" src="https://img.shields.io/badge/kornia-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
@@ -105,7 +106,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 43 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 44 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -230,6 +231,10 @@ I made `Export as PDF` and `Export as PNG` ask where to save when they run witho
 **[semantica](https://github.com/semantica-agi/semantica)** · graph-native infrastructure for context and accountable AI systems
 
 I made all five `semantica temporal` subcommands work again on v0.7.0, remapping each one from engine methods that no longer exist onto the APIs that do, with a smoke test per subcommand. [merged in semantica-agi/semantica#1987 →](https://github.com/semantica-agi/semantica/pull/1987) · Oct 2026
+
+**[DroidDeck](https://github.com/Droid-Deck/DroidDeck)** · DroidDeck brings the SteamOS experience to Android
+
+I stopped Unreal Engine games from being listed as `BootstrapPackagedGame`, the junk product name their bootstrap launcher ships in its version info, which also left the Steam store search finding nothing; the real game name is used instead. [merged in Droid-Deck/DroidDeck#1020 →](https://github.com/Droid-Deck/DroidDeck/pull/1020) · Oct 2026
 
 **[kornia](https://github.com/kornia/kornia)** · geometric computer vision library for spatial AI
 
