@@ -60,6 +60,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/genspark-ai/genoffice"><img alt="genoffice · 1 merged PR" src="https://img.shields.io/badge/genoffice-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 5 merged PRs" src="https://img.shields.io/badge/harness--sdk-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
@@ -100,7 +101,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 39 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 40 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -239,6 +240,10 @@ I let `OmegaConfigLoader` register custom resolvers with keyword options such as
 **[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
 
 I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
+
+**[genoffice](https://github.com/genspark-ai/genoffice)** · a free, open-source AI office suite: docs, sheets, slides and PDF editors with a built-in agent, plus a CLI
+
+I made the sheets xlsx sidecar say a workbook is password-protected instead of dying inside the zip reader with `invalid Zip archive: Could not find EOCD` and showing an empty grid, by detecting the OLE2 compound-container signature that encryption wraps the package in before the zip reader runs. [merged in genspark-ai/genoffice#2093 →](https://github.com/genspark-ai/genoffice/pull/2093) · Oct 2026
 
 **[harness-sdk](https://github.com/strands-agents/harness-sdk)** · build an agent harness and control it end-to-end
 
