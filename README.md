@@ -63,7 +63,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/mcp-use/mcp-use"><img alt="mcp-use · 1 merged PR" src="https://img.shields.io/badge/mcp--use-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/py-pdf/pypdf"><img alt="pypdf · 3 merged PRs" src="https://img.shields.io/badge/pypdf-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/py-pdf/pypdf"><img alt="pypdf · 4 merged PRs" src="https://img.shields.io/badge/pypdf-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/genspark-ai/genoffice"><img alt="genoffice · 1 merged PR" src="https://img.shields.io/badge/genoffice-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 5 merged PRs" src="https://img.shields.io/badge/harness--sdk-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
@@ -262,6 +262,8 @@ I stopped a malformed PDF with a negative `/N`, `/First` or header offset in an 
 I made a malformed `/N` or `/First` object-stream header fail with a clear `PdfReadError` instead of a raw `KeyError`, `TypeError` or `ValueError`, so a broken PDF gets one honest error. [merged in py-pdf/pypdf#4216 →](https://github.com/py-pdf/pypdf/pull/4216) · Oct 2026
 
 I stopped a `/ToUnicode` CMap with a negative bfrange source range from crashing text extraction with an `OverflowError: cannot convert negative int to unsigned`; the broken line is now skipped. [merged in py-pdf/pypdf#4225 →](https://github.com/py-pdf/pypdf/pull/4225) · Oct 2026
+
+I made a malformed `/Length` in the `/Encrypt` dictionary fail as a pypdf error instead of a raw `ValueError: Invalid key size` or a `ZeroDivisionError` on the pure-Python fallback. [merged in py-pdf/pypdf#4226 →](https://github.com/py-pdf/pypdf/pull/4226) · Oct 2026
 
 **[genoffice](https://github.com/genspark-ai/genoffice)** · a free, open-source AI office suite: docs, sheets, slides and PDF editors with a built-in agent, plus a CLI
 
