@@ -48,9 +48,10 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 7 merged PRs" src="https://img.shields.io/badge/recharts-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/kivy/kivy"><img alt="kivy · 6 merged PRs" src="https://img.shields.io/badge/kivy-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 2 merged PRs" src="https://img.shields.io/badge/pdfcraft-2_merged-181717?logo=github&logoColor=white"></a>
@@ -101,7 +102,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 40 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 41 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -134,6 +135,10 @@ I made `cloneObject` keep the length of sparse arrays, so a sparse array passed 
 **[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
 
 I made the model response cache key include the response schema, so two output classes with different fields no longer share a cached answer for identical messages. [merged in agno-agi/agno#10621 →](https://github.com/agno-agi/agno/pull/10621) · Oct 2026
+
+**[pnpm](https://github.com/pnpm/pnpm)** · fast, disk space efficient package manager
+
+I made a frozen install check transitive local directory dependencies, not just an injected workspace package's immediate ones: a `file:` child one level deeper was only compared against its recorded spec, so moving a leaf from `file:../leaf1` to `file:../leaf2` passed validation with a stale lockfile. [merged in pnpm/pnpm#17141 →](https://github.com/pnpm/pnpm/pull/17141) · Oct 2026
 
 **[locust](https://github.com/locustio/locust)** · write scalable load tests in plain Python
 
@@ -168,6 +173,8 @@ I fixed rotation-invariant gesture matching treating every gesture as unrotated:
 I fixed a released `Recorder` still receiving keyboard input and staying retained by the window: `release()` tried to unbind the underlying methods instead of the partial callbacks bound at init, and skipped the keyboard event entirely. It now unbinds the exact mapping from bind time, and releasing twice stays safe. [merged in kivy/kivy#9424 →](https://github.com/kivy/kivy/pull/9424) · Oct 2026
 
 I stopped a per-entry cache timeout from leaking onto every entry stored after it in the same category: `Cache._purge_by_timeout` seeded the timeout once per category and let any entry's own timeout overwrite it for the rest of the sweep, so an entry with `timeout=10` expired later entries that never asked for one. The effective timeout now resets per entry. [merged in kivy/kivy#9433 →](https://github.com/kivy/kivy/pull/9433) · Oct 2026
+
+I made `circumcircle` raise a descriptive `ValueError` for collinear or coincident points instead of crashing with a bare `ZeroDivisionError`, so callers can tell degenerate input apart from an internal arithmetic bug, and `minimum_bounding_circle` propagates the same error for all-collinear sets. [merged in kivy/kivy#9434 →](https://github.com/kivy/kivy/pull/9434) · Oct 2026
 
 **[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
 
