@@ -52,6 +52,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 7 merged PRs" src="https://img.shields.io/badge/recharts-7_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
@@ -106,7 +107,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 44 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 45 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -163,6 +164,10 @@ I gave each `Funnel` entry its own tooltip color and legend item, so the tooltip
 I made `Scatter` tooltips use each point's own color and stopped data-entry IDs from leaking onto rendered symbols, while keeping the original ID in the point's payload. [merged in recharts/recharts#7986 →](https://github.com/recharts/recharts/pull/7986) · Oct 2026
 
 I fixed mouse events on a sparse `Bar` series reporting the wrong data index when a bar is skipped, by passing the original data index instead of the rendered position to the hover and press handlers. [merged in recharts/recharts#7929 →](https://github.com/recharts/recharts/pull/7929) · Oct 2026
+
+**[react-native-web](https://github.com/necolas/react-native-web)** · Cross-platform React UI packages
+
+I fixed two guards in `StyleSheet/preprocess` that used the comma operator, so `options.shadow` and `options.textShadow` were evaluated and thrown away: the `shadow*` to `boxShadow` and `textShadow*` conversions now stay off when the caller asked for no shadow. [merged in necolas/react-native-web#2915 →](https://github.com/necolas/react-native-web/pull/2915) · Oct 2026
 
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
