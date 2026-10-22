@@ -56,7 +56,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 2 merged PRs" src="https://img.shields.io/badge/pdfcraft-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
@@ -224,6 +224,8 @@ I made the daisyui `SelectWidget`'s empty-selection fallback go through `transla
 I kept link annotations with non-ASCII targets within the PDF spec, percent-encoding the bytes written into the link's `/URI` string instead of saving raw UTF-8 that strict readers can reject or misparse. [merged in storytold/pdfcraft#2679 →](https://github.com/storytold/pdfcraft/pull/2679) · Oct 2026
 
 I made the `info` command catch JavaScript attached through a document's `/OpenAction` catalog entry, so a PDF that runs JS on open no longer reports `javascript: false`. [merged in storytold/pdfcraft#2687 →](https://github.com/storytold/pdfcraft/pull/2687) · Oct 2026
+
+I stopped a single malformed entry in a `/ToUnicode` CMap making the reading path discard the whole map and fall back to the font encoding, by vendoring and patching `hayro-cmap` to parse tolerantly, so `text_find` and search-redact see the same text the edit layer does. [merged in storytold/pdfcraft#3195 →](https://github.com/storytold/pdfcraft/pull/3195) · Oct 2026
 
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
