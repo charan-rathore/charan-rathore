@@ -47,7 +47,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 7 merged PRs" src="https://img.shields.io/badge/react--hook--form-7_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 8 merged PRs" src="https://img.shields.io/badge/react--hook--form-8_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
@@ -136,6 +136,8 @@ I stopped `getValues` with `dirtyFields` from throwing when a form has a field l
 I fixed blur and `setValue` for fields named after `Object.prototype` members like `hasOwnProperty`, so they get marked touched instead of crashing the touched-fields lookup. [merged in react-hook-form/react-hook-form#13833 →](https://github.com/react-hook-form/react-hook-form/pull/13833) · Oct 2026
 
 I made `cloneObject` keep the length of sparse arrays, so a sparse array passed through `defaultValues` or `reset` no longer collapses to `[]` on the way back out of `getValues`. [merged in react-hook-form/react-hook-form#13834 →](https://github.com/react-hook-form/react-hook-form/pull/13834) · Oct 2026
+
+I made `setValues` with `shouldDirty` refresh the dirty flags for values set on inputs that are not mounted yet, so `isDirty` and `dirtyFields` report the change instead of staying empty while `getValues` already returns the new value. [merged in react-hook-form/react-hook-form#13946 →](https://github.com/react-hook-form/react-hook-form/pull/13946) · Oct 2026
 
 **[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
 
