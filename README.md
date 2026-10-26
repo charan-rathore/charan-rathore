@@ -73,7 +73,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 6 merged PRs" src="https://img.shields.io/badge/openmuse-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 7 merged PRs" src="https://img.shields.io/badge/openmuse-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
@@ -336,6 +336,8 @@ I fixed a race where the server and worker starting together on a fresh data dir
 I stopped one bad attachment filename with an unpaired surrogate from breaking the whole Gmail inbox listing and from failing sends, by replacing the bad character before encoding. [merged in CopilotKit/openmuse#121 →](https://github.com/CopilotKit/openmuse/pull/121) · Oct 2026
 
 I made the spending analysis reject a CSV with a repeated `date`, `description`, `amount` or `category` header, so it no longer silently reports one of two conflicting amounts. [merged in CopilotKit/openmuse#114 →](https://github.com/CopilotKit/openmuse/pull/114) · Oct 2026
+
+I stopped a numeric character reference to a surrogate code point (like `&#xD800;`) in an email snippet from throwing in `String.fromCodePoint` and failing the whole mail list; the reference now stays literal instead. [merged in CopilotKit/openmuse#183 →](https://github.com/CopilotKit/openmuse/pull/183) · Oct 2026
 
 **[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
 
