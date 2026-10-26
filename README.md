@@ -77,7 +77,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 3 merged PRs" src="https://img.shields.io/badge/urwid-3_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 4 merged PRs" src="https://img.shields.io/badge/urwid-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
@@ -380,6 +380,8 @@ I stopped `ListBox` from rendering the same items repeatedly when a short list s
 I made alarm callbacks from `set_alarm_in` and `set_alarm_at` safe to raise, so a mis-shaped or throwing callback gets logged with its traceback and the main loop keeps running instead of tearing down the whole app. [merged in urwid/urwid#1418 →](https://github.com/urwid/urwid/pull/1418) · Oct 2026
 
 I made `FloatEdit` turn exponent defaults into editable fixed-point values, reject non-finite defaults and quantize long inputs without exceeding the decimal context precision. [merged in urwid/urwid#1447 →](https://github.com/urwid/urwid/pull/1447) · Oct 2026
+
+I stopped the progress bar showing 100% before it is done with very large finite values, like `current=1e307, done=1e308`, where multiplying by the percentage scale overflowed to infinity even though the real fraction was 10%. [merged in urwid/urwid#1507 →](https://github.com/urwid/urwid/pull/1507) · Oct 2026
 
 **[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
 
