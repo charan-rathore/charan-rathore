@@ -61,7 +61,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 12 merged PRs" src="https://img.shields.io/badge/react--hook--form-12_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/locustio/locust"><img alt="locust · 2 merged PRs" src="https://img.shields.io/badge/locust-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/locustio/locust"><img alt="locust · 3 merged PRs" src="https://img.shields.io/badge/locust-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 9 merged PRs" src="https://img.shields.io/badge/recharts-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 1 merged PR" src="https://img.shields.io/badge/kit-1_merged-181717?logo=github&logoColor=white"></a>
@@ -172,6 +172,8 @@ I made a frozen install check transitive local directory dependencies, not just 
 I closed a CSRF hole in the web UI by making `/stop` and `/stats/reset` POST-only, so a cross-site GET can no longer kill a running load test or wipe its stats through a logged-in admin's browser. [merged in locustio/locust#3567 →](https://github.com/locustio/locust/pull/3567) · Oct 2026
 
 I made temporary request-name groups restore the previous name when they end, including nested groups and exceptions, so later requests keep their intended statistics group across the HTTP, Fast HTTP and OpenAI clients. [merged in locustio/locust#3583 →](https://github.com/locustio/locust/pull/3583) · Nov 2026
+
+I made the HTTP client decode UTF-8 byte URLs before checking or joining them to the base URL, so relative and absolute byte URLs no longer fail with a string-pattern `TypeError`. [merged in locustio/locust#3588 →](https://github.com/locustio/locust/pull/3588) · Nov 2026
 
 **[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
 
