@@ -16,12 +16,23 @@ I work as an Analyst at MiQ across MENA markets. This is the systems work I buil
 
 ## systems I'm building
 
+### Voice Memory
+
+**Changing records. Checkable answers.**
+
+Ask typed questions about synthetic lab reports and contract records, then open the cited line on the original page. Voice Memory tracks corrections, conflicting values and missing approvals, with a memory graph connecting the evidence. You can also upload a document and ask from its source.
+
+[Try the live demo](https://voice-memory-beige.vercel.app/) · [Explore the code](https://github.com/charan-rathore/voice-memory)
+
+Public Bolna calls are currently off. This is a research prototype, not a clinically validated product.
+
 | Project | The system-design question | What is there today |
 | --- | --- | --- |
+| [Voice Memory](https://github.com/charan-rathore/voice-memory) | Which source should an answer trust when records change? | Typed questions, located citations, corrections and a memory graph. [Live synthetic demos](https://voice-memory-beige.vercel.app/); public Bolna calls currently off. |
 | [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | Can a retrieval pipeline show which evidence it kept, lost or refused to answer from? | A source-to-answer browser lab with citations, retrieval traces and a measured diagnostic. The public no-key demo uses keyword retrieval and cited extracts; production hybrid retrieval and model-answer evaluation remain open. |
-| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | How does information become reusable memory without losing its source? | Six source-linked memory blocks, click-through provenance and email/web/document outputs. Local-first; AI is optional. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Can a forecast show whether it is learning from ground truth? | Hyperlocal temperature forecasting that tracks model and API bias over time. Live dashboard and a public forecast leaderboard. |
+| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Earlier experiment, not a current focus. Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
 
 These are different parts of the problem, not one finished autonomous-agent platform.
 
@@ -47,12 +58,13 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 8 merged PRs" src="https://img.shields.io/badge/react--hook--form-8_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 12 merged PRs" src="https://img.shields.io/badge/react--hook--form-12_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/locustio/locust"><img alt="locust · 1 merged PR" src="https://img.shields.io/badge/locust-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/recharts/recharts"><img alt="recharts · 8 merged PRs" src="https://img.shields.io/badge/recharts-8_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/locustio/locust"><img alt="locust · 2 merged PRs" src="https://img.shields.io/badge/locust-2_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 9 merged PRs" src="https://img.shields.io/badge/recharts-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/sveltejs/kit"><img alt="kit · 1 merged PR" src="https://img.shields.io/badge/kit-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
@@ -70,14 +82,14 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 5 merged PRs" src="https://img.shields.io/badge/harness--sdk-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/davidhalter/jedi"><img alt="jedi · 1 merged PR" src="https://img.shields.io/badge/jedi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 6 merged PRs" src="https://img.shields.io/badge/OpenBot-6_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenBot"><img alt="OpenBot · 7 merged PRs" src="https://img.shields.io/badge/OpenBot-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 7 merged PRs" src="https://img.shields.io/badge/openmuse-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 4 merged PRs" src="https://img.shields.io/badge/urwid-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 7 merged PRs" src="https://img.shields.io/badge/urwid-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
@@ -107,7 +119,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 45 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 46 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -139,6 +151,14 @@ I made `cloneObject` keep the length of sparse arrays, so a sparse array passed 
 
 I made `setValues` with `shouldDirty` refresh the dirty flags for values set on inputs that are not mounted yet, so `isDirty` and `dirtyFields` report the change instead of staying empty while `getValues` already returns the new value. [merged in react-hook-form/react-hook-form#13946 →](https://github.com/react-hook-form/react-hook-form/pull/13946) · Oct 2026
 
+I made select hydration account for disabled optgroups, so an untouched select gets its configured default instead of retaining the browser's initial selection and being marked dirty; real edits before hydration are still kept. [merged in react-hook-form/react-hook-form#13953 →](https://github.com/react-hook-form/react-hook-form/pull/13953) · Oct 2026
+
+I made validation-error focus skip disabled options in radio and checkbox groups, so it reaches the first enabled option instead of stopping at a disabled one. [merged in react-hook-form/react-hook-form#13960 →](https://github.com/react-hook-form/react-hook-form/pull/13960) · Oct 2026
+
+I made `handleSubmit` keep a submission unsuccessful when its callback throws or rejects with a falsy reason such as `undefined`, and propagate that original failure instead of treating it as success. [merged in react-hook-form/react-hook-form#13967 →](https://github.com/react-hook-form/react-hook-form/pull/13967) · Oct 2026
+
+I made unregistering a parent clear its descendant registrations too, so a retained child's value is no longer silently dropped on submit because it was still marked disabled. [merged in react-hook-form/react-hook-form#13976 →](https://github.com/react-hook-form/react-hook-form/pull/13976) · Nov 2026
+
 **[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
 
 I made the model response cache key include the response schema, so two output classes with different fields no longer share a cached answer for identical messages. [merged in agno-agi/agno#10621 →](https://github.com/agno-agi/agno/pull/10621) · Oct 2026
@@ -150,6 +170,8 @@ I made a frozen install check transitive local directory dependencies, not just 
 **[locust](https://github.com/locustio/locust)** · write scalable load tests in plain Python
 
 I closed a CSRF hole in the web UI by making `/stop` and `/stats/reset` POST-only, so a cross-site GET can no longer kill a running load test or wipe its stats through a logged-in admin's browser. [merged in locustio/locust#3567 →](https://github.com/locustio/locust/pull/3567) · Oct 2026
+
+I made temporary request-name groups restore the previous name when they end, including nested groups and exceptions, so later requests keep their intended statistics group across the HTTP, Fast HTTP and OpenAI clients. [merged in locustio/locust#3583 →](https://github.com/locustio/locust/pull/3583) · Nov 2026
 
 **[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
 
@@ -169,9 +191,15 @@ I fixed mouse events on a sparse `Bar` series reporting the wrong data index whe
 
 I kept a `Pie` data entry's styles off its label line and label text and stopped the entry `id` rendering three times in the DOM, so valid SVG properties spread onto the sector only. [merged in recharts/recharts#7984 →](https://github.com/recharts/recharts/pull/7984) · Oct 2026
 
+I kept Unicode code points intact when Text wraps with breakAll or truncates with maxLines, so emoji and supplementary Han characters no longer split into surrogate halves. [merged in recharts/recharts#8117 →](https://github.com/recharts/recharts/pull/8117) · Oct 2026
+
 **[react-native-web](https://github.com/necolas/react-native-web)** · Cross-platform React UI packages
 
 I fixed two guards in `StyleSheet/preprocess` that used the comma operator, so `options.shadow` and `options.textShadow` were evaluated and thrown away: the `shadow*` to `boxShadow` and `textShadow*` conversions now stay off when the caller asked for no shadow. [merged in necolas/react-native-web#2915 →](https://github.com/necolas/react-native-web/pull/2915) · Oct 2026
+
+**[kit](https://github.com/sveltejs/kit)** · Svelte's framework for building web apps
+
+I made the initial `afterNavigate` event use the hydrated route and params, so its destination includes the route ID and slug instead of stale navigation state. [merged in sveltejs/kit#17577 →](https://github.com/sveltejs/kit/pull/17577) · Oct 2026
 
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
@@ -319,6 +347,8 @@ I stopped a malformed percent-escape in a stream URL from crashing the server wi
 
 I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
 
+I made the telemetry scrubber distinguish MySQL's `-P` port flag from its `-p` password flag, so it keeps `-P3306` and redacts the attached password later in the same command. [merged in CopilotKit/OpenBot#819 →](https://github.com/CopilotKit/OpenBot/pull/819) · Oct 2026
+
 **[kserve](https://github.com/kserve/kserve)** · model inference on Kubernetes
 
 I made `cpu_count()` read cgroup v2 CPU limits, so the default model-server worker count respects the container quota instead of falling back to the node CPU count. [merged in kserve/kserve#6347 →](https://github.com/kserve/kserve/pull/6347) · Oct 2026
@@ -384,6 +414,12 @@ I made alarm callbacks from `set_alarm_in` and `set_alarm_at` safe to raise, so 
 I made `FloatEdit` turn exponent defaults into editable fixed-point values, reject non-finite defaults and quantize long inputs without exceeding the decimal context precision. [merged in urwid/urwid#1447 →](https://github.com/urwid/urwid/pull/1447) · Oct 2026
 
 I stopped the progress bar showing 100% before it is done with very large finite values, like `current=1e307, done=1e308`, where multiplying by the percentage scale overflowed to infinity even though the real fraction was 10%. [merged in urwid/urwid#1507 →](https://github.com/urwid/urwid/pull/1507) · Oct 2026
+
+I made `IntEdit` trim leading zeros with a bytes caption as it already does with a string caption, so typing `7` into an initial `0` produces `b"7"` instead of `b"07"`. [merged in urwid/urwid#1525 →](https://github.com/urwid/urwid/pull/1525) · Oct 2026
+
+I made `IntegerEdit` convert numeric defaults into the selected base, so `42` stays forty-two in a hexadecimal editor instead of becoming sixty-six; string defaults still mean digits in that base. [merged in urwid/urwid#1532 →](https://github.com/urwid/urwid/pull/1532) · Oct 2026
+
+I stopped zero-height `Pile` rows from receiving typing or exposing a cursor, while keeping navigation to visible rows and preserving an explicitly chosen hidden focus. [merged in urwid/urwid#1543 →](https://github.com/urwid/urwid/pull/1543) · Oct 2026
 
 **[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
 
@@ -566,6 +602,8 @@ Ground truth → commercial API bias → ensemble forecast → public leaderboar
 [see the experiment →](https://thermosense-black.vercel.app)
 
 **[Finsight](https://github.com/charan-rathore/agentic-finance-advisor)**  
+Earlier experiment, not a current focus.
+
 *Can an AI answer also explain how much it should be trusted?*
 
 Multi-agent research with freshness, source diversity, versioned knowledge, and a confidence score you can inspect.
