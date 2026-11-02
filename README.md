@@ -64,7 +64,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/locustio/locust"><img alt="locust · 4 merged PRs" src="https://img.shields.io/badge/locust-4_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 9 merged PRs" src="https://img.shields.io/badge/recharts-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/sveltejs/kit"><img alt="kit · 1 merged PR" src="https://img.shields.io/badge/kit-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/scalar/scalar"><img alt="scalar · 10 merged PRs" src="https://img.shields.io/badge/scalar-10_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
@@ -204,6 +204,8 @@ I fixed two guards in `StyleSheet/preprocess` that used the comma operator, so `
 **[kit](https://github.com/sveltejs/kit)** · Svelte's framework for building web apps
 
 I made the initial `afterNavigate` event use the hydrated route and params, so its destination includes the route ID and slug instead of stale navigation state. [merged in sveltejs/kit#17577 →](https://github.com/sveltejs/kit/pull/17577) · Oct 2026
+
+I made adapter-node ignore `Range` headers on static `HEAD` requests, so header-only asset checks return the full representation size instead of partial-content or out-of-range responses. `GET` ranges keep their existing behavior. [merged in sveltejs/kit#17602 →](https://github.com/sveltejs/kit/pull/17602) · Nov 2026
 
 **[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
 
