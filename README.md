@@ -66,7 +66,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 1 merged PR" src="https://img.shields.io/badge/kit-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/scalar/scalar"><img alt="scalar · 9 merged PRs" src="https://img.shields.io/badge/scalar-9_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/scalar/scalar"><img alt="scalar · 10 merged PRs" src="https://img.shields.io/badge/scalar-10_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
@@ -240,6 +240,8 @@ I kept multiline bodies and unusual header or form names valid in the clj-http e
 I made the raw HTTP/1.1 examples send the body for JSON media types with parameters and for text bodies, instead of sending a Content-Type header with no body behind it. [merged in scalar/scalar#10510 →](https://github.com/scalar/scalar/pull/10510) · Oct 2026
 
 I made Scalar's document download convert flow-style YAML to real JSON, so a spec that starts with `{` no longer downloads as YAML wearing a `.json` name. [merged in scalar/scalar#10545 →](https://github.com/scalar/scalar/pull/10545) · Oct 2026
+
+I kept explicit badge colors and their text contrast above late-loading default utilities, so custom yellow or black badges no longer turn gray in the API reference. [merged in scalar/scalar#10814 →](https://github.com/scalar/scalar/pull/10814) · Nov 2026
 
 **[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
 
