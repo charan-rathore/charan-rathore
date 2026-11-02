@@ -89,7 +89,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 7 merged PRs" src="https://img.shields.io/badge/urwid-7_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 9 merged PRs" src="https://img.shields.io/badge/urwid-9_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
@@ -422,6 +422,10 @@ I made `IntEdit` trim leading zeros with a bytes caption as it already does with
 I made `IntegerEdit` convert numeric defaults into the selected base, so `42` stays forty-two in a hexadecimal editor instead of becoming sixty-six; string defaults still mean digits in that base. [merged in urwid/urwid#1532 →](https://github.com/urwid/urwid/pull/1532) · Oct 2026
 
 I stopped zero-height `Pile` rows from receiving typing or exposing a cursor, while keeping navigation to visible rows and preserving an explicitly chosen hidden focus. [merged in urwid/urwid#1543 →](https://github.com/urwid/urwid/pull/1543) · Oct 2026
+
+I made partial `MonitoredDeque` extensions notify observers before an input iterator error is re-raised, so a cached `ListBox` refreshes changed rows even when a bounded deque keeps the same length. [merged in urwid/urwid#1553 →](https://github.com/urwid/urwid/pull/1553) · Nov 2026
+
+I kept shared table text cells updating every owning row and matching column when their text changes, so reusing a cell across rows or layouts no longer leaves stale widths or clipped text. [merged in urwid/urwid#1551 →](https://github.com/urwid/urwid/pull/1551) · Nov 2026
 
 **[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
 
