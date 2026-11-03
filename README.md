@@ -86,7 +86,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 7 merged PRs" src="https://img.shields.io/badge/openmuse-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 14 merged PRs" src="https://img.shields.io/badge/OpenDots-14_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 15 merged PRs" src="https://img.shields.io/badge/OpenDots-15_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 9 merged PRs" src="https://img.shields.io/badge/urwid-9_merged-181717?logo=github&logoColor=white"></a>
@@ -408,6 +408,8 @@ I made an unknown or foreign page conversation id return a 404 instead of a gene
 I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
 
 I stopped a page deleted during remote thread creation from returning success with an orphan local conversation, by rechecking the page before binding the result. A remote thread already created is not undone by this fix. [merged in CopilotKit/OpenDots#119 →](https://github.com/CopilotKit/OpenDots/pull/119) · Nov 2026
+
+I kept successful owner screen refreshes out of the Computer activity log, so repeated screenshots no longer crowd out the Dot's actions. Failed owner screenshots, agent screenshots and other owner actions still get recorded. [merged in CopilotKit/OpenDots#94 →](https://github.com/CopilotKit/OpenDots/pull/94) · Nov 2026
 
 **[msgspec](https://github.com/msgspec/msgspec)** · a fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML
 
