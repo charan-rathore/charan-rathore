@@ -62,7 +62,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 4 merged PRs" src="https://img.shields.io/badge/locust-4_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/recharts/recharts"><img alt="recharts · 10 merged PRs" src="https://img.shields.io/badge/recharts-10_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 11 merged PRs" src="https://img.shields.io/badge/recharts-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
@@ -198,6 +198,8 @@ I kept a `Pie` data entry's styles off its label line and label text and stopped
 I kept Unicode code points intact when Text wraps with breakAll or truncates with maxLines, so emoji and supplementary Han characters no longer split into surrogate halves. [merged in recharts/recharts#8117 →](https://github.com/recharts/recharts/pull/8117) · Oct 2026
 
 I kept grapheme clusters together when `Text` wraps or truncates, so supported runtimes no longer split joined emoji or leave a dangling joiner before an ellipsis. Runtimes without `Intl.Segmenter` keep the existing code-point fallback. [merged in recharts/recharts#8133 →](https://github.com/recharts/recharts/pull/8133) · Nov 2026
+
+I made `Text` retain the last fitting prefix during `maxLines` truncation, so a fitting prefix plus an ellipsis no longer falls back to the original overflowing text when the search reaches its final candidate. [merged in recharts/recharts#8153 →](https://github.com/recharts/recharts/pull/8153) · Nov 2026
 
 **[react-native-web](https://github.com/necolas/react-native-web)** · Cross-platform React UI packages
 
