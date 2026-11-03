@@ -58,7 +58,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 12 merged PRs" src="https://img.shields.io/badge/react--hook--form-12_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 13 merged PRs" src="https://img.shields.io/badge/react--hook--form-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 4 merged PRs" src="https://img.shields.io/badge/locust-4_merged-181717?logo=github&logoColor=white"></a>
@@ -158,6 +158,8 @@ I made validation-error focus skip disabled options in radio and checkbox groups
 I made `handleSubmit` keep a submission unsuccessful when its callback throws or rejects with a falsy reason such as `undefined`, and propagate that original failure instead of treating it as success. [merged in react-hook-form/react-hook-form#13967 →](https://github.com/react-hook-form/react-hook-form/pull/13967) · Oct 2026
 
 I made unregistering a parent clear its descendant registrations too, so a retained child's value is no longer silently dropped on submit because it was still marked disabled. [merged in react-hook-form/react-hook-form#13976 →](https://github.com/react-hook-form/react-hook-form/pull/13976) · Nov 2026
+
+I made `setError` with `shouldFocus` reach the first enabled radio or checkbox option, instead of trying to focus the group's placeholder ref. Ordinary fields and calls without a focus request keep their behavior. [merged in react-hook-form/react-hook-form#13977 →](https://github.com/react-hook-form/react-hook-form/pull/13977) · Nov 2026
 
 **[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
 
