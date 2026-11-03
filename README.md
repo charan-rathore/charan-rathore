@@ -62,7 +62,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 4 merged PRs" src="https://img.shields.io/badge/locust-4_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/recharts/recharts"><img alt="recharts · 9 merged PRs" src="https://img.shields.io/badge/recharts-9_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/recharts/recharts"><img alt="recharts · 10 merged PRs" src="https://img.shields.io/badge/recharts-10_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
@@ -86,7 +86,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/CopilotKit/openmuse"><img alt="openmuse · 7 merged PRs" src="https://img.shields.io/badge/openmuse-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 13 merged PRs" src="https://img.shields.io/badge/OpenDots-13_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 14 merged PRs" src="https://img.shields.io/badge/OpenDots-14_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/urwid/urwid"><img alt="urwid · 9 merged PRs" src="https://img.shields.io/badge/urwid-9_merged-181717?logo=github&logoColor=white"></a>
@@ -196,6 +196,8 @@ I fixed mouse events on a sparse `Bar` series reporting the wrong data index whe
 I kept a `Pie` data entry's styles off its label line and label text and stopped the entry `id` rendering three times in the DOM, so valid SVG properties spread onto the sector only. [merged in recharts/recharts#7984 →](https://github.com/recharts/recharts/pull/7984) · Oct 2026
 
 I kept Unicode code points intact when Text wraps with breakAll or truncates with maxLines, so emoji and supplementary Han characters no longer split into surrogate halves. [merged in recharts/recharts#8117 →](https://github.com/recharts/recharts/pull/8117) · Oct 2026
+
+I kept grapheme clusters together when `Text` wraps or truncates, so supported runtimes no longer split joined emoji or leave a dangling joiner before an ellipsis. Runtimes without `Intl.Segmenter` keep the existing code-point fallback. [merged in recharts/recharts#8133 →](https://github.com/recharts/recharts/pull/8133) · Nov 2026
 
 **[react-native-web](https://github.com/necolas/react-native-web)** · Cross-platform React UI packages
 
@@ -404,6 +406,8 @@ I made the red connection banner clear once polling recovers after an API restar
 I made an unknown or foreign page conversation id return a 404 instead of a generic 503 that blamed the Intelligence setup; real Intelligence errors still return 503. [merged in CopilotKit/OpenDots#14 →](https://github.com/CopilotKit/OpenDots/pull/14) · Oct 2026
 
 I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
+
+I stopped a page deleted during remote thread creation from returning success with an orphan local conversation, by rechecking the page before binding the result. A remote thread already created is not undone by this fix. [merged in CopilotKit/OpenDots#119 →](https://github.com/CopilotKit/OpenDots/pull/119) · Nov 2026
 
 **[msgspec](https://github.com/msgspec/msgspec)** · a fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML
 
