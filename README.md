@@ -70,6 +70,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/cookiecutter/cookiecutter-django"><img alt="cookiecutter-django · 1 merged PR" src="https://img.shields.io/badge/cookiecutter--django-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/Droid-Deck/DroidDeck"><img alt="DroidDeck · 1 merged PR" src="https://img.shields.io/badge/DroidDeck-1_merged-181717?logo=github&logoColor=white"></a>
@@ -119,7 +120,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 46 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 47 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
@@ -278,6 +279,10 @@ I stopped a single malformed entry in a `/ToUnicode` CMap making the reading pat
 **[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
 
 I fixed data URIs with parameters like `charset=utf-8` raising ContentError and parameterless ones losing their media type, and tightened media detection so plain text no longer reads as BMP or arbitrary XML as SVG. [merged in microsoft/agent-framework#8918 →](https://github.com/microsoft/agent-framework/pull/8918) · Oct 2026
+
+**[cookiecutter-django](https://github.com/cookiecutter/cookiecutter-django)** · Django projects with sensible defaults
+
+I made the production Dockerfile give Django ownership of the media folder when no cloud provider is selected, so uploads no longer hit a root-owned directory. The WORKDIR ownership change stays non-recursive. [merged in cookiecutter/cookiecutter-django#7003 →](https://github.com/cookiecutter/cookiecutter-django/pull/7003) · Nov 2026
 
 **[wordcraft](https://github.com/storytold/wordcraft)** · an open-source, clean-room reimplementation of Microsoft Word in pure Rust
 
