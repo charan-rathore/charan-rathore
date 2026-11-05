@@ -72,7 +72,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/cookiecutter/cookiecutter-django"><img alt="cookiecutter-django · 1 merged PR" src="https://img.shields.io/badge/cookiecutter--django-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/wordcraft"><img alt="wordcraft · 1 merged PR" src="https://img.shields.io/badge/wordcraft-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 1 merged PR" src="https://img.shields.io/badge/semantica-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 2 merged PRs" src="https://img.shields.io/badge/semantica-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/Droid-Deck/DroidDeck"><img alt="DroidDeck · 1 merged PR" src="https://img.shields.io/badge/DroidDeck-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kornia/kornia"><img alt="kornia · 1 merged PR" src="https://img.shields.io/badge/kornia-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
@@ -291,6 +291,8 @@ I made `Export as PDF` and `Export as PNG` ask where to save when they run witho
 **[semantica](https://github.com/semantica-agi/semantica)** · graph-native infrastructure for context and accountable AI systems
 
 I made all five `semantica temporal` subcommands work again on v0.7.0, remapping each one from engine methods that no longer exist onto the APIs that do, with a smoke test per subcommand. [merged in semantica-agi/semantica#1987 →](https://github.com/semantica-agi/semantica/pull/1987) · Oct 2026
+
+I made `kg find-path` resolve numeric CLI arguments to integer-keyed graph nodes, while keeping string IDs and name lookup intact. Ambiguous matches now list integer IDs without crashing, and digit strings that cannot be converted fall back to normal lookup. [merged in semantica-agi/semantica#2186 →](https://github.com/semantica-agi/semantica/pull/2186) · Nov 2026
 
 **[DroidDeck](https://github.com/Droid-Deck/DroidDeck)** · DroidDeck brings the SteamOS experience to Android
 
