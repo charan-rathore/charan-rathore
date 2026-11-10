@@ -61,7 +61,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 13 merged PRs" src="https://img.shields.io/badge/react--hook--form-13_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/locustio/locust"><img alt="locust · 4 merged PRs" src="https://img.shields.io/badge/locust-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/locustio/locust"><img alt="locust · 5 merged PRs" src="https://img.shields.io/badge/locust-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/recharts/recharts"><img alt="recharts · 11 merged PRs" src="https://img.shields.io/badge/recharts-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
@@ -708,4 +708,4 @@ Write the tradeoff down. Keep eval next to the code. Prefer systems that fail in
 </p>
 
 <sub>BITS Pilani · dual degree · class of 2026 · MiQ analyst, MENA · ex-Flipkart product analytics<br>
-Older experiments stay public. The four above are the ones that still feel like me.</sub>
+Older experiments stay public. The five above are the ones that still feel like me.</sub>
