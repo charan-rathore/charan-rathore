@@ -90,7 +90,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/CopilotKit/OpenDots"><img alt="OpenDots · 15 merged PRs" src="https://img.shields.io/badge/OpenDots-15_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/chrisvel/tududi"><img alt="tududi · 1 merged PR" src="https://img.shields.io/badge/tududi-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/urwid/urwid"><img alt="urwid · 10 merged PRs" src="https://img.shields.io/badge/urwid-10_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/urwid/urwid"><img alt="urwid · 11 merged PRs" src="https://img.shields.io/badge/urwid-11_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/simplejson/simplejson"><img alt="simplejson · 1 merged PR" src="https://img.shields.io/badge/simplejson-1_merged-181717?logo=github&logoColor=white"></a>
