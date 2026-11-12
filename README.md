@@ -29,10 +29,10 @@ Public Bolna calls are currently off. This is a research prototype, not a clinic
 | Project | The system-design question | What is there today |
 | --- | --- | --- |
 | [Voice Memory](https://github.com/charan-rathore/voice-memory) | Which source should an answer trust when records change? | Typed questions, located citations, corrections and a memory graph. [Live synthetic demos](https://voice-memory-beige.vercel.app/); public Bolna calls currently off. |
-| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | Can a retrieval pipeline show which evidence it kept, lost or refused to answer from? | A source-to-answer browser lab with citations, retrieval traces and a measured diagnostic. The public no-key demo uses keyword retrieval and cited extracts; production hybrid retrieval and model-answer evaluation remain open. |
+| [IntelliRAG](https://github.com/charan-rathore/IntelliRAG) | Can a retrieval pipeline show which evidence it kept, lost or refused to answer from? | A source-to-answer browser lab with citations, retrieval traces and a measured diagnostic. The public demo uses cited extracts by default. Visitors can add a model key; real-provider answer quality is still unverified. Production hybrid retrieval and model-answer evaluation remain open. |
 | [memoRABLE](https://github.com/charan-rathore/memoRABLE) | How does information become reusable memory without losing its source? | Six source-linked memory blocks, click-through provenance and email/web/document outputs. Local-first; AI is optional. |
 | [ThermoSense](https://github.com/charan-rathore/Time-Series-Temperature-Modelling) | Can a forecast show whether it is learning from ground truth? | Hyperlocal temperature forecasting that tracks model and API bias over time. Live dashboard and a public forecast leaderboard. |
-| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Earlier experiment, not a current focus. Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A project, not a claim of reliable financial advice. |
+| [Finsight](https://github.com/charan-rathore/agentic-finance-advisor) | How do ingestion, analysis and storage agents share knowledge an answer can be checked against? | Separate agents, versioned knowledge and a confidence rubric based on freshness and source diversity. A research project, not financial advice. |
 
 These are different parts of the problem, not one finished autonomous-agent platform.
 
@@ -612,7 +612,7 @@ I made scaffold generation read the vendored AIP specs instead of the sibling ch
 *I wanted to know where RAG actually breaks.*
 
 ingestion → chunking → hybrid retrieval → rerank → citations → evaluation → observability  
-The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. The public demo currently uses temporary keyword/extractive mode; persistent hybrid retrieval and real-provider evaluation are next. The Python platform has separate deterministic CI benchmarks.
+The live browser lab exposes issue ingestion, cited retrieval traces and a lexical knowledge graph. The public demo uses cited extracts by default and storage is temporary; visitors can add a model key, with real-provider answer quality still unverified. Persistent hybrid retrieval and real-provider evaluation are next. The Python platform has separate deterministic CI benchmarks.
 
 Graph-first vector retrieval with weighted shortest-path ranking is now in main ([PR #9](https://github.com/charan-rathore/IntelliRAG/pull/9)).
 
@@ -633,8 +633,6 @@ Ground truth → commercial API bias → ensemble forecast → public leaderboar
 [see the experiment →](https://thermosense-black.vercel.app)
 
 **[Finsight](https://github.com/charan-rathore/agentic-finance-advisor)**  
-Earlier experiment, not a current focus.
-
 *Can an AI answer also explain how much it should be trusted?*
 
 Multi-agent research with freshness, source diversity, versioned knowledge, and a confidence score you can inspect.
