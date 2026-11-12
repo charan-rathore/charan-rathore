@@ -66,7 +66,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kivy/kivy"><img alt="kivy · 7 merged PRs" src="https://img.shields.io/badge/kivy-7_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/scalar/scalar"><img alt="scalar · 11 merged PRs" src="https://img.shields.io/badge/scalar-11_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/scalar/scalar"><img alt="scalar · 12 merged PRs" src="https://img.shields.io/badge/scalar-12_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/rjsf-team/react-jsonschema-form"><img alt="react-jsonschema-form · 6 merged PRs" src="https://img.shields.io/badge/react--jsonschema--form-6_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
