@@ -104,6 +104,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/click-contrib/click-repl"><img alt="click-repl · 1 merged PR" src="https://img.shields.io/badge/click--repl-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kserve/models-web-app"><img alt="models-web-app · 1 merged PR" src="https://img.shields.io/badge/models--web--app-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/Leaflet/Leaflet"><img alt="Leaflet · 1 merged PR" src="https://img.shields.io/badge/Leaflet-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/Aseel012/kavynui"><img alt="kavynui · 1 merged PR" src="https://img.shields.io/badge/kavynui-1_merged-181717?logo=github&logoColor=white"></a>
 </p>
 
 **[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
@@ -121,7 +122,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 48 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 49 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
