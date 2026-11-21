@@ -58,7 +58,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/morluto/rea"><img alt="rea · 1 merged PR" src="https://img.shields.io/badge/rea-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/vitejs/vite"><img alt="vite · 1 merged PR" src="https://img.shields.io/badge/vite-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/prettier/prettier"><img alt="prettier · 1 merged PR" src="https://img.shields.io/badge/prettier-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 13 merged PRs" src="https://img.shields.io/badge/react--hook--form-13_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/react-hook-form/react-hook-form"><img alt="react-hook-form · 14 merged PRs" src="https://img.shields.io/badge/react--hook--form-14_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agno-agi/agno"><img alt="agno · 1 merged PR" src="https://img.shields.io/badge/agno-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pnpm/pnpm"><img alt="pnpm · 1 merged PR" src="https://img.shields.io/badge/pnpm-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/locustio/locust"><img alt="locust · 5 merged PRs" src="https://img.shields.io/badge/locust-5_merged-181717?logo=github&logoColor=white"></a>
