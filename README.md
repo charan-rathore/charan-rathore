@@ -6,9 +6,9 @@ I build retrieval and memory systems that let you ask **“Where did that answer
 
 **IntelliRAG** · Ask a question, open the cited passage, then follow the retrieval trace to see which evidence survived. The public demo starts with cited extracts. [Open the lab](https://intellirag-live-own-track.vercel.app/) · [Read the evaluation](https://github.com/charan-rathore/IntelliRAG/blob/main/docs/audit/REPORT.md)
 
-**memoRABLE** · Turn a document into six reusable memory blocks. Follow a block back to its source, then use that same material in an email or on a web page. [Explore the code](https://github.com/charan-rathore/memoRABLE)
+**memoRABLE** · Turn a document into six reusable memory blocks. Follow a block back to its source, then use that same material in an email or on a web page. [Try the workspace](https://memo-rable.vercel.app/) · [Explore the code](https://github.com/charan-rathore/memoRABLE)
 
-**ThermoSense** · A hyperlocal temperature forecast keeps its score after the weather arrives. Compare the model and the API against observations to see where each runs warm or cold. [Explore the forecasts](https://github.com/charan-rathore/Time-Series-Temperature-Modelling)
+**ThermoSense** · How much does a model improve on “tomorrow equals today”? I tested that baseline over a 365-day window using the Open-Meteo archive. A regularised linear model reduced RMSE by about 8% on that window. The audit explains how the reference data limits that result. [Open the dashboard](https://thermosense-black.vercel.app/) · [Read the forecast audit](https://github.com/charan-rathore/Time-Series-Temperature-Modelling/blob/main/docs/EVALUATION-AUDIT.md)
 
 ## Changes that reached upstream
 
