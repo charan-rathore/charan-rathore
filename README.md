@@ -12,7 +12,7 @@ I build retrieval and memory systems that let you ask **“Where did that answer
 
 ## Changes that reached upstream
 
-- **A retry should produce one artifact.** In openmuse, a file could exist even when its checkpoint was lost. I made the retry recover the original file. [openmuse #45](https://github.com/CopilotKit/openmuse/pull/45)
+- **A retry should produce one artifact.** In OpenFuse, a file could exist even when its checkpoint was lost. I made the retry recover the original file. [OpenFuse #45](https://github.com/CopilotKit/openfuse/pull/45)
 - **Deleting one row should leave its neighbor intact.** In React Hook Form, removing a parent row could unregister the nested fields of the row moving into its place. I fixed the interaction between removal and reindexing. [React Hook Form #13828](https://github.com/react-hook-form/react-hook-form/pull/13828)
 - **One tool definition could break every request.** Hermes sent a schema constraint that llama.cpp could not compile. I removed the incompatible constraint while preserving the runtime length check. [Hermes #131286](https://github.com/NousResearch/hermes-agent/pull/131286)
 - **A list should follow the page around it.** Removing content above a virtual list could leave it displaying stale rows. I fixed the missed update in react-window. [react-window #935](https://github.com/bvaughn/react-window/pull/935)

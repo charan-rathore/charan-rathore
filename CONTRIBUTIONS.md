@@ -2,6 +2,10 @@
 
 [Back to my profile](README.md)
 
+**Leaflet** · A throttled handler could call itself before the interval had elapsed. I fixed the reentrant path. [Merged change](https://github.com/Leaflet/Leaflet/pull/10614)
+
+**React Virtuoso** · When a virtual list switches scroll containers, an old resize measurement can arrive after the switch. I cancelled those stale measurements. [Merged change](https://github.com/petyosi/react-virtuoso/pull/1579)
+
 **react-window**
 
 When the content above a virtual list disappeared, the list could miss its next update. I fixed that transition. [Merged change](https://github.com/bvaughn/react-window/pull/935)
@@ -475,3 +479,15 @@ I made a background quota reading write the account's quota history too, so a ma
 I made the sessions page limit count nonempty sessions only, so a newest empty session file no longer eats the whole page or wins an mtime tie. [merged in yetone/magpie#1324 →](https://github.com/yetone/magpie/pull/1324) · Oct 2026
 
 </details>
+
+## Work carried forward by maintainers
+
+I stopped Hermes compression from copying long user messages into summaries; the maintainer carried my fix into the merged PR, with credit in its history. [merged via NousResearch/hermes-agent#124966 →](https://github.com/NousResearch/hermes-agent/pull/124966) · Sep 2026
+
+I traced why Anthropic tool_result images died with a 400 on Chat translation; the maintainer shipped his own version of the fix in v0.1.348, crediting the find in the commit message. [fixed via yetone/magpie@504b470 →](https://github.com/yetone/magpie/commit/504b470f127c05a805093ada144e11b58376ddb0) · Sep 2026
+
+I made unanswered user text survive the next turn's persist override; after my PR was closed unmerged, the maintainer carried all four of my commits to main with authorship intact. [merged via NousResearch/hermes-agent#126615 →](https://github.com/NousResearch/hermes-agent/pull/126615) · Sep 2026
+
+I kept clarify and connection cards open for /btw side tasks; the maintainer's expanded take (/bg too, plus an attachment guard) carried two of my commits to main and co-credited me on his. [merged via NousResearch/hermes-agent#127051 →](https://github.com/NousResearch/hermes-agent/pull/127051) · Sep 2026
+
+I made scaffold generation read the vendored AIP specs instead of the sibling checkout; another contributor's PR carried the approach to main, crediting it in the description. [merged via agentproto/ts#1622 →](https://github.com/agentproto/ts/pull/1622) · Sep 2026
