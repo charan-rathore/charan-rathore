@@ -4,7 +4,7 @@ I build retrieval and memory systems that let you ask **“Where did that answer
 
 ## Try the work
 
-**IntelliRAG** · Ask a question, open the cited passage, then follow the retrieval trace to see which evidence survived. The public demo starts with cited extracts. [Open the lab](https://intellirag-live-own-track.vercel.app/) · [Read the evaluation](https://github.com/charan-rathore/IntelliRAG/blob/main/audit/REPORT.md)
+**IntelliRAG** · Ask a question, open the cited passage, then follow the retrieval trace to see which evidence survived. The public demo starts with cited extracts. [Open the lab](https://intellirag-live-own-track.vercel.app/) · [Read the evaluation](https://github.com/charan-rathore/IntelliRAG/blob/main/docs/audit/REPORT.md)
 
 **memoRABLE** · Turn a document into six reusable memory blocks. Follow a block back to its source, then use that same material in an email or on a web page. [Explore the code](https://github.com/charan-rathore/memoRABLE)
 
