@@ -1,0 +1,477 @@
+# Upstream contributions
+
+[Back to my profile](README.md)
+
+**react-window**
+
+When the content above a virtual list disappeared, the list could miss its next update. I fixed that transition. [Merged change](https://github.com/bvaughn/react-window/pull/935)
+
+**[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
+
+I made the gateway show an enabled platform whose adapter is missing in `hermes status`. My commit is on main with my authorship, merged through a maintainer's salvage PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
+
+I fixed every request to a llama.cpp server failing with HTTP 400 "failed to parse grammar", by dropping the `maxLength: 8000` from the clarify tool's `choices` schema; the runtime length check is untouched, and tests guard against any bound of 2000 or more. [merged in NousResearch/hermes-agent#131286 →](https://github.com/NousResearch/hermes-agent/pull/131286) · Oct 2026
+
+**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
+
+I stopped Gemini ANY mode and Responses allowed_tools from leaking the full tool list, so an allowed subset stays a subset. [merged in yetone/magpie#164 →](https://github.com/yetone/magpie/pull/164) · Sep 2026
+
+I made Gemini VALIDATED mode filter declarations down to the allowed list on translated routes, so the model only sees tools it may call. [merged in yetone/magpie#170 →](https://github.com/yetone/magpie/pull/170) · Sep 2026
+
+I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
+
+
+
+**[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
+
+I added an opt-in Swift module cache to REA's macOS ownership helper: `REA_DARWIN_MODULE_CACHE_PATH` gives the compiler a caller-owned cache that survives helper close, and `REA_DARWIN_SWIFTC_PATH` with an absolute `SDKROOT` invokes an installed Swift compiler directly, bypassing `xcrun`'s lookup cache. [merged in morluto/rea#2252 →](https://github.com/morluto/rea/pull/2252) · Oct 2026
+
+**[vite](https://github.com/vitejs/vite)** · next generation frontend tooling
+
+I stopped Vite's dependency optimizer from warning about packages that intentionally empty an import in the browser, so a `browser: false` mapping loads an empty module while genuinely unsupported imports still warn. [merged in vitejs/vite#23590 →](https://github.com/vitejs/vite/pull/23590) · Sep 2026
+
+**[prettier](https://github.com/prettier/prettier)** · an opinionated code formatter
+
+I stopped a leading comment between `export` and a decorator from growing a fresh blank line on every reformat, by leaving out the extra hardline the decorator printer added on top of the comment's own separator. [merged in prettier/prettier#20180 →](https://github.com/prettier/prettier/pull/20180) · Oct 2026
+
+**[react-hook-form](https://github.com/react-hook-form/react-hook-form)** · react hooks for form state management and validation
+
+I restored blur validation on a `Controller` after `reset()`, so a field that lost its registration without rerendering registers again on blur and validates in `onTouched` mode instead of skipping the check. [merged in react-hook-form/react-hook-form#13817 →](https://github.com/react-hook-form/react-hook-form/pull/13817) · Oct 2026
+
+I stopped removing a row from an outer `useFieldArray` with `shouldUnregister` on from wiping the nested field array values of the row that shifts into its place, by skipping the nested unregister while the parent reindexes. [merged in react-hook-form/react-hook-form#13828 →](https://github.com/react-hook-form/react-hook-form/pull/13828) · Oct 2026
+
+I fixed `useFieldArray.remove` so duplicated indexes like `remove([1, 1])` no longer remove extra rows, and the array you pass in is no longer sorted in place. [merged in react-hook-form/react-hook-form#13830 →](https://github.com/react-hook-form/react-hook-form/pull/13830) · Oct 2026
+
+I made `useForm` reset an option to its default when it is left out of the props on a later render, so a dropped `resolver` stops running on submit and `mode` goes back to `onSubmit`. [merged in react-hook-form/react-hook-form#13831 →](https://github.com/react-hook-form/react-hook-form/pull/13831) · Oct 2026
+
+I stopped `getValues` with `dirtyFields` from throwing when a form has a field literally named `hasOwnProperty`, so the dirty check no longer mistakes the field's value for the Object method. [merged in react-hook-form/react-hook-form#13832 →](https://github.com/react-hook-form/react-hook-form/pull/13832) · Oct 2026
+
+I fixed blur and `setValue` for fields named after `Object.prototype` members like `hasOwnProperty`, so they get marked touched instead of crashing the touched-fields lookup. [merged in react-hook-form/react-hook-form#13833 →](https://github.com/react-hook-form/react-hook-form/pull/13833) · Oct 2026
+
+I made `cloneObject` keep the length of sparse arrays, so a sparse array passed through `defaultValues` or `reset` no longer collapses to `[]` on the way back out of `getValues`. [merged in react-hook-form/react-hook-form#13834 →](https://github.com/react-hook-form/react-hook-form/pull/13834) · Oct 2026
+
+I made `setValues` with `shouldDirty` refresh the dirty flags for values set on inputs that are not mounted yet, so `isDirty` and `dirtyFields` report the change instead of staying empty while `getValues` already returns the new value. [merged in react-hook-form/react-hook-form#13946 →](https://github.com/react-hook-form/react-hook-form/pull/13946) · Oct 2026
+
+I made select hydration account for disabled optgroups, so an untouched select gets its configured default instead of retaining the browser's initial selection and being marked dirty; real edits before hydration are still kept. [merged in react-hook-form/react-hook-form#13953 →](https://github.com/react-hook-form/react-hook-form/pull/13953) · Oct 2026
+
+I made validation-error focus skip disabled options in radio and checkbox groups, so it reaches the first enabled option instead of stopping at a disabled one. [merged in react-hook-form/react-hook-form#13960 →](https://github.com/react-hook-form/react-hook-form/pull/13960) · Oct 2026
+
+I made `handleSubmit` keep a submission unsuccessful when its callback throws or rejects with a falsy reason such as `undefined`, and propagate that original failure instead of treating it as success. [merged in react-hook-form/react-hook-form#13967 →](https://github.com/react-hook-form/react-hook-form/pull/13967) · Oct 2026
+
+I made unregistering a parent clear its descendant registrations too, so a retained child's value is no longer silently dropped on submit because it was still marked disabled. [merged in react-hook-form/react-hook-form#13976 →](https://github.com/react-hook-form/react-hook-form/pull/13976) · Nov 2026
+
+I made `setError` with `shouldFocus` reach the first enabled radio or checkbox option, instead of trying to focus the group's placeholder ref. Ordinary fields and calls without a focus request keep their behavior. [merged in react-hook-form/react-hook-form#13977 →](https://github.com/react-hook-form/react-hook-form/pull/13977) · Nov 2026
+
+**[agno](https://github.com/agno-agi/agno)** · build, run, and manage agent platforms
+
+I made the model response cache key include the response schema, so two output classes with different fields no longer share a cached answer for identical messages. [merged in agno-agi/agno#10621 →](https://github.com/agno-agi/agno/pull/10621) · Oct 2026
+
+**[pnpm](https://github.com/pnpm/pnpm)** · fast, disk space efficient package manager
+
+I made a frozen install check transitive local directory dependencies, not just an injected workspace package's immediate ones: a `file:` child one level deeper was only compared against its recorded spec, so moving a leaf from `file:../leaf1` to `file:../leaf2` passed validation with a stale lockfile. [merged in pnpm/pnpm#17141 →](https://github.com/pnpm/pnpm/pull/17141) · Oct 2026
+
+**[locust](https://github.com/locustio/locust)** · write scalable load tests in plain Python
+
+I closed a CSRF hole in the web UI by making `/stop` and `/stats/reset` POST-only, so a cross-site GET can no longer kill a running load test or wipe its stats through a logged-in admin's browser. [merged in locustio/locust#3567 →](https://github.com/locustio/locust/pull/3567) · Oct 2026
+
+I made temporary request-name groups restore the previous name when they end, including nested groups and exceptions, so later requests keep their intended statistics group across the HTTP, Fast HTTP and OpenAI clients. [merged in locustio/locust#3583 →](https://github.com/locustio/locust/pull/3583) · Nov 2026
+
+I made the HTTP client decode UTF-8 byte URLs before checking or joining them to the base URL, so relative and absolute byte URLs no longer fail with a string-pattern `TypeError`. [merged in locustio/locust#3588 →](https://github.com/locustio/locust/pull/3588) · Nov 2026
+
+I kept task-control exceptions from being swallowed as request failures inside `EventHook.measure()`, so `StopUser` can stop a user and the scheduler still receives reschedule and interrupt signals. [merged in locustio/locust#3589 →](https://github.com/locustio/locust/pull/3589) · Nov 2026
+
+**[recharts](https://github.com/recharts/recharts)** · redefined chart library built with React and D3
+
+I fixed a lone negative bar in a `BarStack` rounding its corners at the zero line instead of the outer end, by running a single rectangle through the same normalization as a stack of several. [merged in recharts/recharts#7896 →](https://github.com/recharts/recharts/pull/7896) · Oct 2026
+
+I stopped `Bar`, `RadialBar` and `Brush` writing the text `undefined` into the DOM when a name or className is missing; the attribute is now left out, and Brush aria labels fall back to the dataKey value. [merged in recharts/recharts#7914 →](https://github.com/recharts/recharts/pull/7914) · Oct 2026
+
+I kept a `Brush` start or end index from falling outside the data and drawing NaN positions, by clamping both indexes to the data range when the data or the props change. [merged in recharts/recharts#7916 →](https://github.com/recharts/recharts/pull/7916) · Oct 2026
+
+I fixed the `ease-out` and `ease-in-out` animation curves being swapped, so `easing="ease-out"` now runs the real CSS ease-out curve instead of ease-in-out. [merged in recharts/recharts#7931 →](https://github.com/recharts/recharts/pull/7931) · Oct 2026
+
+I gave each `Funnel` entry its own tooltip color and legend item, so the tooltip and legend reflect the entry instead of a shared chart-level color or an empty legend. [merged in recharts/recharts#7985 →](https://github.com/recharts/recharts/pull/7985) · Oct 2026
+
+I made `Scatter` tooltips use each point's own color and stopped data-entry IDs from leaking onto rendered symbols, while keeping the original ID in the point's payload. [merged in recharts/recharts#7986 →](https://github.com/recharts/recharts/pull/7986) · Oct 2026
+
+I fixed mouse events on a sparse `Bar` series reporting the wrong data index when a bar is skipped, by passing the original data index instead of the rendered position to the hover and press handlers. [merged in recharts/recharts#7929 →](https://github.com/recharts/recharts/pull/7929) · Oct 2026
+
+I kept a `Pie` data entry's styles off its label line and label text and stopped the entry `id` rendering three times in the DOM, so valid SVG properties spread onto the sector only. [merged in recharts/recharts#7984 →](https://github.com/recharts/recharts/pull/7984) · Oct 2026
+
+I kept Unicode code points intact when Text wraps with breakAll or truncates with maxLines, so emoji and supplementary Han characters no longer split into surrogate halves. [merged in recharts/recharts#8117 →](https://github.com/recharts/recharts/pull/8117) · Oct 2026
+
+I kept grapheme clusters together when `Text` wraps or truncates, so supported runtimes no longer split joined emoji or leave a dangling joiner before an ellipsis. Runtimes without `Intl.Segmenter` keep the existing code-point fallback. [merged in recharts/recharts#8133 →](https://github.com/recharts/recharts/pull/8133) · Nov 2026
+
+I made `Text` retain the last fitting prefix during `maxLines` truncation, so a fitting prefix plus an ellipsis no longer falls back to the original overflowing text when the search reaches its final candidate. [merged in recharts/recharts#8153 →](https://github.com/recharts/recharts/pull/8153) · Nov 2026
+
+**[react-native-web](https://github.com/necolas/react-native-web)** · Cross-platform React UI packages
+
+I fixed two guards in `StyleSheet/preprocess` that used the comma operator, so `options.shadow` and `options.textShadow` were evaluated and thrown away: the `shadow*` to `boxShadow` and `textShadow*` conversions now stay off when the caller asked for no shadow. [merged in necolas/react-native-web#2915 →](https://github.com/necolas/react-native-web/pull/2915) · Oct 2026
+
+**[kit](https://github.com/sveltejs/kit)** · Svelte's framework for building web apps
+
+I made the initial `afterNavigate` event use the hydrated route and params, so its destination includes the route ID and slug instead of stale navigation state. [merged in sveltejs/kit#17577 →](https://github.com/sveltejs/kit/pull/17577) · Oct 2026
+
+I made adapter-node ignore `Range` headers on static `HEAD` requests, so header-only asset checks return the full representation size instead of partial-content or out-of-range responses. `GET` ranges keep their existing behavior. [merged in sveltejs/kit#17602 →](https://github.com/sveltejs/kit/pull/17602) · Nov 2026
+
+**[kivy](https://github.com/kivy/kivy)** · open source UI framework written in Python, running on Windows, Linux, macOS, Android and iOS
+
+I fixed `Image` crashing on data URIs without `;base64`, which handed a plain string to `BytesIO`; the payload is now percent-decoded to bytes first, per RFC 2397, and base64 handling is unchanged. [merged in kivy/kivy#9394 →](https://github.com/kivy/kivy/pull/9394) · Oct 2026
+
+I fixed KV rules crashing on an `or` or `and` inside an f-string, such as `f"{a or b}"`, by splitting the boolean branch from the f-string branch so both operands are found and stay reactive. [merged in kivy/kivy#9393 →](https://github.com/kivy/kivy/pull/9393) · Oct 2026
+
+I stopped `xclip` holding a launcher's captured output streams open after the app quits, by sending the two streams it does not use to `/dev/null`, so test runners and pipelines see EOF instead of a process that looks hung. [merged in kivy/kivy#9419 →](https://github.com/kivy/kivy/pull/9419) · Oct 2026
+
+I fixed rotation-invariant gesture matching treating every gesture as unrotated: `get_rotation()` measured the angle between the other gesture's first point and itself, and it now uses this gesture's own first point. [merged in kivy/kivy#9420 →](https://github.com/kivy/kivy/pull/9420) · Oct 2026
+
+I fixed a released `Recorder` still receiving keyboard input and staying retained by the window: `release()` tried to unbind the underlying methods instead of the partial callbacks bound at init, and skipped the keyboard event entirely. It now unbinds the exact mapping from bind time, and releasing twice stays safe. [merged in kivy/kivy#9424 →](https://github.com/kivy/kivy/pull/9424) · Oct 2026
+
+I stopped a per-entry cache timeout from leaking onto every entry stored after it in the same category: `Cache._purge_by_timeout` seeded the timeout once per category and let any entry's own timeout overwrite it for the rest of the sweep, so an entry with `timeout=10` expired later entries that never asked for one. The effective timeout now resets per entry. [merged in kivy/kivy#9433 →](https://github.com/kivy/kivy/pull/9433) · Oct 2026
+
+I made `circumcircle` raise a descriptive `ValueError` for collinear or coincident points instead of crashing with a bare `ZeroDivisionError`, so callers can tell degenerate input apart from an internal arithmetic bug, and `minimum_bounding_circle` propagates the same error for all-collinear sets. [merged in kivy/kivy#9434 →](https://github.com/kivy/kivy/pull/9434) · Oct 2026
+
+**[scalar](https://github.com/scalar/scalar)** · open-source API references and API client
+
+I fixed multipart file uploads in Scalar's generated code examples, starting with the missing `fileName` on file params. The maintainer built on it so examples keep real file bytes and matching boundaries across clients. [merged in scalar/scalar#10460 →](https://github.com/scalar/scalar/pull/10460) · Oct 2026
+
+I escaped quotes and backslashes in the PHP cURL example bodies, so a copied snippet with an apostrophe in the body is still valid PHP. [merged in scalar/scalar#10495 →](https://github.com/scalar/scalar/pull/10495) · Oct 2026
+
+I escaped special characters in the Dart HTTP examples and taught them to send plain text bodies, so copied Dart code compiles and includes the body it should. [merged in scalar/scalar#10496 →](https://github.com/scalar/scalar/pull/10496) · Oct 2026
+
+I made the Python Requests and HTTPX examples send bodies for JSON media types with parameters and for text types, instead of dropping them. [merged in scalar/scalar#10497 →](https://github.com/scalar/scalar/pull/10497) · Oct 2026
+
+I kept every value of a repeated form field in the PHP Guzzle examples, so `tag=a&tag=b` arrives with both values instead of only the last. [merged in scalar/scalar#10499 →](https://github.com/scalar/scalar/pull/10499) · Oct 2026
+
+I escaped strings in the C# HttpClient examples, so a URL, header or form value with a quote or backslash still compiles and sends as written. [merged in scalar/scalar#10503 →](https://github.com/scalar/scalar/pull/10503) · Oct 2026
+
+I kept multiline bodies and unusual header or form names valid in the clj-http examples, by writing line breaks as escapes and falling back to string keys when a name is not a valid keyword. [merged in scalar/scalar#10507 →](https://github.com/scalar/scalar/pull/10507) · Oct 2026
+
+I made the raw HTTP/1.1 examples send the body for JSON media types with parameters and for text bodies, instead of sending a Content-Type header with no body behind it. [merged in scalar/scalar#10510 →](https://github.com/scalar/scalar/pull/10510) · Oct 2026
+
+I made Scalar's document download convert flow-style YAML to real JSON, so a spec that starts with `{` no longer downloads as YAML wearing a `.json` name. [merged in scalar/scalar#10545 →](https://github.com/scalar/scalar/pull/10545) · Oct 2026
+
+I kept explicit badge colors and their text contrast above late-loading default utilities, so custom yellow or black badges no longer turn gray in the API reference. [merged in scalar/scalar#10814 →](https://github.com/scalar/scalar/pull/10814) · Nov 2026
+
+I kept root JSON values intact in generated Fetch, Undici, clj-http and Objective-C examples, instead of turning them into objects, dropping `false`, or rejecting scalars. Python examples now use valid `True` and `False` literals. [merged in scalar/scalar#10838 →](https://github.com/scalar/scalar/pull/10838) · Nov 2026
+
+**[react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)** · a React component for building web forms from JSON Schema
+
+I fixed a root value of `false`, `0` or `''` failing validation, so a boolean form with `false` no longer errors with "must be boolean" and can submit. [merged in rjsf-team/react-jsonschema-form#5423 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5423) · Oct 2026
+
+I fixed a false "Circular reference ($ref cycle) detected" notice when `dependencies` `oneOf` branches share a definition, by resolving each branch against its own recurse list so a sibling's resolved ref no longer reads as a cycle. [merged in rjsf-team/react-jsonschema-form#5435 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5435) · Oct 2026
+
+I made `makeAllReferencesAbsolute` skip non-string `$ref` and `$id` values, so a schema property that happens to be named `$ref` keeps its schema instead of being rewritten as a URL with `[object Object]` in it. [merged in rjsf-team/react-jsonschema-form#5459 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5459) · Oct 2026
+
+I stopped `sanitizeDataForNewSchema` from deleting legitimately entered array items when an unrelated sibling field's schema changed: the old items schema now resolves against the previous form data, so the enum filter only runs when the items schema really changed. [merged in rjsf-team/react-jsonschema-form#5460 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5460) · Oct 2026
+
+I named the shadcn multiple `SelectWidget`'s cmdk combobox from the field's title or a `ui:title` override, so its search input no longer renders without an accessible name. [merged in rjsf-team/react-jsonschema-form#5475 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5475) · Oct 2026
+
+I made the daisyui `SelectWidget`'s empty-selection fallback go through `translateString`, so a `SelectPlaceholder` translation reaches it the way it already reached the shadcn widget. [merged in rjsf-team/react-jsonschema-form#5512 →](https://github.com/rjsf-team/react-jsonschema-form/pull/5512) · Oct 2026
+
+**[pdfcraft](https://github.com/storytold/pdfcraft)** · an open-source PDF reader and editor written from scratch in pure Rust
+
+I kept link annotations with non-ASCII targets within the PDF spec, percent-encoding the bytes written into the link's `/URI` string instead of saving raw UTF-8 that strict readers can reject or misparse. [merged in storytold/pdfcraft#2679 →](https://github.com/storytold/pdfcraft/pull/2679) · Oct 2026
+
+I made the `info` command catch JavaScript attached through a document's `/OpenAction` catalog entry, so a PDF that runs JS on open no longer reports `javascript: false`. [merged in storytold/pdfcraft#2687 →](https://github.com/storytold/pdfcraft/pull/2687) · Oct 2026
+
+I stopped a single malformed entry in a `/ToUnicode` CMap making the reading path discard the whole map and fall back to the font encoding, by vendoring and patching `hayro-cmap` to parse tolerantly, so `text_find` and search-redact see the same text the edit layer does. [merged in storytold/pdfcraft#3195 →](https://github.com/storytold/pdfcraft/pull/3195) · Oct 2026
+
+**[agent-framework](https://github.com/microsoft/agent-framework)** · a framework for building, orchestrating and deploying AI agents and multi-agent workflows
+
+I fixed data URIs with parameters like `charset=utf-8` raising ContentError and parameterless ones losing their media type, and tightened media detection so plain text no longer reads as BMP or arbitrary XML as SVG. [merged in microsoft/agent-framework#8918 →](https://github.com/microsoft/agent-framework/pull/8918) · Oct 2026
+
+**[cookiecutter-django](https://github.com/cookiecutter/cookiecutter-django)** · Django projects with sensible defaults
+
+I made the production Dockerfile give Django ownership of the media folder when no cloud provider is selected, so uploads no longer hit a root-owned directory. The WORKDIR ownership change stays non-recursive. [merged in cookiecutter/cookiecutter-django#7003 →](https://github.com/cookiecutter/cookiecutter-django/pull/7003) · Nov 2026
+
+**[wordcraft](https://github.com/storytold/wordcraft)** · an open-source, clean-room reimplementation of Microsoft Word in pure Rust
+
+I made `Export as PDF` and `Export as PNG` ask where to save when they run without a path, instead of failing with a missing-parameter error, and added regression tests for both. [merged in storytold/wordcraft#2665 →](https://github.com/storytold/wordcraft/pull/2665) · Oct 2026
+
+**[semantica](https://github.com/semantica-agi/semantica)** · graph-native infrastructure for context and accountable AI systems
+
+I made all five `semantica temporal` subcommands work again on v0.7.0, remapping each one from engine methods that no longer exist onto the APIs that do, with a smoke test per subcommand. [merged in semantica-agi/semantica#1987 →](https://github.com/semantica-agi/semantica/pull/1987) · Oct 2026
+
+I made `kg find-path` resolve numeric CLI arguments to integer-keyed graph nodes, while keeping string IDs and name lookup intact. Ambiguous matches now list integer IDs without crashing, and digit strings that cannot be converted fall back to normal lookup. [merged in semantica-agi/semantica#2186 →](https://github.com/semantica-agi/semantica/pull/2186) · Nov 2026
+
+**[DroidDeck](https://github.com/Droid-Deck/DroidDeck)** · DroidDeck brings the SteamOS experience to Android
+
+I stopped Unreal Engine games from being listed as `BootstrapPackagedGame`, the junk product name their bootstrap launcher ships in its version info, which also left the Steam store search finding nothing; the real game name is used instead. [merged in Droid-Deck/DroidDeck#1020 →](https://github.com/Droid-Deck/DroidDeck/pull/1020) · Oct 2026
+
+**[kornia](https://github.com/kornia/kornia)** · geometric computer vision library for spatial AI
+
+I made `MS_SSIMLoss` check the exact input and target shapes instead of only the number of dimensions, so a `(2, C, H, W)` input against a `(1, C, H, W)` target raises a clear error immediately instead of silently broadcasting to a wrong loss. [merged in kornia/kornia#6158 →](https://github.com/kornia/kornia/pull/6158) · Oct 2026
+
+**[nitro](https://github.com/nitrojs/nitro)** · next generation server toolkit
+
+I made the build refuse to run when cleaning the output directory would delete the public assets inside it, so it fails with an error naming both paths instead of reporting success on an empty deploy. [merged in nitrojs/nitro#4685 →](https://github.com/nitrojs/nitro/pull/4685) · Oct 2026
+
+I stopped the Cloudflare preset from answering a missing public asset with a 404 carrying the one-year immutable cache header, so browsers no longer cache "this module does not exist" until a hard reload. [merged in nitrojs/nitro#4727 →](https://github.com/nitrojs/nitro/pull/4727) · Oct 2026
+
+I fixed the Vercel preset ignoring a `redirect: false` rule without headers, so those paths no longer get pulled into broader redirects in the build output. [merged in nitrojs/nitro#4728 →](https://github.com/nitrojs/nitro/pull/4728) · Oct 2026
+
+**[kedro](https://github.com/kedro-org/kedro)** · a toolbox for production-ready data science
+
+I fixed unnamed pipeline nodes built from callable objects failing with AttributeError, so a callable without `__name__` now gets its class name, including under `functools.partial`. [merged in kedro-org/kedro#5797 →](https://github.com/kedro-org/kedro/pull/5797) · Oct 2026
+
+I made generator nodes wrapped in `functools.wraps` stream chunk by chunk again, by unwrapping the callable before the runner's generator check, so a decorated generator saves each chunk instead of the generator object once. [merged in kedro-org/kedro#5798 →](https://github.com/kedro-org/kedro/pull/5798) · Oct 2026
+
+I let `OmegaConfigLoader` register custom resolvers with keyword options such as `use_cache` through a `(callable, kwargs)` tuple, while leaving existing plain-callable resolvers unchanged. [merged in kedro-org/kedro#5813 →](https://github.com/kedro-org/kedro/pull/5813) · Oct 2026
+
+**[mcp-use](https://github.com/mcp-use/mcp-use)** · the fullstack MCP framework - MCP apps for ChatGPT and Claude, servers for agents
+
+I wrapped Gemini array tool results in an object, so serialized tool output survives the round trip back to the model. [merged in mcp-use/mcp-use#2675 →](https://github.com/mcp-use/mcp-use/pull/2675) · Sep 2026
+
+**[pypdf](https://github.com/py-pdf/pypdf)** · a pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files
+
+I stopped a malformed PDF with a negative `/N`, `/First` or header offset in an object stream from crashing page access like `len(reader.pages)` with a raw `ValueError: negative seek value`: strict mode now raises `PdfReadError`, and non-strict mode warns and drops the stream or just the bad entry, the same degradation an oversized `/N` already gets. [merged in py-pdf/pypdf#4224 →](https://github.com/py-pdf/pypdf/pull/4224) · Oct 2026
+
+I made a malformed `/N` or `/First` object-stream header fail with a clear `PdfReadError` instead of a raw `KeyError`, `TypeError` or `ValueError`, so a broken PDF gets one honest error. [merged in py-pdf/pypdf#4216 →](https://github.com/py-pdf/pypdf/pull/4216) · Oct 2026
+
+I stopped a `/ToUnicode` CMap with a negative bfrange source range from crashing text extraction with an `OverflowError: cannot convert negative int to unsigned`; the broken line is now skipped. [merged in py-pdf/pypdf#4225 →](https://github.com/py-pdf/pypdf/pull/4225) · Oct 2026
+
+I made a malformed `/Length` in the `/Encrypt` dictionary fail as a pypdf error instead of a raw `ValueError: Invalid key size` or a `ZeroDivisionError` on the pure-Python fallback. [merged in py-pdf/pypdf#4226 →](https://github.com/py-pdf/pypdf/pull/4226) · Oct 2026
+
+**[genoffice](https://github.com/genspark-ai/genoffice)** · a free, open-source AI office suite: docs, sheets, slides and PDF editors with a built-in agent, plus a CLI
+
+I made the sheets xlsx sidecar say a workbook is password-protected instead of dying inside the zip reader with `invalid Zip archive: Could not find EOCD` and showing an empty grid, by detecting the OLE2 compound-container signature that encryption wraps the package in before the zip reader runs. [merged in genspark-ai/genoffice#2093 →](https://github.com/genspark-ai/genoffice/pull/2093) · Oct 2026
+
+**[harness-sdk](https://github.com/strands-agents/harness-sdk)** · build an agent harness and control it end-to-end
+
+I made TypeScript `FileStorage` return a portable filename instead of a machine-specific artifact path, while keeping older references inside the configured artifact directory readable. [merged in strands-agents/harness-sdk#4668 →](https://github.com/strands-agents/harness-sdk/pull/4668) · Oct 2026
+
+I gave the OpenAI Responses model the location-source guard every other provider already had, so a document backed by an S3 location is skipped with a warning instead of crashing the request. [merged in strands-agents/harness-sdk#4706 →](https://github.com/strands-agents/harness-sdk/pull/4706) · Sep 2026
+
+I stopped a finished Gemini reply from crashing token accounting, so a final response without usage metadata completes normally instead of throwing. [merged in strands-agents/harness-sdk#4724 →](https://github.com/strands-agents/harness-sdk/pull/4724) · Sep 2026
+
+I made the Ollama model forward numeric `keep_alive` values like `0`, which were dropped as falsy, so "unload immediately" now reaches the server. [merged in strands-agents/harness-sdk#4725 →](https://github.com/strands-agents/harness-sdk/pull/4725) · Oct 2026
+
+I mapped Gemini's RECITATION finish reason to `content_filtered` instead of `end_turn`, so a response cut off for recitation no longer reads as a normal completion. [merged in strands-agents/harness-sdk#4898 →](https://github.com/strands-agents/harness-sdk/pull/4898) · Oct 2026
+
+**[dynamo](https://github.com/ai-dynamo/dynamo)** · a datacenter scale distributed inference serving framework
+
+I fixed the 500 on vLLM-Omni video requests that set a negative prompt, by putting it in the prompt's dict entry instead of assigning it as an attribute. [merged in ai-dynamo/dynamo#15402 →](https://github.com/ai-dynamo/dynamo/pull/15402) · Oct 2026
+
+**[jedi](https://github.com/davidhalter/jedi)** · awesome autocompletion, static analysis and refactoring library for Python
+
+I stopped importing Jedi from changing the process-wide recursion limit; it now raises the limit only while its own parsing and inference run, then restores it, and never lowers a higher one. [merged in davidhalter/jedi#2113 →](https://github.com/davidhalter/jedi/pull/2113) · Oct 2026
+
+**[OpenBot](https://github.com/CopilotKit/OpenBot)** · a template for running your own agent bots, built to be cloned and made your own
+
+I stopped the Bot's computer reaching the cloud metadata address through the NAT64 prefix, by unwrapping a `64:ff9b::/96` address to the IPv4 it carries before the deny check. [merged in CopilotKit/OpenBot#745 →](https://github.com/CopilotKit/OpenBot/pull/745) · Oct 2026
+
+I stopped a public name that merely starts with `127.` from counting as loopback for `OPENBOT_SINGLE_USER`, so the no-sign-in administrator can no longer be served on a public address. [merged in CopilotKit/OpenBot#744 →](https://github.com/CopilotKit/OpenBot/pull/744) · Oct 2026
+
+I made the Bot's browser refuse every name under `.localhost`, which resolves to loopback without asking DNS, not just the bare name. [merged in CopilotKit/OpenBot#743 →](https://github.com/CopilotKit/OpenBot/pull/743) · Oct 2026
+
+I made command telemetry redact the curl password in every spelling `-u` allows, so `-uuser:pass`, `--user=user:pass` and quoted pairs no longer keep it in clear. [merged in CopilotKit/OpenBot#742 →](https://github.com/CopilotKit/OpenBot/pull/742) · Oct 2026
+
+I stopped a malformed percent-escape in a stream URL from crashing the server with a 500; it now falls through to normal routing. [merged in CopilotKit/OpenBot#699 →](https://github.com/CopilotKit/OpenBot/pull/699) · Oct 2026
+
+I made the provider and Bot registries ignore inherited keys like `constructor` and `__proto__`, so a missing Bot name hits the existing startup error instead of returning undefined fields. [merged in CopilotKit/OpenBot#697 →](https://github.com/CopilotKit/OpenBot/pull/697) · Oct 2026
+
+I made the telemetry scrubber distinguish MySQL's `-P` port flag from its `-p` password flag, so it keeps `-P3306` and redacts the attached password later in the same command. [merged in CopilotKit/OpenBot#819 →](https://github.com/CopilotKit/OpenBot/pull/819) · Oct 2026
+
+**[kserve](https://github.com/kserve/kserve)** · model inference on Kubernetes
+
+I made `cpu_count()` read cgroup v2 CPU limits, so the default model-server worker count respects the container quota instead of falling back to the node CPU count. [merged in kserve/kserve#6347 →](https://github.com/kserve/kserve/pull/6347) · Oct 2026
+
+**[openmuse](https://github.com/CopilotKit/openmuse)** · a personal agent with a browser, terminal, files, and work that keeps going
+
+I made a price watch recognize amounts written with a space after the dollar sign, so `$ 9.99` trips the same threshold as `$9.99`. [merged in CopilotKit/openmuse#126 →](https://github.com/CopilotKit/openmuse/pull/126) · Oct 2026
+
+I made file-producing task retries idempotent, so a retry after a lost checkpoint recovers the original file instead of writing a duplicate under a new ID. [merged in CopilotKit/openmuse#45 →](https://github.com/CopilotKit/openmuse/pull/45) · Oct 2026
+
+I made a pasted transaction CSV that starts with a byte order mark parse instead of failing with "Invalid quoted CSV field", by dropping the mark before parsing. [merged in CopilotKit/openmuse#146 →](https://github.com/CopilotKit/openmuse/pull/146) · Oct 2026
+
+I fixed a race where the server and worker starting together on a fresh data directory could crash on the session-signing key; the key is now published with an atomic hard link and the loser reads the winner's. [merged in CopilotKit/openmuse#125 →](https://github.com/CopilotKit/openmuse/pull/125) · Oct 2026
+
+I stopped one bad attachment filename with an unpaired surrogate from breaking the whole Gmail inbox listing and from failing sends, by replacing the bad character before encoding. [merged in CopilotKit/openmuse#121 →](https://github.com/CopilotKit/openmuse/pull/121) · Oct 2026
+
+I made the spending analysis reject a CSV with a repeated `date`, `description`, `amount` or `category` header, so it no longer silently reports one of two conflicting amounts. [merged in CopilotKit/openmuse#114 →](https://github.com/CopilotKit/openmuse/pull/114) · Oct 2026
+
+I stopped a numeric character reference to a surrogate code point (like `&#xD800;`) in an email snippet from throwing in `String.fromCodePoint` and failing the whole mail list; the reference now stays literal instead. [merged in CopilotKit/openmuse#183 →](https://github.com/CopilotKit/openmuse/pull/183) · Oct 2026
+
+**[OpenDots](https://github.com/CopilotKit/OpenDots)** · your always-on AI coworkers that move between text, calls, and Slack
+
+I kept edits made while "Load latest" is reading a remote page from being discarded when the read finishes, so replacing an earlier confirmed draft no longer overwrites newer work. [merged in CopilotKit/OpenDots#130 →](https://github.com/CopilotKit/OpenDots/pull/130) · Oct 2026
+
+I bound an approved connection action to one `toolCallId`, so reusing the same approval with a fresh call ID gets a 409 instead of running it twice; retries of the original call still recover its saved result. [merged in CopilotKit/OpenDots#137 →](https://github.com/CopilotKit/OpenDots/pull/137) · Oct 2026
+
+I kept balanced brackets in URLs inside research prompts, so a link like `Rust_(programming_language)` is read whole instead of cut at the parenthesis. [merged in CopilotKit/OpenDots#99 →](https://github.com/CopilotKit/OpenDots/pull/99) · Oct 2026
+
+I made the workspace routes answer 404 for a conversation, call or Dot that does not exist, instead of a 503 that sent the user to check the server configuration. [merged in CopilotKit/OpenDots#98 →](https://github.com/CopilotKit/OpenDots/pull/98) · Oct 2026
+
+I made the home composer submit on Enter like the in-thread one, with Shift+Enter still adding a new line. [merged in CopilotKit/OpenDots#95 →](https://github.com/CopilotKit/OpenDots/pull/95) · Oct 2026
+
+I made the server accept the key name the Copilotkit CLI writes, `CPK_INTELLIGENCE_API_KEY`, as well as `INTELLIGENCE_API_KEY`, so setup no longer stays incomplete after a successful CLI login. [merged in CopilotKit/OpenDots#72 →](https://github.com/CopilotKit/OpenDots/pull/72) · Oct 2026
+
+I stopped a store error in the background runner's scheduler tick from rejecting unhandled and taking down the always-on server; later ticks now keep running. [merged in CopilotKit/OpenDots#12 →](https://github.com/CopilotKit/OpenDots/pull/12) · Oct 2026
+
+I made the Dot turn that runs past the 90 second limit end with a clear time-limit error instead of an incomplete stream blamed on the runtime connection. [merged in CopilotKit/OpenDots#85 →](https://github.com/CopilotKit/OpenDots/pull/85) · Oct 2026
+
+I made the "Ready for your review" card render Markdown tables as tables instead of raw pipe text, by adding GFM support. [merged in CopilotKit/OpenDots#78 →](https://github.com/CopilotKit/OpenDots/pull/78) · Oct 2026
+
+I made a WebRTC voice call wait five seconds on `disconnected` before hanging up, so a short network blip that recovers no longer ends the call; `failed` still ends it at once. [merged in CopilotKit/OpenDots#26 →](https://github.com/CopilotKit/OpenDots/pull/26) · Oct 2026
+
+I made the red connection banner clear once polling recovers after an API restart; action errors still need a dismiss. [merged in CopilotKit/OpenDots#73 →](https://github.com/CopilotKit/OpenDots/pull/73) · Oct 2026
+
+I made an unknown or foreign page conversation id return a 404 instead of a generic 503 that blamed the Intelligence setup; real Intelligence errors still return 503. [merged in CopilotKit/OpenDots#14 →](https://github.com/CopilotKit/OpenDots/pull/14) · Oct 2026
+
+I stopped a failed voice compute from staying in the cache and using up one of the six turns, so retrying with the same `toolCallId` can now succeed. [merged in CopilotKit/OpenDots#13 →](https://github.com/CopilotKit/OpenDots/pull/13) · Oct 2026
+
+I stopped a page deleted during remote thread creation from returning success with an orphan local conversation, by rechecking the page before binding the result. A remote thread already created is not undone by this fix. [merged in CopilotKit/OpenDots#119 →](https://github.com/CopilotKit/OpenDots/pull/119) · Nov 2026
+
+I kept successful owner screen refreshes out of the Computer activity log, so repeated screenshots no longer crowd out the Dot's actions. Failed owner screenshots, agent screenshots and other owner actions still get recorded. [merged in CopilotKit/OpenDots#94 →](https://github.com/CopilotKit/OpenDots/pull/94) · Nov 2026
+
+**[msgspec](https://github.com/msgspec/msgspec)** · a fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML
+
+I made msgspec propagate an error raised while looking up `ClassVar` on the `typing` module, instead of reporting "not a ClassVar" with the exception still pending, which was terminating debug CPython builds on an assert. [merged in msgspec/msgspec#1223 →](https://github.com/msgspec/msgspec/pull/1223) · Oct 2026
+
+**[tududi](https://github.com/chrisvel/tududi)** · a calm, open system for organizing life and work - tasks, projects, notes, areas and smart workflows
+
+I fixed CalDAV pushes to Radicale failing with a 412 and the task getting stuck as a conflict, by sending the stored ETag as a properly quoted entity-tag in `If-Match`. [merged in chrisvel/tududi#1779 →](https://github.com/chrisvel/tududi/pull/1779) · Oct 2026
+
+**[urwid](https://github.com/urwid/urwid)** · console user interface library for Python
+
+I stopped `ListBox` from rendering the same items repeatedly when a short list sits on a wrapping walker, by tracking visited positions so each fill pass stops at one it has already seen. [merged in urwid/urwid#1381 →](https://github.com/urwid/urwid/pull/1381) · Oct 2026
+
+I made alarm callbacks from `set_alarm_in` and `set_alarm_at` safe to raise, so a mis-shaped or throwing callback gets logged with its traceback and the main loop keeps running instead of tearing down the whole app. [merged in urwid/urwid#1418 →](https://github.com/urwid/urwid/pull/1418) · Oct 2026
+
+I made `FloatEdit` turn exponent defaults into editable fixed-point values, reject non-finite defaults and quantize long inputs without exceeding the decimal context precision. [merged in urwid/urwid#1447 →](https://github.com/urwid/urwid/pull/1447) · Oct 2026
+
+I stopped the progress bar showing 100% before it is done with very large finite values, like `current=1e307, done=1e308`, where multiplying by the percentage scale overflowed to infinity even though the real fraction was 10%. [merged in urwid/urwid#1507 →](https://github.com/urwid/urwid/pull/1507) · Oct 2026
+
+I made `IntEdit` trim leading zeros with a bytes caption as it already does with a string caption, so typing `7` into an initial `0` produces `b"7"` instead of `b"07"`. [merged in urwid/urwid#1525 →](https://github.com/urwid/urwid/pull/1525) · Oct 2026
+
+I made `IntegerEdit` convert numeric defaults into the selected base, so `42` stays forty-two in a hexadecimal editor instead of becoming sixty-six; string defaults still mean digits in that base. [merged in urwid/urwid#1532 →](https://github.com/urwid/urwid/pull/1532) · Oct 2026
+
+I stopped zero-height `Pile` rows from receiving typing or exposing a cursor, while keeping navigation to visible rows and preserving an explicitly chosen hidden focus. [merged in urwid/urwid#1543 →](https://github.com/urwid/urwid/pull/1543) · Oct 2026
+
+I made partial `MonitoredDeque` extensions notify observers before an input iterator error is re-raised, so a cached `ListBox` refreshes changed rows even when a bounded deque keeps the same length. [merged in urwid/urwid#1553 →](https://github.com/urwid/urwid/pull/1553) · Nov 2026
+
+I kept shared table text cells updating every owning row and matching column when their text changes, so reusing a cell across rows or layouts no longer leaves stale widths or clipped text. [merged in urwid/urwid#1551 →](https://github.com/urwid/urwid/pull/1551) · Nov 2026
+
+**[anyio](https://github.com/agronholm/anyio)** · high level asynchronous concurrency and networking framework on Trio or asyncio
+
+I stopped `connect_tcp()` from leaking a connected socket when the surrounding cancel scope fires after a connection attempt wins but before the internal task group exits, by closing the winning stream before the cancellation re-raises. [merged in agronholm/anyio#1367 →](https://github.com/agronholm/anyio/pull/1367) · Oct 2026
+
+**[pydeps](https://github.com/thebjorn/pydeps)** · python module dependency graphs
+
+I stopped `--externals foo` from dropping `foobar`, so packages that share a name prefix with the target stay in the output while `foo.internal` stays internal. [merged in thebjorn/pydeps#290 →](https://github.com/thebjorn/pydeps/pull/290) · Oct 2026
+
+I made pydeps warn when a dependency diagram comes out with no edges, naming the target and pointing to filters, `--include-missing` and debug logging, instead of silently drawing a blank graph. [merged in thebjorn/pydeps#291 →](https://github.com/thebjorn/pydeps/pull/291) · Oct 2026
+
+**[simplejson](https://github.com/simplejson/simplejson)** · simple, fast, extensible JSON encoder and decoder for Python
+
+I made `check_circular` catch cycles that run through a custom `for_json()` or `_asdict()`, so a self-returning object raises the usual circular-reference error instead of exhausting recursion, in both the Python and C encoders. [merged in simplejson/simplejson#390 →](https://github.com/simplejson/simplejson/pull/390) · Oct 2026
+
+**[filesystem_spec](https://github.com/fsspec/filesystem_spec)** · a specification that python filesystems should adhere to
+
+I made async HTTP streaming files reject position-changing seeks with a `ValueError` and report `seekable()` as false, so a seek can no longer look like it worked while returning bytes from the wrong offset. [merged in fsspec/filesystem_spec#2214 →](https://github.com/fsspec/filesystem_spec/pull/2214) · Oct 2026
+
+I made `DirFileSystem` report async support from the filesystem it wraps, so a directory view over a synchronous backend no longer claims `async_impl`. [merged in fsspec/filesystem_spec#2213 →](https://github.com/fsspec/filesystem_spec/pull/2213) · Oct 2026
+
+I made `DirFileSystem` forward the `local_file` flag of the filesystem it wraps, so a directory view over local files passes the `open_local` check instead of failing it. [merged in fsspec/filesystem_spec#2212 →](https://github.com/fsspec/filesystem_spec/pull/2212) · Oct 2026
+
+I stopped `sync()` from hanging forever when the default fsspec IO thread has already stopped, so it raises `RuntimeError` instead, and stays quiet during interpreter shutdown. [merged in fsspec/filesystem_spec#2210 →](https://github.com/fsspec/filesystem_spec/pull/2210) · Oct 2026
+
+**[bottleneck](https://github.com/pydata/bottleneck)** · fast NumPy array functions written in C
+
+I made the reducer memory test measure retained allocations with tracemalloc instead of process peak RSS, so unrelated growth stops failing it and a real leak can't hide under an old peak. [merged in pydata/bottleneck#602 →](https://github.com/pydata/bottleneck/pull/602) · Oct 2026
+
+**[typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use)** · browser agents should read the page, not just the buttons
+
+I gave the browser loop the visible text it was missing, so Jev can see a price or error before calling the job done. [merged in awlevin/typesafe-computer-use#23 →](https://github.com/awlevin/typesafe-computer-use/pull/23) · Sep 2026
+
+**[astroid](https://github.com/pylint-dev/astroid)** · a common base representation of python source code for pylint and other projects
+
+I taught astroid to infer `values += (1, 2)` on a list, so augmented concatenation with a tuple infers a list instead of `Uninferable`. [merged in pylint-dev/astroid#3357 →](https://github.com/pylint-dev/astroid/pull/3357) · Oct 2026
+
+**[gcsfs](https://github.com/fsspec/gcsfs)** · Pythonic filesystem interface for Google Cloud Storage
+
+I made size-integrity mismatches raise `ChecksumError` instead of relying on assertions, so `consistency="size"` still checks for corrupt transfers under `python -O`. [merged in fsspec/gcsfs#1107 →](https://github.com/fsspec/gcsfs/pull/1107) · Oct 2026
+
+**[pydantic-extra-types](https://github.com/pydantic/pydantic-extra-types)** · extra Pydantic types
+
+I made card number validation check the Verve ranges before the broader Discover prefix, so a Verve card in 650002 to 650027 no longer reports as Discover and a 17-digit one is rejected. [merged in pydantic/pydantic-extra-types#429 →](https://github.com/pydantic/pydantic-extra-types/pull/429) · Oct 2026
+
+I made `S3Path` keep newlines in object keys, so a key with a newline in its prefix is no longer silently trimmed to a different last key. [merged in pydantic/pydantic-extra-types#430 →](https://github.com/pydantic/pydantic-extra-types/pull/430) · Oct 2026
+
+I let `DomainStr` accept internal hyphens in punycode top-level domains, so delegated TLDs like `xn--vermgensberater-ctb` stop being rejected. [merged in pydantic/pydantic-extra-types#431 →](https://github.com/pydantic/pydantic-extra-types/pull/431) · Oct 2026
+
+**[opencompany](https://github.com/tinyhumansai/opencompany)** · run a hive mind of agents to focus on a specific goal
+
+I removed the dead `ChannelAdapter::inbound()` stream that every adapter stubbed with an empty stream and nothing read, so the trait is now an honest outbound-only sink; a deprecated default keeps out-of-tree adapters compiling. [merged in tinyhumansai/opencompany#2408 →](https://github.com/tinyhumansai/opencompany/pull/2408) · Oct 2026
+
+I made the reserved-path test expect the right status for `/acp` (404 without the feature, 405 with it) and added the missing CI lane for `server::routes`, so the check that only failed on unscoped runs now runs in CI. [merged in tinyhumansai/opencompany#2410 →](https://github.com/tinyhumansai/opencompany/pull/2410) · Oct 2026
+
+I stopped the empty-retry from sending the user message twice: on retry the agent reloaded the failed turn's saved transcript and re-added the message, so I suppress that autoload on the retry and added regression tests. [merged in tinyhumansai/opencompany#2421 →](https://github.com/tinyhumansai/opencompany/pull/2421) · Oct 2026
+
+I made a setup answer cut off by the output limit report that instead of "model unreachable", and raised the setup output budget from 1,500 to 4,000 tokens so a reasoning model can think and still answer. [merged in tinyhumansai/opencompany#2556 →](https://github.com/tinyhumansai/opencompany/pull/2556) · Oct 2026
+
+I gave a setup run that stops on the output limit its own fallback reason, `output_budget_exhausted`, and both setup screens now say the model ran out of output room and offer a retry. [merged in tinyhumansai/opencompany#2562 →](https://github.com/tinyhumansai/opencompany/pull/2562) · Oct 2026
+
+**[click-repl](https://github.com/click-contrib/click-repl)** · subcommand REPL for click apps
+
+I stopped `import click_repl` from crashing when stdin is unavailable (`sys.stdin` is `None`), by treating that as non-interactive and keeping the `isatty()` check for a real stream. [merged in click-contrib/click-repl#140 →](https://github.com/click-contrib/click-repl/pull/140) · Oct 2026
+
+**[models-web-app](https://github.com/kserve/models-web-app)** · KServe UI
+
+I stopped an old SSE watcher from delivering callbacks to reconnected clients or overwriting their replay snapshot, by checking watcher generations before recording and sending events. [merged in kserve/models-web-app#206 →](https://github.com/kserve/models-web-app/pull/206) · Oct 2026
+
+<details>
+<summary><b>more magpie fixes</b> · the other twenty-four merged PRs</summary>
+
+**[magpie](https://github.com/yetone/magpie)** · every agent's model, one place - Codex on DeepSeek, Claude Code on Kimi, from the menu bar
+
+I made Gemini PDFs and audio survive text-only routes, so Magpie no longer treats every file part as an image. [merged in yetone/magpie#95 →](https://github.com/yetone/magpie/pull/95) · Sep 2026
+
+I stopped a reply translated from a dying gateway stream from reading as complete, so a dead upstream can't pass a cut-off answer off as finished. [merged in yetone/magpie#78 →](https://github.com/yetone/magpie/pull/78) · Sep 2026
+
+I stopped group images from being retried on text-only fallbacks, so a vision failure skips them instead of mangling the picture into text. [merged in yetone/magpie#87 →](https://github.com/yetone/magpie/pull/87) · Sep 2026
+
+I cleared the 400 on Responses images referenced by file_id, so stored images survive translation to Chat routes. [merged in yetone/magpie#166 →](https://github.com/yetone/magpie/pull/166) · Sep 2026
+
+I fixed usage accounting for SSE events split across data lines or missing a trailing newline, so streamed token counts stop vanishing. [merged in yetone/magpie#94 →](https://github.com/yetone/magpie/pull/94) · Sep 2026
+
+I fixed the Codex prompt cache so two accounts saving in the same mtime tick both keep their instructions. [merged in yetone/magpie#74 →](https://github.com/yetone/magpie/pull/74) · Sep 2026
+
+I made the long-turn router count providers hidden from the model picker, so a growing turn no longer stays pinned to the small model. [merged in yetone/magpie#86 →](https://github.com/yetone/magpie/pull/86) · Sep 2026
+
+I stopped disabled keys from being fetched during model refresh, with a regression test proving zero requests to them. [merged in yetone/magpie#76 →](https://github.com/yetone/magpie/pull/76) · Sep 2026
+
+I gave Gemini's session-affinity fallback a hash of the conversation to stick to, so keyless requests stop scattering across upstreams. [merged in yetone/magpie#165 →](https://github.com/yetone/magpie/pull/165) · Sep 2026
+
+I kept Gemini session affinity when the first turn omits its role, treating it as the user turn Gemini says it is. [merged in yetone/magpie#171 →](https://github.com/yetone/magpie/pull/171) · Sep 2026
+
+I stopped a multi-choice Chat stream from being flattened into one reply, so translation keeps the first readable choice instead of joining the rest. [merged in yetone/magpie#168 →](https://github.com/yetone/magpie/pull/168) · Sep 2026
+
+I fixed the `TestSmartRouting` hour-boundary flake by anchoring its reset fixture within one hour, so the five-hour tie-breaker stays deterministic. [merged in yetone/magpie#77 →](https://github.com/yetone/magpie/pull/77) · Sep 2026
+
+I kept YAML top-level strings as strings, so a model named like `null` or `true` is no longer read back as nil or bool, and single-quoted values with escaped quotes now decode whole. [merged in yetone/magpie#431 →](https://github.com/yetone/magpie/pull/431) · Oct 2026
+
+I kept large integers exact in the Cursor gateway's tool history, so IDs and results above 2^53 are no longer rounded when a call is replayed or its result is stored. [merged in yetone/magpie#434 →](https://github.com/yetone/magpie/pull/434) · Oct 2026
+
+I stopped inline comments from leaking into dotenv values in two readers, so `GEMINI_API_KEY=abc123 # my key` reads back as the key alone while quoted values keep their `#`. [merged in yetone/magpie#439 →](https://github.com/yetone/magpie/pull/439) · Oct 2026
+
+I made the Kimi model picker read TOML literal-quoted keys like `[models.'kimi k2.5']`, so models with spaces in their names stop being silently skipped. [merged in yetone/magpie#446 →](https://github.com/yetone/magpie/pull/446) · Oct 2026
+
+I escaped backslashes when quoting dotenv values on write, so a Windows path like `C:\new folder\tmp` round-trips instead of reading back with a newline and a tab. [merged in yetone/magpie#450 →](https://github.com/yetone/magpie/pull/450) · Oct 2026
+
+
+I kept a CRLF file's line endings when the dotenv, TOML and top-level YAML setters add or replace lines, so a Windows config file no longer comes back with bare `\n` on every edited line. [merged in yetone/magpie#829 →](https://github.com/yetone/magpie/pull/829) · Oct 2026
+
+I did the same for JSON and JSONC edits, so `SetJSON` on a CRLF file keeps `\r\n` on the lines it adds. [merged in yetone/magpie#830 →](https://github.com/yetone/magpie/pull/830) · Oct 2026
+
+I did the same for the YAML round trip, so `SetYAML`, `DelYAML` and `EditYAMLStrings` no longer rewrite every line of a CRLF file as LF. [merged in yetone/magpie#831 →](https://github.com/yetone/magpie/pull/831) · Oct 2026
+
+I made a dotenv key that appears twice read and write its last line, as dotenv does, so wiring Gemini CLI to the gateway edits the line the CLI actually uses. [merged in yetone/magpie#832 →](https://github.com/yetone/magpie/pull/832) · Oct 2026
+
+I held a catalog model's prompt cap to its context window, so rows like `opencode/hy3-free` no longer serve an input limit above the window the gateway advertises. [merged in yetone/magpie#1288 →](https://github.com/yetone/magpie/pull/1288) · Oct 2026
+
+I made a background quota reading write the account's quota history too, so a magpie serving only other magpies no longer keeps an empty history, with the writes batched off the routing wait path. [merged in yetone/magpie#1318 →](https://github.com/yetone/magpie/pull/1318) · Oct 2026
+
+I made the sessions page limit count nonempty sessions only, so a newest empty session file no longer eats the whole page or wins an mtime tie. [merged in yetone/magpie#1324 →](https://github.com/yetone/magpie/pull/1324) · Oct 2026
+
+</details>
