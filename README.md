@@ -49,7 +49,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
 
 ## open source contributions
 
-*if it isn't merged, it isn't here. 56 repos · 196 merged contributions: 194 merged PRs + 2 carried commits. badges up top; every fix in words folded below.*
+*if it isn't merged, it isn't here. 57 repos · 197 merged contributions: 195 merged PRs + 2 carried commits. badges up top; every fix in words folded below.*
 
 <p>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
@@ -85,7 +85,8 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/necolas/react-native-web"><img alt="react-native-web · 1 merged PR" src="https://img.shields.io/badge/react--native--web-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/petyosi/react-virtuoso"><img alt="react-virtuoso · 1 merged PR" src="https://img.shields.io/badge/react--virtuoso-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 carried" src="https://img.shields.io/badge/agent--framework-1_carried-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/agentproto/ts"><img alt="ts · 1 carried" src="https://img.shields.io/badge/ts-1_carried-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
@@ -127,7 +128,7 @@ I made Gemini VALIDATED mode filter declarations down to the allowed list on tra
 I made a required tool choice that filters down to nothing callable fail with a clear 400, instead of a silent plain-text 200 the caller never asked for. [merged in yetone/magpie#169 →](https://github.com/yetone/magpie/pull/169) · Sep 2026
 
 <details>
-<summary><b>every merged fix, in words</b> · the other 54 repos, plus the full magpie history</summary>
+<summary><b>every merged fix, in words</b> · the other 55 repos, plus the full magpie history</summary>
 
 **[rea](https://github.com/morluto/rea)** · reverse engineer anything with agents, from app behavior down to native binaries
 
