@@ -10,6 +10,10 @@
 
 When the content above a virtual list disappeared, the list could miss its next update. I fixed that transition. [Merged change](https://github.com/bvaughn/react-window/pull/935)
 
+**react-spring** · Default props and handlers returned by a useTransition props function now apply like the same props in object form. The function is resolved once per render and its result is reused for defaults, keys and transition phases. [Merged change](https://github.com/pmndrs/react-spring/pull/2660)
+
+**MobX** · Signal cancellation during the first synchronous reaction run now stops the reaction instead of leaving it subscribed. A promised when also rejects if its initial predicate aborts the signal. [Merged change](https://github.com/mobxjs/mobx/pull/4787)
+
 **[hermes-agent](https://github.com/NousResearch/hermes-agent)** · the agent that grows with you
 
 I made the gateway show an enabled platform whose adapter is missing in `hermes status`. My commit is on main with my authorship, merged through a maintainer's salvage PR that also reconnects the platform once its plugin loads. [merged via NousResearch/hermes-agent#130613 →](https://github.com/NousResearch/hermes-agent/pull/130613) · Oct 2026
