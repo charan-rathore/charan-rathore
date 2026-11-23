@@ -49,7 +49,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
 
 ## open source contributions
 
-*if it isn't merged, it isn't here. 57 repos · 197 merged contributions: 195 merged PRs + 2 carried commits. badges up top; every fix in words folded below.*
+*if it isn't merged, it isn't here. 57 repos · 197 merged contributions: 195 merged PRs + 2 credited contributions merged through other PRs. badges up top; every fix in words folded below.*
 
 <p>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
@@ -71,7 +71,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/pydantic/pydantic-extra-types"><img alt="pydantic-extra-types · 3 merged PRs" src="https://img.shields.io/badge/pydantic--extra--types-3_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/NousResearch/hermes-agent"><img alt="hermes-agent · 1 merged + 1 carried" src="https://img.shields.io/badge/hermes--agent-1_merged_%2B_1_carried-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/NousResearch/hermes-agent"><img alt="hermes-agent · 1 merged + 1 credited" src="https://img.shields.io/badge/hermes--agent-1_merged_%2B_1_credited-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/sveltejs/kit"><img alt="kit · 2 merged PRs" src="https://img.shields.io/badge/kit-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/semantica-agi/semantica"><img alt="semantica · 2 merged PRs" src="https://img.shields.io/badge/semantica-2_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/thebjorn/pydeps"><img alt="pydeps · 2 merged PRs" src="https://img.shields.io/badge/pydeps-2_merged-181717?logo=github&logoColor=white"></a>
@@ -86,7 +86,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/petyosi/react-virtuoso"><img alt="react-virtuoso · 1 merged PR" src="https://img.shields.io/badge/react--virtuoso-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kserve/kserve"><img alt="kserve · 1 merged PR" src="https://img.shields.io/badge/kserve-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/microsoft/agent-framework"><img alt="agent-framework · 1 merged PR" src="https://img.shields.io/badge/agent--framework-1_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/agentproto/ts"><img alt="ts · 1 carried" src="https://img.shields.io/badge/ts-1_carried-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/agentproto/ts"><img alt="ts · 1 credited" src="https://img.shields.io/badge/ts-1_credited-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/ai-dynamo/dynamo"><img alt="dynamo · 1 merged PR" src="https://img.shields.io/badge/dynamo-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/msgspec/msgspec"><img alt="msgspec · 1 merged PR" src="https://img.shields.io/badge/msgspec-1_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/agronholm/anyio"><img alt="anyio · 1 merged PR" src="https://img.shields.io/badge/anyio-1_merged-181717?logo=github&logoColor=white"></a>
