@@ -49,7 +49,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
 
 ## open source contributions
 
-*if it isn't merged, it isn't here. 57 repos · 197 merged contributions: 195 merged PRs + 2 credited contributions merged through other PRs. badges up top; every fix in words folded below.*
+*if it isn't merged, it isn't here. 57 repos · 198 merged contributions: 196 merged PRs + 2 credited contributions merged through other PRs. badges up top; every fix in words folded below.*
 
 <p>
   <a href="https://github.com/yetone/magpie"><img alt="magpie · 27 merged PRs" src="https://img.shields.io/badge/magpie-27_merged-181717?logo=github&logoColor=white"></a>
@@ -66,7 +66,7 @@ These are scoped fixes in existing systems, not claims that I designed the frame
   <a href="https://github.com/strands-agents/harness-sdk"><img alt="harness-sdk · 5 merged PRs" src="https://img.shields.io/badge/harness--sdk-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/tinyhumansai/opencompany"><img alt="opencompany · 5 merged PRs" src="https://img.shields.io/badge/opencompany-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/py-pdf/pypdf"><img alt="pypdf · 4 merged PRs" src="https://img.shields.io/badge/pypdf-4_merged-181717?logo=github&logoColor=white"></a>
-  <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 4 merged PRs" src="https://img.shields.io/badge/filesystem__spec-4_merged-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/fsspec/filesystem_spec"><img alt="filesystem_spec · 5 merged PRs" src="https://img.shields.io/badge/filesystem__spec-5_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/nitrojs/nitro"><img alt="nitro · 3 merged PRs" src="https://img.shields.io/badge/nitro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/kedro-org/kedro"><img alt="kedro · 3 merged PRs" src="https://img.shields.io/badge/kedro-3_merged-181717?logo=github&logoColor=white"></a>
   <a href="https://github.com/storytold/pdfcraft"><img alt="pdfcraft · 3 merged PRs" src="https://img.shields.io/badge/pdfcraft-3_merged-181717?logo=github&logoColor=white"></a>
@@ -475,6 +475,8 @@ I made pydeps warn when a dependency diagram comes out with no edges, naming the
 I made `check_circular` catch cycles that run through a custom `for_json()` or `_asdict()`, so a self-returning object raises the usual circular-reference error instead of exhausting recursion, in both the Python and C encoders. [merged in simplejson/simplejson#390 →](https://github.com/simplejson/simplejson/pull/390) · Oct 2026
 
 **[filesystem_spec](https://github.com/fsspec/filesystem_spec)** · a specification that python filesystems should adhere to
+
+I kept a Dask transaction's worker actor in place when its context is entered, so exiting the context commits or discards deferred files through the worker instead of failing on a plain deque. [merged in fsspec/filesystem_spec#2495 →](https://github.com/fsspec/filesystem_spec/pull/2495) · Nov 2026
 
 I made async HTTP streaming files reject position-changing seeks with a `ValueError` and report `seekable()` as false, so a seek can no longer look like it worked while returning bytes from the wrong offset. [merged in fsspec/filesystem_spec#2214 →](https://github.com/fsspec/filesystem_spec/pull/2214) · Oct 2026
 
